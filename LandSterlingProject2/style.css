@@ -1103,37 +1103,7 @@ html {
 .tab-body > div.hide-div {
     display: none
 }
-    /************************************/
-/*body {
-    display: flex;
-    font-size: 1.5em;
-    justify-content: center;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
-}*/
-/*body {
-    height: 100vh;
-    overflow-y: hidden;
-    padding-right: 15px;
-}
-#dialog {
-    display: none;
-    position: fixed;
-    top: 10vh;
-    left: 10vw;
-    width: 80vw;
-    height: 80vw;
-    border: 1px solid #eee;
-    border-radius: 4px;
-    padding: 10px;
-    text-align: center;
-    z-index: 1;
-    background-color: #444;
-    color: #fff;
-}
-#dialog.show {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-    }*/
+ .testclass
+ {
+     color:red;
+ }

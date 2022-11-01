@@ -1097,22 +1097,7 @@ html {
     .sign-in svg:hover {
         color: var(--main-color);
     }
-.tab-header {
-    display: flex;
-    justify-content: center;
-}
 
-    .tab-header > div {
-        text-align: center;
-        padding: 10px;
-        cursor: pointer;
-    }
-
-        .tab-header > div.active {
-            font-weight: bold;
-            border-bottom: 4px solid var(--main-color);
-            color: black;
-        }
 
 
 .tab-body > div.hide-div {

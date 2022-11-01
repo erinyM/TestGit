@@ -1,0 +1,767 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ePMS2040Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Country_Master">
+          <Key>
+            <PropertyRef Name="Country_Id" />
+          </Key>
+          <Property Name="Country_Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Country_Desc" Type="varchar" MaxLength="50" />
+          <Property Name="Modify_By" Type="varchar" MaxLength="50" />
+          <Property Name="Modify_On" Type="datetime" />
+        </EntityType>
+        <EntityType Name="eBedroom_Master">
+          <Key>
+            <PropertyRef Name="Record_Id" />
+          </Key>
+          <Property Name="Record_Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Bedrooms" Type="varchar" MaxLength="100" />
+          <Property Name="Bedrooms_BI" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="eCountryCity_Master">
+          <Key>
+            <PropertyRef Name="Record_Id" />
+            <PropertyRef Name="Country_Desc" />
+          </Key>
+          <Property Name="Record_Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Country_Desc" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="City_Desc" Type="varchar" MaxLength="100" />
+          <Property Name="Country_Desc_Ar" Type="nvarchar" MaxLength="100" />
+          <Property Name="City_Desc_Ar" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="eUnitCategory_Master">
+          <Key>
+            <PropertyRef Name="Record_Id" />
+          </Key>
+          <Property Name="Record_Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Unit_Type" Type="varchar" MaxLength="100" />
+          <Property Name="Unit_Category" Type="varchar" MaxLength="100" />
+          <Property Name="Unit_Category_Ar" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="tbTestimonials">
+          <Key>
+            <PropertyRef Name="testId" />
+          </Key>
+          <Property Name="testId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" />
+          <Property Name="Comment" Type="nvarchar(max)" />
+          <Property Name="Starcount" Type="int" />
+        </EntityType>
+        <EntityType Name="tbUnit_Master">
+          <Key>
+            <PropertyRef Name="Ref_No" />
+          </Key>
+          <Property Name="Record_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Property_No" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Property_Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Unit_No" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Ref_No" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Unit_Sr_No" Type="bigint" />
+          <Property Name="RERA_STR_No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Street_No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Street_Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Unit_Option" Type="nvarchar" MaxLength="100" />
+          <Property Name="Category_Mix" Type="nvarchar" MaxLength="100" />
+          <Property Name="Permitted_Use" Type="nvarchar" MaxLength="100" />
+          <Property Name="Unit_Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="Unit_Category" Type="nvarchar" MaxLength="100" />
+          <Property Name="Unit_Style" Type="nvarchar" MaxLength="100" />
+          <Property Name="Unit_Model" Type="nvarchar" MaxLength="100" />
+          <Property Name="Unit_Zone" Type="nvarchar" MaxLength="100" />
+          <Property Name="BuildingName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Plot_No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Plot_Size" Type="nvarchar" MaxLength="50" />
+          <Property Name="Block" Type="nvarchar" MaxLength="50" />
+          <Property Name="Floor" Type="nvarchar" MaxLength="50" />
+          <Property Name="Unit_View" Type="nvarchar" MaxLength="255" />
+          <Property Name="CurrentMarketRate" Type="money" />
+          <Property Name="Completion_Date" Type="nvarchar" MaxLength="50" />
+          <Property Name="Unit_Class" Type="nvarchar" MaxLength="50" />
+          <Property Name="LivingRooms" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bedrooms" Type="nvarchar" MaxLength="50" />
+          <Property Name="StoreRooms" Type="nvarchar" MaxLength="50" />
+          <Property Name="Parking" Type="nvarchar" MaxLength="50" />
+          <Property Name="Facilities" Type="nvarchar(max)" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Payment_Plan" Type="nvarchar" MaxLength="100" />
+          <Property Name="Broker_Id" Type="nvarchar" MaxLength="50" />
+          <Property Name="Broker_Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Seller_Id" Type="nvarchar" MaxLength="50" />
+          <Property Name="Seller_Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="RequirementId" Type="bigint" />
+          <Property Name="Adv_Listing" Type="bit" />
+          <Property Name="Adv_NewsPaper" Type="bit" />
+          <Property Name="Adv_Web" Type="bit" />
+          <Property Name="Adv_OpenHouse" Type="bit" />
+          <Property Name="Adv1" Type="bit" />
+          <Property Name="Adv2" Type="bit" />
+          <Property Name="Adv3" Type="bit" />
+          <Property Name="Adv_Remarks1" Type="nvarchar(max)" />
+          <Property Name="Adv_Remarks2" Type="nvarchar(max)" />
+          <Property Name="Adv_Remarks3" Type="nvarchar(max)" />
+          <Property Name="Remarks" Type="nvarchar(max)" />
+          <Property Name="InternalRemarks" Type="nvarchar(max)" />
+          <Property Name="OtherSpace1" Type="nvarchar" MaxLength="50" />
+          <Property Name="OtherSpace2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bathrooms" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kitchen" Type="nvarchar" MaxLength="50" />
+          <Property Name="Balcony" Type="nvarchar" MaxLength="50" />
+          <Property Name="Terrace" Type="nvarchar" MaxLength="50" />
+          <Property Name="Total_Area" Type="money" />
+          <Property Name="Measured_Area" Type="money" />
+          <Property Name="Sqft_Rate" Type="money" />
+          <Property Name="Purchase_Value" Type="money" />
+          <Property Name="Total_Value" Type="money" />
+          <Property Name="Measured_Value" Type="money" />
+          <Property Name="RoundOff_Value" Type="money" />
+          <Property Name="Parking_Price" Type="money" />
+          <Property Name="All_In_Price" Type="money" />
+          <Property Name="Premium" Type="money" />
+          <Property Name="Premium_Percent" Type="smallmoney" />
+          <Property Name="Seller_Commission" Type="money" />
+          <Property Name="Seller_Commission_Percent" Type="smallmoney" />
+          <Property Name="Buyer_Commission" Type="money" />
+          <Property Name="Buyer_Commission_Percent" Type="smallmoney" />
+          <Property Name="Seller_TransferFee" Type="money" />
+          <Property Name="Seller_TransferFee_Percent" Type="smallmoney" />
+          <Property Name="Buyer_TransferFee" Type="money" />
+          <Property Name="Buyer_TransferFee_Percent" Type="smallmoney" />
+          <Property Name="Admin_Fees" Type="money" />
+          <Property Name="Admin_Fees_Percent" Type="smallmoney" />
+          <Property Name="Other_Fees" Type="money" />
+          <Property Name="Other_Fees_Percent" Type="smallmoney" />
+          <Property Name="Other_Fees_Remarks" Type="nvarchar" MaxLength="255" />
+          <Property Name="Seller_Paid" Type="money" />
+          <Property Name="Seller_Paid_Percent" Type="smallmoney" />
+          <Property Name="Developer_Due" Type="money" />
+          <Property Name="Developer_Due_Percent" Type="smallmoney" />
+          <Property Name="Rent_Per_Annum" Type="money" />
+          <Property Name="Short_Term_Rent" Type="money" />
+          <Property Name="Short_Term_Period" Type="nvarchar" MaxLength="100" />
+          <Property Name="Rent_Per_Day" Type="money" />
+          <Property Name="Security_Deposit" Type="money" />
+          <Property Name="Advance_Deposit" Type="money" />
+          <Property Name="Tenant_Commission" Type="money" />
+          <Property Name="Landlord_Commission" Type="money" />
+          <Property Name="Maintenance_Fee" Type="money" />
+          <Property Name="ReferralCommission" Type="money" />
+          <Property Name="All_In_Rent" Type="money" />
+          <Property Name="VAT" Type="money" />
+          <Property Name="VAT_Percent" Type="smallmoney" />
+          <Property Name="Tax" Type="money" />
+          <Property Name="Tax_Percent" Type="smallmoney" />
+          <Property Name="Tax_Code" Type="int" />
+          <Property Name="Discount" Type="money" />
+          <Property Name="Discount_Percent" Type="smallmoney" />
+          <Property Name="Negotiable" Type="bit" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="50" />
+          <Property Name="CMA_Range1" Type="money" />
+          <Property Name="CMA_Range2" Type="money" />
+          <Property Name="Installments" Type="int" />
+          <Property Name="RentPayableTo" Type="nvarchar" MaxLength="255" />
+          <Property Name="RentBankName" Type="nvarchar" MaxLength="255" />
+          <Property Name="RentBankAcNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="SecDepPayableTo" Type="nvarchar" MaxLength="255" />
+          <Property Name="SecDepBankName" Type="nvarchar" MaxLength="255" />
+          <Property Name="SecDepBankAcNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="ComPayableTo" Type="nvarchar" MaxLength="255" />
+          <Property Name="ComBankName" Type="nvarchar" MaxLength="255" />
+          <Property Name="ComBankAcNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Key_Status" Type="nvarchar" MaxLength="100" />
+          <Property Name="NoofKeys" Type="int" />
+          <Property Name="PublishDate" Type="datetime" />
+          <Property Name="PublishStatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="ServiceCharge" Type="nvarchar" MaxLength="50" />
+          <Property Name="OwnerOccupied" Type="bit" />
+          <Property Name="Leased" Type="bit" />
+          <Property Name="LeaseAmount" Type="money" />
+          <Property Name="LeaseExpiry" Type="datetime" />
+          <Property Name="Mandate" Type="nvarchar" MaxLength="50" />
+          <Property Name="FinanceOffered" Type="bit" />
+          <Property Name="FinanceCompany" Type="nvarchar" MaxLength="100" />
+          <Property Name="Mortgaged" Type="bit" />
+          <Property Name="MortgageCompany" Type="nvarchar" MaxLength="100" />
+          <Property Name="PropertyRegistered" Type="bit" />
+          <Property Name="RegisteredDate" Type="datetime" />
+          <Property Name="ForSale" Type="bit" />
+          <Property Name="Adv_Listing_Date" Type="datetime" />
+          <Property Name="Adv_NewsPaper_Date" Type="datetime" />
+          <Property Name="Adv_Web_Date" Type="datetime" />
+          <Property Name="Adv_OpenHouse_Date" Type="datetime" />
+          <Property Name="Adv1_Date" Type="datetime" />
+          <Property Name="Adv2_Date" Type="datetime" />
+          <Property Name="Adv3_Date" Type="datetime" />
+          <Property Name="Portfolio" Type="nvarchar" MaxLength="100" />
+          <Property Name="PortfolioManager" Type="nvarchar" MaxLength="100" />
+          <Property Name="PropertyAdministrator" Type="nvarchar" MaxLength="100" />
+          <Property Name="CanView" Type="bit" />
+          <Property Name="Upcoming" Type="bit" />
+          <Property Name="PropertyType" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReferredTo" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReferredOn" Type="datetime" />
+          <Property Name="UnpublishedDate" Type="datetime" />
+          <Property Name="Factor" Type="nvarchar" MaxLength="50" />
+          <Property Name="Common" Type="nvarchar" MaxLength="50" />
+          <Property Name="CP" Type="nvarchar" MaxLength="50" />
+          <Property Name="GSA" Type="nvarchar" MaxLength="50" />
+          <Property Name="NSA" Type="nvarchar" MaxLength="50" />
+          <Property Name="Effeciency" Type="nvarchar" MaxLength="50" />
+          <Property Name="TotalValueUSD" Type="money" />
+          <Property Name="ListingPriceUSD" Type="money" />
+          <Property Name="AllInPriceUSD" Type="money" />
+          <Property Name="RentPerAnnumUSD" Type="money" />
+          <Property Name="AllInRentUSD" Type="money" />
+          <Property Name="Interest" Type="smallmoney" />
+          <Property Name="Repayment" Type="smallmoney" />
+          <Property Name="MonthlyIncome" Type="smallmoney" />
+          <Property Name="AnnualIncome" Type="smallmoney" />
+          <Property Name="EURights" Type="nvarchar" MaxLength="50" />
+          <Property Name="EURightsAmount" Type="money" />
+          <Property Name="USP" Type="nvarchar" MaxLength="500" />
+          <Property Name="Exp1" Type="nvarchar(max)" />
+          <Property Name="Exp2" Type="nvarchar(max)" />
+          <Property Name="Exp3" Type="nvarchar" MaxLength="500" />
+          <Property Name="Exp4" Type="nvarchar" MaxLength="500" />
+          <Property Name="Exp5" Type="nvarchar" MaxLength="255" />
+          <Property Name="Exp6" Type="nvarchar" MaxLength="255" />
+          <Property Name="Exp7" Type="nvarchar" MaxLength="255" />
+          <Property Name="Exp8" Type="nvarchar" MaxLength="100" />
+          <Property Name="Exp9" Type="nvarchar" MaxLength="100" />
+          <Property Name="Exp10" Type="nvarchar" MaxLength="100" />
+          <Property Name="TempId" Type="nvarchar" MaxLength="100" />
+          <Property Name="Refered_By" Type="nvarchar" MaxLength="100" />
+          <Property Name="Refered_On" Type="datetime" />
+          <Property Name="Modified_By" Type="nvarchar" MaxLength="100" />
+          <Property Name="Modified_On" Type="datetime" />
+          <Property Name="Created_By" Type="nvarchar" MaxLength="100" />
+          <Property Name="Created_On" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="ePMS2040ModelStoreContainer">
+          <EntitySet Name="Country_Master" EntityType="Self.Country_Master" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="eBedroom_Master" EntityType="Self.eBedroom_Master" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="eCountryCity_Master" EntityType="Self.eCountryCity_Master" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="eUnitCategory_Master" EntityType="Self.eUnitCategory_Master" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbTestimonials" EntityType="Self.tbTestimonials" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbUnit_Master" EntityType="Self.tbUnit_Master" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ePMS2040Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Country_Master">
+          <Key>
+            <PropertyRef Name="Country_Id" />
+          </Key>
+          <Property Name="Country_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Country_Desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modify_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modify_On" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="eBedroom_Master">
+          <Key>
+            <PropertyRef Name="Record_Id" />
+          </Key>
+          <Property Name="Record_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Bedrooms" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Bedrooms_BI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="eCountryCity_Master">
+          <Key>
+            <PropertyRef Name="Record_Id" />
+            <PropertyRef Name="Country_Desc" />
+          </Key>
+          <Property Name="Record_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Country_Desc" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="City_Desc" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Country_Desc_Ar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="City_Desc_Ar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="eUnitCategory_Master">
+          <Key>
+            <PropertyRef Name="Record_Id" />
+          </Key>
+          <Property Name="Record_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Unit_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Unit_Category" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Unit_Category_Ar" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbUnit_Master">
+          <Key>
+            <PropertyRef Name="Ref_No" />
+          </Key>
+          <Property Name="Record_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Property_No" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Property_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Unit_No" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ref_No" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Unit_Sr_No" Type="Int64" />
+          <Property Name="RERA_STR_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Street_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Street_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Unit_Option" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Category_Mix" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Permitted_Use" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Unit_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Unit_Category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Unit_Style" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Unit_Model" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Unit_Zone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="BuildingName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Plot_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Plot_Size" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Block" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Floor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Unit_View" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CurrentMarketRate" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Completion_Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Unit_Class" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LivingRooms" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bedrooms" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StoreRooms" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Parking" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Facilities" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Payment_Plan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Broker_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Broker_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Seller_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Seller_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RequirementId" Type="Int64" />
+          <Property Name="Adv_Listing" Type="Boolean" />
+          <Property Name="Adv_NewsPaper" Type="Boolean" />
+          <Property Name="Adv_Web" Type="Boolean" />
+          <Property Name="Adv_OpenHouse" Type="Boolean" />
+          <Property Name="Adv1" Type="Boolean" />
+          <Property Name="Adv2" Type="Boolean" />
+          <Property Name="Adv3" Type="Boolean" />
+          <Property Name="Adv_Remarks1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Adv_Remarks2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Adv_Remarks3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="InternalRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OtherSpace1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OtherSpace2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bathrooms" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kitchen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Balcony" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Terrace" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Total_Area" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Measured_Area" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Sqft_Rate" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Purchase_Value" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Total_Value" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Measured_Value" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="RoundOff_Value" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Parking_Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="All_In_Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Premium" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Premium_Percent" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Seller_Commission" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Seller_Commission_Percent" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Buyer_Commission" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Buyer_Commission_Percent" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Seller_TransferFee" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Seller_TransferFee_Percent" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Buyer_TransferFee" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Buyer_TransferFee_Percent" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Admin_Fees" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Admin_Fees_Percent" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Other_Fees" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Other_Fees_Percent" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Other_Fees_Remarks" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Seller_Paid" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Seller_Paid_Percent" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Developer_Due" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Developer_Due_Percent" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Rent_Per_Annum" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Short_Term_Rent" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Short_Term_Period" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Rent_Per_Day" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Security_Deposit" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Advance_Deposit" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Tenant_Commission" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Landlord_Commission" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Maintenance_Fee" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ReferralCommission" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="All_In_Rent" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="VAT" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="VAT_Percent" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Tax" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Tax_Percent" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Tax_Code" Type="Int32" />
+          <Property Name="Discount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Discount_Percent" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Negotiable" Type="Boolean" />
+          <Property Name="Currency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CMA_Range1" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="CMA_Range2" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Installments" Type="Int32" />
+          <Property Name="RentPayableTo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RentBankName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RentBankAcNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SecDepPayableTo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SecDepBankName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SecDepBankAcNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ComPayableTo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ComBankName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ComBankAcNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Key_Status" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NoofKeys" Type="Int32" />
+          <Property Name="PublishDate" Type="DateTime" Precision="3" />
+          <Property Name="PublishStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceCharge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerOccupied" Type="Boolean" />
+          <Property Name="Leased" Type="Boolean" />
+          <Property Name="LeaseAmount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="LeaseExpiry" Type="DateTime" Precision="3" />
+          <Property Name="Mandate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FinanceOffered" Type="Boolean" />
+          <Property Name="FinanceCompany" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Mortgaged" Type="Boolean" />
+          <Property Name="MortgageCompany" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyRegistered" Type="Boolean" />
+          <Property Name="RegisteredDate" Type="DateTime" Precision="3" />
+          <Property Name="ForSale" Type="Boolean" />
+          <Property Name="Adv_Listing_Date" Type="DateTime" Precision="3" />
+          <Property Name="Adv_NewsPaper_Date" Type="DateTime" Precision="3" />
+          <Property Name="Adv_Web_Date" Type="DateTime" Precision="3" />
+          <Property Name="Adv_OpenHouse_Date" Type="DateTime" Precision="3" />
+          <Property Name="Adv1_Date" Type="DateTime" Precision="3" />
+          <Property Name="Adv2_Date" Type="DateTime" Precision="3" />
+          <Property Name="Adv3_Date" Type="DateTime" Precision="3" />
+          <Property Name="Portfolio" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PortfolioManager" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyAdministrator" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CanView" Type="Boolean" />
+          <Property Name="Upcoming" Type="Boolean" />
+          <Property Name="PropertyType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ReferredTo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ReferredOn" Type="DateTime" Precision="3" />
+          <Property Name="UnpublishedDate" Type="DateTime" Precision="3" />
+          <Property Name="Factor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Common" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GSA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NSA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Effeciency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TotalValueUSD" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ListingPriceUSD" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="AllInPriceUSD" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="RentPerAnnumUSD" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="AllInRentUSD" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Interest" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Repayment" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="MonthlyIncome" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="AnnualIncome" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="EURights" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EURightsAmount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="USP" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Exp1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Exp2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Exp3" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Exp4" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Exp5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Exp6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Exp7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Exp8" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Exp9" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Exp10" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TempId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Refered_By" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Refered_On" Type="DateTime" Precision="3" />
+          <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Modified_On" Type="DateTime" Precision="3" />
+          <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Created_On" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="ePMS2040Entities3" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Country_Master" EntityType="Self.Country_Master" />
+          <EntitySet Name="eBedroom_Master" EntityType="Self.eBedroom_Master" />
+          <EntitySet Name="eCountryCity_Master" EntityType="Self.eCountryCity_Master" />
+          <EntitySet Name="eUnitCategory_Master" EntityType="Self.eUnitCategory_Master" />
+          <EntitySet Name="tbUnit_Master" EntityType="Self.tbUnit_Master" />
+          <EntitySet Name="tbTestimonials" EntityType="ePMS2040Model.tbTestimonials" />
+        </EntityContainer>
+        <EntityType Name="tbTestimonials">
+          <Key>
+            <PropertyRef Name="testId" />
+          </Key>
+          <Property Name="testId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Starcount" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ePMS2040ModelStoreContainer" CdmEntityContainer="ePMS2040Entities3">
+          <EntitySetMapping Name="Country_Master">
+            <EntityTypeMapping TypeName="ePMS2040Model.Country_Master">
+              <MappingFragment StoreEntitySet="Country_Master">
+                <ScalarProperty Name="Country_Id" ColumnName="Country_Id" />
+                <ScalarProperty Name="Country_Desc" ColumnName="Country_Desc" />
+                <ScalarProperty Name="Modify_By" ColumnName="Modify_By" />
+                <ScalarProperty Name="Modify_On" ColumnName="Modify_On" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="eBedroom_Master">
+            <EntityTypeMapping TypeName="ePMS2040Model.eBedroom_Master">
+              <MappingFragment StoreEntitySet="eBedroom_Master">
+                <ScalarProperty Name="Record_Id" ColumnName="Record_Id" />
+                <ScalarProperty Name="Bedrooms" ColumnName="Bedrooms" />
+                <ScalarProperty Name="Bedrooms_BI" ColumnName="Bedrooms_BI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="eCountryCity_Master">
+            <EntityTypeMapping TypeName="ePMS2040Model.eCountryCity_Master">
+              <MappingFragment StoreEntitySet="eCountryCity_Master">
+                <ScalarProperty Name="Record_Id" ColumnName="Record_Id" />
+                <ScalarProperty Name="Country_Desc" ColumnName="Country_Desc" />
+                <ScalarProperty Name="City_Desc" ColumnName="City_Desc" />
+                <ScalarProperty Name="Country_Desc_Ar" ColumnName="Country_Desc_Ar" />
+                <ScalarProperty Name="City_Desc_Ar" ColumnName="City_Desc_Ar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="eUnitCategory_Master">
+            <EntityTypeMapping TypeName="ePMS2040Model.eUnitCategory_Master">
+              <MappingFragment StoreEntitySet="eUnitCategory_Master">
+                <ScalarProperty Name="Record_Id" ColumnName="Record_Id" />
+                <ScalarProperty Name="Unit_Type" ColumnName="Unit_Type" />
+                <ScalarProperty Name="Unit_Category" ColumnName="Unit_Category" />
+                <ScalarProperty Name="Unit_Category_Ar" ColumnName="Unit_Category_Ar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbUnit_Master">
+            <EntityTypeMapping TypeName="ePMS2040Model.tbUnit_Master">
+              <MappingFragment StoreEntitySet="tbUnit_Master">
+                <ScalarProperty Name="Record_Id" ColumnName="Record_Id" />
+                <ScalarProperty Name="Property_No" ColumnName="Property_No" />
+                <ScalarProperty Name="Property_Name" ColumnName="Property_Name" />
+                <ScalarProperty Name="Unit_No" ColumnName="Unit_No" />
+                <ScalarProperty Name="Ref_No" ColumnName="Ref_No" />
+                <ScalarProperty Name="Unit_Sr_No" ColumnName="Unit_Sr_No" />
+                <ScalarProperty Name="RERA_STR_No" ColumnName="RERA_STR_No" />
+                <ScalarProperty Name="Street_No" ColumnName="Street_No" />
+                <ScalarProperty Name="Street_Name" ColumnName="Street_Name" />
+                <ScalarProperty Name="Unit_Option" ColumnName="Unit_Option" />
+                <ScalarProperty Name="Category_Mix" ColumnName="Category_Mix" />
+                <ScalarProperty Name="Permitted_Use" ColumnName="Permitted_Use" />
+                <ScalarProperty Name="Unit_Type" ColumnName="Unit_Type" />
+                <ScalarProperty Name="Unit_Category" ColumnName="Unit_Category" />
+                <ScalarProperty Name="Unit_Style" ColumnName="Unit_Style" />
+                <ScalarProperty Name="Unit_Model" ColumnName="Unit_Model" />
+                <ScalarProperty Name="Unit_Zone" ColumnName="Unit_Zone" />
+                <ScalarProperty Name="BuildingName" ColumnName="BuildingName" />
+                <ScalarProperty Name="Plot_No" ColumnName="Plot_No" />
+                <ScalarProperty Name="Plot_Size" ColumnName="Plot_Size" />
+                <ScalarProperty Name="Block" ColumnName="Block" />
+                <ScalarProperty Name="Floor" ColumnName="Floor" />
+                <ScalarProperty Name="Unit_View" ColumnName="Unit_View" />
+                <ScalarProperty Name="CurrentMarketRate" ColumnName="CurrentMarketRate" />
+                <ScalarProperty Name="Completion_Date" ColumnName="Completion_Date" />
+                <ScalarProperty Name="Unit_Class" ColumnName="Unit_Class" />
+                <ScalarProperty Name="LivingRooms" ColumnName="LivingRooms" />
+                <ScalarProperty Name="Bedrooms" ColumnName="Bedrooms" />
+                <ScalarProperty Name="StoreRooms" ColumnName="StoreRooms" />
+                <ScalarProperty Name="Parking" ColumnName="Parking" />
+                <ScalarProperty Name="Facilities" ColumnName="Facilities" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Payment_Plan" ColumnName="Payment_Plan" />
+                <ScalarProperty Name="Broker_Id" ColumnName="Broker_Id" />
+                <ScalarProperty Name="Broker_Name" ColumnName="Broker_Name" />
+                <ScalarProperty Name="Seller_Id" ColumnName="Seller_Id" />
+                <ScalarProperty Name="Seller_Name" ColumnName="Seller_Name" />
+                <ScalarProperty Name="RequirementId" ColumnName="RequirementId" />
+                <ScalarProperty Name="Adv_Listing" ColumnName="Adv_Listing" />
+                <ScalarProperty Name="Adv_NewsPaper" ColumnName="Adv_NewsPaper" />
+                <ScalarProperty Name="Adv_Web" ColumnName="Adv_Web" />
+                <ScalarProperty Name="Adv_OpenHouse" ColumnName="Adv_OpenHouse" />
+                <ScalarProperty Name="Adv1" ColumnName="Adv1" />
+                <ScalarProperty Name="Adv2" ColumnName="Adv2" />
+                <ScalarProperty Name="Adv3" ColumnName="Adv3" />
+                <ScalarProperty Name="Adv_Remarks1" ColumnName="Adv_Remarks1" />
+                <ScalarProperty Name="Adv_Remarks2" ColumnName="Adv_Remarks2" />
+                <ScalarProperty Name="Adv_Remarks3" ColumnName="Adv_Remarks3" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="InternalRemarks" ColumnName="InternalRemarks" />
+                <ScalarProperty Name="OtherSpace1" ColumnName="OtherSpace1" />
+                <ScalarProperty Name="OtherSpace2" ColumnName="OtherSpace2" />
+                <ScalarProperty Name="Bathrooms" ColumnName="Bathrooms" />
+                <ScalarProperty Name="Kitchen" ColumnName="Kitchen" />
+                <ScalarProperty Name="Balcony" ColumnName="Balcony" />
+                <ScalarProperty Name="Terrace" ColumnName="Terrace" />
+                <ScalarProperty Name="Total_Area" ColumnName="Total_Area" />
+                <ScalarProperty Name="Measured_Area" ColumnName="Measured_Area" />
+                <ScalarProperty Name="Sqft_Rate" ColumnName="Sqft_Rate" />
+                <ScalarProperty Name="Purchase_Value" ColumnName="Purchase_Value" />
+                <ScalarProperty Name="Total_Value" ColumnName="Total_Value" />
+                <ScalarProperty Name="Measured_Value" ColumnName="Measured_Value" />
+                <ScalarProperty Name="RoundOff_Value" ColumnName="RoundOff_Value" />
+                <ScalarProperty Name="Parking_Price" ColumnName="Parking_Price" />
+                <ScalarProperty Name="All_In_Price" ColumnName="All_In_Price" />
+                <ScalarProperty Name="Premium" ColumnName="Premium" />
+                <ScalarProperty Name="Premium_Percent" ColumnName="Premium_Percent" />
+                <ScalarProperty Name="Seller_Commission" ColumnName="Seller_Commission" />
+                <ScalarProperty Name="Seller_Commission_Percent" ColumnName="Seller_Commission_Percent" />
+                <ScalarProperty Name="Buyer_Commission" ColumnName="Buyer_Commission" />
+                <ScalarProperty Name="Buyer_Commission_Percent" ColumnName="Buyer_Commission_Percent" />
+                <ScalarProperty Name="Seller_TransferFee" ColumnName="Seller_TransferFee" />
+                <ScalarProperty Name="Seller_TransferFee_Percent" ColumnName="Seller_TransferFee_Percent" />
+                <ScalarProperty Name="Buyer_TransferFee" ColumnName="Buyer_TransferFee" />
+                <ScalarProperty Name="Buyer_TransferFee_Percent" ColumnName="Buyer_TransferFee_Percent" />
+                <ScalarProperty Name="Admin_Fees" ColumnName="Admin_Fees" />
+                <ScalarProperty Name="Admin_Fees_Percent" ColumnName="Admin_Fees_Percent" />
+                <ScalarProperty Name="Other_Fees" ColumnName="Other_Fees" />
+                <ScalarProperty Name="Other_Fees_Percent" ColumnName="Other_Fees_Percent" />
+                <ScalarProperty Name="Other_Fees_Remarks" ColumnName="Other_Fees_Remarks" />
+                <ScalarProperty Name="Seller_Paid" ColumnName="Seller_Paid" />
+                <ScalarProperty Name="Seller_Paid_Percent" ColumnName="Seller_Paid_Percent" />
+                <ScalarProperty Name="Developer_Due" ColumnName="Developer_Due" />
+                <ScalarProperty Name="Developer_Due_Percent" ColumnName="Developer_Due_Percent" />
+                <ScalarProperty Name="Rent_Per_Annum" ColumnName="Rent_Per_Annum" />
+                <ScalarProperty Name="Short_Term_Rent" ColumnName="Short_Term_Rent" />
+                <ScalarProperty Name="Short_Term_Period" ColumnName="Short_Term_Period" />
+                <ScalarProperty Name="Rent_Per_Day" ColumnName="Rent_Per_Day" />
+                <ScalarProperty Name="Security_Deposit" ColumnName="Security_Deposit" />
+                <ScalarProperty Name="Advance_Deposit" ColumnName="Advance_Deposit" />
+                <ScalarProperty Name="Tenant_Commission" ColumnName="Tenant_Commission" />
+                <ScalarProperty Name="Landlord_Commission" ColumnName="Landlord_Commission" />
+                <ScalarProperty Name="Maintenance_Fee" ColumnName="Maintenance_Fee" />
+                <ScalarProperty Name="ReferralCommission" ColumnName="ReferralCommission" />
+                <ScalarProperty Name="All_In_Rent" ColumnName="All_In_Rent" />
+                <ScalarProperty Name="VAT" ColumnName="VAT" />
+                <ScalarProperty Name="VAT_Percent" ColumnName="VAT_Percent" />
+                <ScalarProperty Name="Tax" ColumnName="Tax" />
+                <ScalarProperty Name="Tax_Percent" ColumnName="Tax_Percent" />
+                <ScalarProperty Name="Tax_Code" ColumnName="Tax_Code" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="Discount_Percent" ColumnName="Discount_Percent" />
+                <ScalarProperty Name="Negotiable" ColumnName="Negotiable" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="CMA_Range1" ColumnName="CMA_Range1" />
+                <ScalarProperty Name="CMA_Range2" ColumnName="CMA_Range2" />
+                <ScalarProperty Name="Installments" ColumnName="Installments" />
+                <ScalarProperty Name="RentPayableTo" ColumnName="RentPayableTo" />
+                <ScalarProperty Name="RentBankName" ColumnName="RentBankName" />
+                <ScalarProperty Name="RentBankAcNo" ColumnName="RentBankAcNo" />
+                <ScalarProperty Name="SecDepPayableTo" ColumnName="SecDepPayableTo" />
+                <ScalarProperty Name="SecDepBankName" ColumnName="SecDepBankName" />
+                <ScalarProperty Name="SecDepBankAcNo" ColumnName="SecDepBankAcNo" />
+                <ScalarProperty Name="ComPayableTo" ColumnName="ComPayableTo" />
+                <ScalarProperty Name="ComBankName" ColumnName="ComBankName" />
+                <ScalarProperty Name="ComBankAcNo" ColumnName="ComBankAcNo" />
+                <ScalarProperty Name="Key_Status" ColumnName="Key_Status" />
+                <ScalarProperty Name="NoofKeys" ColumnName="NoofKeys" />
+                <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+                <ScalarProperty Name="PublishStatus" ColumnName="PublishStatus" />
+                <ScalarProperty Name="ServiceCharge" ColumnName="ServiceCharge" />
+                <ScalarProperty Name="OwnerOccupied" ColumnName="OwnerOccupied" />
+                <ScalarProperty Name="Leased" ColumnName="Leased" />
+                <ScalarProperty Name="LeaseAmount" ColumnName="LeaseAmount" />
+                <ScalarProperty Name="LeaseExpiry" ColumnName="LeaseExpiry" />
+                <ScalarProperty Name="Mandate" ColumnName="Mandate" />
+                <ScalarProperty Name="FinanceOffered" ColumnName="FinanceOffered" />
+                <ScalarProperty Name="FinanceCompany" ColumnName="FinanceCompany" />
+                <ScalarProperty Name="Mortgaged" ColumnName="Mortgaged" />
+                <ScalarProperty Name="MortgageCompany" ColumnName="MortgageCompany" />
+                <ScalarProperty Name="PropertyRegistered" ColumnName="PropertyRegistered" />
+                <ScalarProperty Name="RegisteredDate" ColumnName="RegisteredDate" />
+                <ScalarProperty Name="ForSale" ColumnName="ForSale" />
+                <ScalarProperty Name="Adv_Listing_Date" ColumnName="Adv_Listing_Date" />
+                <ScalarProperty Name="Adv_NewsPaper_Date" ColumnName="Adv_NewsPaper_Date" />
+                <ScalarProperty Name="Adv_Web_Date" ColumnName="Adv_Web_Date" />
+                <ScalarProperty Name="Adv_OpenHouse_Date" ColumnName="Adv_OpenHouse_Date" />
+                <ScalarProperty Name="Adv1_Date" ColumnName="Adv1_Date" />
+                <ScalarProperty Name="Adv2_Date" ColumnName="Adv2_Date" />
+                <ScalarProperty Name="Adv3_Date" ColumnName="Adv3_Date" />
+                <ScalarProperty Name="Portfolio" ColumnName="Portfolio" />
+                <ScalarProperty Name="PortfolioManager" ColumnName="PortfolioManager" />
+                <ScalarProperty Name="PropertyAdministrator" ColumnName="PropertyAdministrator" />
+                <ScalarProperty Name="CanView" ColumnName="CanView" />
+                <ScalarProperty Name="Upcoming" ColumnName="Upcoming" />
+                <ScalarProperty Name="PropertyType" ColumnName="PropertyType" />
+                <ScalarProperty Name="ReferredTo" ColumnName="ReferredTo" />
+                <ScalarProperty Name="ReferredOn" ColumnName="ReferredOn" />
+                <ScalarProperty Name="UnpublishedDate" ColumnName="UnpublishedDate" />
+                <ScalarProperty Name="Factor" ColumnName="Factor" />
+                <ScalarProperty Name="Common" ColumnName="Common" />
+                <ScalarProperty Name="CP" ColumnName="CP" />
+                <ScalarProperty Name="GSA" ColumnName="GSA" />
+                <ScalarProperty Name="NSA" ColumnName="NSA" />
+                <ScalarProperty Name="Effeciency" ColumnName="Effeciency" />
+                <ScalarProperty Name="TotalValueUSD" ColumnName="TotalValueUSD" />
+                <ScalarProperty Name="ListingPriceUSD" ColumnName="ListingPriceUSD" />
+                <ScalarProperty Name="AllInPriceUSD" ColumnName="AllInPriceUSD" />
+                <ScalarProperty Name="RentPerAnnumUSD" ColumnName="RentPerAnnumUSD" />
+                <ScalarProperty Name="AllInRentUSD" ColumnName="AllInRentUSD" />
+                <ScalarProperty Name="Interest" ColumnName="Interest" />
+                <ScalarProperty Name="Repayment" ColumnName="Repayment" />
+                <ScalarProperty Name="MonthlyIncome" ColumnName="MonthlyIncome" />
+                <ScalarProperty Name="AnnualIncome" ColumnName="AnnualIncome" />
+                <ScalarProperty Name="EURights" ColumnName="EURights" />
+                <ScalarProperty Name="EURightsAmount" ColumnName="EURightsAmount" />
+                <ScalarProperty Name="USP" ColumnName="USP" />
+                <ScalarProperty Name="Exp1" ColumnName="Exp1" />
+                <ScalarProperty Name="Exp2" ColumnName="Exp2" />
+                <ScalarProperty Name="Exp3" ColumnName="Exp3" />
+                <ScalarProperty Name="Exp4" ColumnName="Exp4" />
+                <ScalarProperty Name="Exp5" ColumnName="Exp5" />
+                <ScalarProperty Name="Exp6" ColumnName="Exp6" />
+                <ScalarProperty Name="Exp7" ColumnName="Exp7" />
+                <ScalarProperty Name="Exp8" ColumnName="Exp8" />
+                <ScalarProperty Name="Exp9" ColumnName="Exp9" />
+                <ScalarProperty Name="Exp10" ColumnName="Exp10" />
+                <ScalarProperty Name="TempId" ColumnName="TempId" />
+                <ScalarProperty Name="Refered_By" ColumnName="Refered_By" />
+                <ScalarProperty Name="Refered_On" ColumnName="Refered_On" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Modified_On" ColumnName="Modified_On" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Created_On" ColumnName="Created_On" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbTestimonials">
+            <EntityTypeMapping TypeName="ePMS2040Model.tbTestimonials">
+              <MappingFragment StoreEntitySet="tbTestimonials">
+                <ScalarProperty Name="Starcount" ColumnName="Starcount" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="testId" ColumnName="testId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+  <g id="Fully-equipped_gym" data-name="Fully-equipped gym" transform="translate(-447 -153)">
+    <rect id="Rectangle_3992" data-name="Rectangle 3992" width="70" height="70" transform="translate(447 153)" fill="#fff"/>
+    <g id="Group_13519" data-name="Group 13519" transform="translate(-154.861 79.772)">
+      <line id="Line_17" data-name="Line 17" x2="36.832" transform="translate(618.476 113.805)" fill="none" stroke="#00a88f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="Line_18" data-name="Line 18" x2="30.776" transform="translate(621.518 134.8)" fill="none" stroke="#00a88f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <g id="Group_13513" data-name="Group 13513">
+        <line id="Line_19" data-name="Line 19" y1="14.803" transform="translate(628.411 113.805)" fill="none" stroke="#00a88f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <line id="Line_20" data-name="Line 20" y1="14.803" transform="translate(645.372 113.805)" fill="none" stroke="#00a88f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <path id="Path_5155" data-name="Path 5155" d="M621.28,139.915v-5.346l3.958-5.962h23.308" fill="none" stroke="#00a88f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_5156" data-name="Path 5156" d="M652.5,139.915v-5.346l-3.958-5.962" fill="none" stroke="#00a88f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <g id="Group_13515" data-name="Group 13515">
+        <g id="Group_13514" data-name="Group 13514">
+          <path id="Path_5157" data-name="Path 5157" d="M618.478,102.54h-6.42c-3.55,0-6.32,4.95-6.32,11.26s2.77,11.27,6.32,11.27h6.42c3.54,0,6.32-4.95,6.32-11.27S622.018,102.54,618.478,102.54Zm-6.42,20.53c-2.05,0-4.32-3.81-4.32-9.27s2.27-9.26,4.32-9.26h2.78a8.42,8.42,0,0,0-.79,1.16,18.324,18.324,0,0,0,0,16.21,7.884,7.884,0,0,0,.8,1.16Zm6.42,0a2.8,2.8,0,0,1-2-1.15,8.04,8.04,0,0,1-1.21-2.05,17.125,17.125,0,0,1,0-12.13,7.76,7.76,0,0,1,1.21-2.05,2.8,2.8,0,0,1,2-1.15c2.04,0,4.32,3.8,4.32,9.26S620.518,123.07,618.478,123.07Z" fill="#00a88f"/>
+        </g>
+      </g>
+      <g id="Group_13516" data-name="Group 13516">
+        <path id="Path_5158" data-name="Path 5158" d="M615.7,104.54h-.86a5.19,5.19,0,0,1,.43-.49C615.408,104.2,615.558,104.36,615.7,104.54Z" fill="#00a88f"/>
+      </g>
+      <line id="Line_21" data-name="Line 21" x1="3.106" transform="translate(603.552 113.805)" fill="none" stroke="#00a88f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <g id="Group_13518" data-name="Group 13518">
+        <g id="Group_13517" data-name="Group 13517">
+          <path id="Path_5159" data-name="Path 5159" d="M655.244,125.07h6.42c3.55,0,6.32-4.95,6.32-11.26s-2.77-11.27-6.32-11.27h-6.42c-3.54,0-6.32,4.951-6.32,11.27S651.7,125.07,655.244,125.07Zm6.42-20.53c2.05,0,4.32,3.81,4.32,9.27s-2.27,9.26-4.32,9.26h-2.78a8.3,8.3,0,0,0,.79-1.16,18.321,18.321,0,0,0,0-16.209,7.847,7.847,0,0,0-.8-1.161Zm-6.42,0a2.8,2.8,0,0,1,2,1.15,8.03,8.03,0,0,1,1.21,2.051,17.121,17.121,0,0,1,0,12.129,7.746,7.746,0,0,1-1.21,2.05,2.8,2.8,0,0,1-2,1.15c-2.04,0-4.32-3.8-4.32-9.26S653.2,104.54,655.244,104.54Z" fill="#00a88f"/>
+        </g>
+      </g>
+      <line id="Line_22" data-name="Line 22" x2="3.106" transform="translate(667.064 113.805)" fill="none" stroke="#00a88f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,78 @@
+﻿
+
+@{
+    ViewBag.Title = "EmailUs";
+}
+@if (ViewBag.IsSent != null)
+{
+    if (ViewBag.IsSent)
+    {
+        <div class="send-btn text-center">
+            <label class="alert-success" style="margin:10px; border-radius:5px; padding:5px;">Thank you for submitting your enquiry. one of our agents will contact you soon !</label>
+        </div>
+    }
+    else
+    {
+        <div class="col-md-12">
+            <div class="text-center">
+                <label class="alert-danger  text-center" style="margin:10px; border-radius:5px; padding:5px;">Please fill in all the required fields.. !</label>
+            </div>
+        </div>
+    }
+}
+<div class="connect-us">
+    <div class="connect-section">
+        <div class="connect">
+            <div class="container">
+                <h2>Email us</h2>
+                @using (Ajax.BeginForm("EmailUS", "Home", null,
+               new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "divTSettings", OnSuccess = "ShowsuccessContactUS", OnFailure = "ShowfailSellYProperty" },
+               new { id = "EmailUS" }))
+                {
+                        @model LandSterlingProject2.Models.models_ado.ContactUs
+                        @Html.AntiForgeryToken()
+                        <div class="row">
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="col-md-6 contact-form">
+                                @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Name",@id= "name" } })
+                                @Html.ValidationMessageFor(model => model.FullName, null, new { @class = "text-danger" })
+
+                            </div>
+                            <div class="col-md-6 contact-form">
+
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @placeholder = "Email", @id = "EmailId" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
+                            </div>
+                            <div class="col-md-6 contact-form">
+                                @Html.EditorFor(model => model.Exp1, new { htmlAttributes = new { @class = "form-control", @placeholder = "Subject",@id= "subject" } })
+                                @Html.ValidationMessageFor(model => model.Exp1, "", new { @class = "text-danger" })
+
+                            </div>
+                            <div class="col-md-6 contact-form">
+                                @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control", @placeholder = "Mobile Number",@id= "PhoneNumber" } })
+                                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+
+                            </div>
+                            <div class="col-md-6 contact-form">
+                                <textarea id="Message" class="form-control" name="Exp2" placeholder="Write message" ></textarea>
+                                <br>
+                                @Html.ValidationMessageFor(model => model.Exp2, "", new { @style = "color:red" })
+
+                            </div>
+                            <div class="form-group" style="margin-top:-22px;">
+                                <div id="divcaptcha" class="col-md-6"></div>
+                            </div>
+                            @*<input id="txtcaptcha" name="Cap" type="text" style="display:none" required />*@
+                            <div class="col-md-12" style="margin-top:0px">
+                                <div class="text-center">
+                                    <input type="submit" class="submit" value="Submit" />
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+        </div>
+
+    </div>
+</div>

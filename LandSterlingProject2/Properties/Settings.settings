@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="LandSterlingProject2.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ServerPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://landsterling.freemyip.com/</Value>
+    </Setting>
+    <Setting Name="ImagesPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://crm.landsterling.belsio.io/UserDocs/</Value>
+    </Setting>
+    <Setting Name="BaseDB" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ePMS..</Value>
+    </Setting>
+    <Setting Name="Company" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">2040</Value>
+    </Setting>
+    <Setting Name="FolderPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:/inetpub/wwwroot/CRM/</Value>
+    </Setting>
+    <Setting Name="CRMLink" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://crm.landsterling.belsio.io/</Value>
+    </Setting>
+    <Setting Name="CS" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=20.233.34.12;Initial Catalog=ePMS1099;User Id=sa;Password=Land4321$$;MultipleActiveResultSets=True;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

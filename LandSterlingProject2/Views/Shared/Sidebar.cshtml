@@ -1,0 +1,109 @@
+﻿@model LandSterlingProject2.Models.models_ado.ContactUs
+@{
+    ViewBag.Title = "Sidebar";
+}
+
+
+
+<script>
+    var form = document.getElementById("ContactUS")
+    function validateForm() {
+
+
+        var ContactUs = {};
+        ContactUs.FullName = document.getElementById("FullName").value;
+        alert(ContactUs.FullName);
+        ContactUs.Email = document.getElementById("ContactEmail").value;
+        console.log(ContactUs.Email)
+        ContactUs.PhoneNumber1 = document.getElementById("ContactPhoneNumber1").value;
+        ContactUs.Message = document.getElementById("ContactMessage").value;
+        ContactUs.KeepMeInformed = document.getElementById("KeepMeInformed").value;
+        console.log(JSON.stringify(ContactUs))
+        $.ajax({
+            url: "/PropertyDetails/ContactUs",
+            type: 'POST',
+            data: JSON.stringify(ContactUs),
+            contentType: "application/json; charset=utf-8",
+            datatype: 'json',
+            success: function (data) {
+                if (data == true) {
+                    swal("Thank you! ", "Submitted successfully", "success");
+                }
+                else {
+
+                }
+
+            }
+        });
+
+    };
+</script>
+
+
+
+
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { onsubmit = "validateForm()" }))
+{
+    <div class="form">
+        <form class="w-100">
+            <div class="mb-3">
+                @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Name", id = "FullName" } })
+
+                @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+
+            </div>
+            <div class="mb-3">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @placeholder = "Email", id = "ContactEmail" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+            <div class="mb-3">
+
+                @Html.EditorFor(model => model.PhoneNumber1, new { htmlAttributes = new { @class = "form-control", @placeholder = "Mobile Number", id = "ContactPhoneNumber1" } })
+                @Html.ValidationMessageFor(model => model.PhoneNumber1, "", new { @class = "text-danger" })
+
+
+            </div>
+            <div class="mb-3">
+                @if (@ViewData["propertyname"] != null)
+                {
+                    @Html.TextArea("ContactMessage", "Hello, I am interseted in " + @ViewData["propertyname"]
+                  , new { @class = "MessageTextArea form-control m-0", id = "ContactMessage", @style = "height: 130px" })
+
+                }
+                else
+                {
+                    @Html.TextArea("ContactMessage",""
+                             , new { @class = "MessageTextArea form-control m-0", id = "ContactMessage", @style = "height: 130px" })
+                }
+
+                @* <textarea class="form-control"
+        placeholder="I would like to inquire about your property - Water's Edge. Please contact me at your earliest convenience."
+        id="floatingTextarea2" style="height: 130px" name="Message"></textarea>*@
+                @Html.ValidationMessageFor(model => model.Message, "", new { @style = "color:red" })
+            </div>
+            <div class="mb-3 form-check pb-3">
+                @Html.CheckBoxFor(model => model.KeepMeInformed, new { @checked = "true", @title = "Keep Me informed", id = "KeepMeInformed" })
+                <label>Keep Me Informed </label><br>
+            </div>
+            <div class="row pb-3">
+                <div class="col-6">
+                    <button type="submit" class="w-100 main-button px-1 py-2 ">Submit</button>
+                </div>
+                <div class="col-6">
+                    <button type="submit" class=" w-100 main-button px-1 py-2"><i class=" fa-solid fa-phone pr-2"></i><a class="call-link" id="call" href="tel:o1277564465" style="color:#ffffff"> Call</a></button>
+                </div>
+            </div>
+        </form>
+    </div>
+}
+<div class="contact-with-us pb-3">
+    <a class="btn  w-100 main-button px-1 py-2" href="https://wa.me/01277564465/?text=urlencodedtext"> <i class="fa-brands fa-whatsapp pr-2 "></i>Send WhatsApp Message</a>
+</div>
+<div class="img pb-3">
+    <img src="~/images/Aldar Mayan Ad 720x1280.png " width="100%" />
+</div>
+
+
+
+

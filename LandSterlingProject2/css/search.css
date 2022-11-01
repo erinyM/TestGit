@@ -1,0 +1,336 @@
+﻿
+.searchDiv
+{
+    padding-top:100px;
+    padding-bottom:100px;
+    padding-left:50px;
+    padding-right:50px;
+}
+.buttonSearch {
+    background-color: var(--main-color);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 10px;
+    border: none;
+}
+.viewbutton {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+.sortbutton {
+    width: 90px;
+    height: 40px;
+    text-align: center;
+}
+.sortbutton1 {
+    width: 110px;
+    height: 40px;
+    text-align: center;
+}
+.viewbutton1 {
+    width: 45px;
+    height: 45px;
+    text-align:center;
+}
+.buttonEmail {
+    width: 120px;
+    height: 50px;
+}
+.textheader {
+    width: 400px;
+    font-size: 14px;
+}
+.selectSearch {
+    width: 168px;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 5px;
+    height: 34px;
+    background: url("../images/polygon 5.svg") no-repeat right #ddd;
+    /* background-image: url('../images/polygon 5.svg') no-repeat right;*/
+    -webkit-appearance: none;
+    background-position-x: 144px;
+}
+@media (max-width: 991px) {
+    .offers-card1 {
+        width: 290px;
+        height: 100%;
+        /* height: 500px;*/
+        box-shadow: 2px 5px 11px grey;
+        border-radius: 10px;
+        margin: 10px;
+    }
+        .offers-card1 p {
+            font-size: 9px;
+        }
+        .offers-card1 a {
+           /* font-size: 1vw;*/
+        }
+
+}
+/* If the screen size is 1200px wide or more, set the font-size to 80px */
+@media (min-width: 1200px) {
+    .responsive-font-example {
+        font-size: 20px;
+    }
+}
+/* If the screen size is smaller than 1200px, set the font-size to 80px */
+@media (max-width: 1199.98px) {
+    .responsive-font-example {
+        font-size: 10px;
+    }
+}
+@media (min-width: 400px) {
+    .offers-card1 {
+        width: 290px;
+        height: 100%;
+        box-shadow: 2px 5px 11px grey;
+        border-radius: 10px;
+        margin: 10px;
+    }
+        .offers-card1 p {
+            font-size: 9px;
+        }
+    .sortbutton {
+        width: 70px;
+        height: 40px;
+        text-align: center;
+    }
+        .offers-card1 a {
+           /* font-size: 1vw;*/
+        }
+    .viewbutton1 {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+    }
+    .font-responsive {
+        font-size: 9px;
+    }
+}
+    .offers-card1 p {
+        font-size: 11px;
+    }
+.offers-card1 a {
+   /* font-size: 1vw;*/
+}
+@media (min-width: 700px) {
+    .offers-card1 {
+        width: 700px;
+        box-shadow: 2px 5px 11px grey;
+        border-radius: 10px;
+        margin: 10px;
+    }
+}
+.font-responsive {
+    font-size: 12px;
+}
+.offers-card1 button {
+    background-color: var(--main-color);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 10px 20px;
+    border: none;
+}
+
+    .search-cards {
+        overflow-y: hidden;
+        overflow-x: scroll;
+        position: relative;
+        scroll-behavior: smooth;
+    }
+
+    .search-row {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search-cards::-webkit-scrollbar {
+        display: none;
+    }
+
+    .search .card {
+        background-color: #f7fbfe;
+        width: 415px;
+        margin: 10px;
+        transition: 1.3s;
+    }
+
+        .search .card:first-of-type {
+            transform: translateX(-60%);
+        }
+
+        .search .card:nth-of-type(2) {
+            transform: translateY(-60%);
+        }
+
+        .search .card:nth-of-type(3) {
+            transform: translateX(60%);
+        }
+
+    /************************************************/
+    .offers-card2 {
+        width: 250px;
+        box-shadow: 2px 5px 11px grey;
+        border-radius: 10px;
+        margin: 10px;
+    }
+        /*
+            .offers-card2:first-of-type {
+                transform: translateX(-60%);
+            
+            }
+
+            .offers-card2:nth-of-type(2) {
+                transform: translateY(-60%);
+             
+            }
+
+            .offers-card2:nth-of-type(3) {
+                transform: translateX(60%);
+                
+            }
+
+        .second-row .offers-card2:first-of-type {
+            transform: translateX(-60%);
+         
+        }
+
+        .second-row .offers-card2:nth-of-type(2) {
+            transform: translateY(60%);
+         
+        }
+
+        .second-row .offers-card2:nth-of-type(3) {
+            transform: translateX(60%);
+           
+        }*/
+
+        .offers-card2 button {
+            background-color: var(--main-color);
+            color: white;
+            text-transform: uppercase;
+            font-weight: 500;
+            border-radius: 20px;
+            font-size: 14px;
+            padding: 10px 20px;
+            border: none;
+        }
+
+    .size-div p {
+        font-size: 15px;
+    }
+
+    .button-div {
+        justify-content: space-between;
+    }
+
+        .button-div h4 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+    .left-arrow1 {
+        position: absolute;
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
+        background-color: white;
+        top: 23%;
+        left: -25px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        color: gray;
+        box-shadow: 2px 3px 7px grey;
+        cursor: pointer;
+    }
+
+    .left-arrow2 {
+        position: absolute;
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
+        background-color: white;
+        top: 73%;
+        left: -25px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        color: gray;
+        box-shadow: 2px 3px 7px grey;
+        cursor: pointer;
+    }
+
+    .right-arrow1 {
+        position: absolute;
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
+        background-color: white;
+        top: 73%;
+        right: -25px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        color: gray;
+        box-shadow: 2px 3px 7px grey;
+        cursor: pointer;
+    }
+
+    .right-arrow2 {
+        position: absolute;
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
+        background-color: white;
+        top: 23%;
+        right: -25px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        color: gray;
+        box-shadow: 2px 3px 7px grey;
+        cursor: pointer;
+    }
+
+    .arrow:hover {
+        box-shadow: 10px 6px 13px grey;
+    }
+
+    .offers-card2 {
+        width: 350px;
+    }
+
+        .offers-card2 button {
+            padding: 5px;
+            font-size: 11px;
+            font-weight: 300;
+        }
+
+    .button-div h4 {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .offers-card2 p {
+        font-size: 11px;
+    }
+
+    .graybackground {
+        border: none;
+        background-color: #f3f3f3;
+    }

@@ -1,0 +1,2943 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title -Land Sterling</title>
+    @*Styles.Render("~/Content/css")*@
+    @Styles.Render("~/css")
+    @*@Scripts.Render("~/bundles/modernizr")*@
+    @Scripts.Render("~/js")
+    @Scripts.Render("~/bundles/jquery1")
+    @Scripts.Render("~/bundles/popper1")
+    @Scripts.Render("~/bundles/bootstrap1")
+    <script src="@Url.Content("~/js/jquery.slim.min.js")"></script>
+    <script src="@Url.Content("~/js/popper.min.js")"></script>
+    <script src="@Url.Content("~/js/bootstrap1.bundle.min.js")"></script>
+    @RenderSection("scripts", required: false)
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>eBusiness Bootstrap Template - Index</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="~/assets/img/favicon.png" rel="icon">
+    <link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Template Main CSS File -->
+    <link href="~/assets/css/style.css" rel="stylesheet">
+    <style>
+    .checked {
+        color: orange;
+    }
+        .parent1 {
+            background-image: url('../../assets/img/ls-snagging-3.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 500px;
+            position: relative;
+        }
+
+        .text {
+            color: white;
+            position: absolute;
+        }
+
+        .top-left {
+            top: 0;
+            left: 0;
+            padding: 20px;
+        }
+
+        .Center1 {
+            top: 50%;
+            bottom: 60%;
+            left: 0;
+        }
+
+        .top-right {
+            top: 0;
+            right: 0;
+        }
+
+        .bottom-left2 {
+            bottom: 30%;
+            left: 0;
+        }
+
+        .bottom-left1 {
+            bottom: 50%;
+            left: 0;
+        }
+       </style>
+    /*<!--//////////////////////////-->*/
+      <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    '../../www.googletagmanager.com/gtm5445.html?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-P83XSMS');
+    </script>
+    <!-- End Google Tag Manager -->
+    @if (ViewBag.Property != null)
+    {
+        <title>Land Sterling | @{@Html.Raw(ViewBag.Property.Name)} | @{@Html.Raw(ViewBag.Property.Price + " AED")}</title>
+        <meta name="description" content="@{@Html.Raw(ViewBag.Property.MarketingText)}">
+    }
+    else
+    {
+        <title>Land Sterling | BOOK YOUR UNIT | BUY & RENT</title>
+        <meta name="description" content="with Andersen Properties join elegant living communities. Our organization have various choices to find your luxury unit and specially designed.">
+    }
+    <meta name="Keywords" content="Andersen Properties, Realestate, villa, apartment, realtors">
+    <meta name="author" content="landsterling.freemyip.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="google-site-verification" content="c9XBfvXRae4vBIUkNvslO0D1M_h9opYYLehhfv646U8" />
+    <!-- External CSS libraries -->
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <title>Home - Land sterling</title>
+    <meta name="description" content="Your trusted partner in making informed property decisions. Comprehensive Real Estate SolutionsA mix of international standards with local expertise." />
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+    <link rel="canonical" href="https://landsterling.com/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Home - Land sterling" />
+    <meta property="og:description" content="Your trusted partner in making informed property decisions. Comprehensive Real Estate SolutionsA mix of international standards with local expertise." />
+    <meta property="og:url" content="https://landsterling.com/" />
+    <meta property="og:site_name" content="Land Sterling" />
+    <meta property="og:updated_time" content="2022-03-16T11:19:04+00:00" />
+    <meta property="article:published_time" content="2021-09-28T09:31:17+00:00" />
+    <meta property="article:modified_time" content="2022-03-16T11:19:04+00:00" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Home - Land sterling" />
+    <meta name="twitter:description" content="Your trusted partner in making informed property decisions. Comprehensive Real Estate SolutionsA mix of international standards with local expertise." />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Mubarak" />
+    <meta name="twitter:label2" content="Time to read" />
+    <meta name="twitter:data2" content="2 minutes" />
+    <script type="application/ld+json" class="rank-math-schema">{"@@context":"https://schema.org","@@graph":[{"@@type":"Organization","@@id":"https://landsterling.com/#organization","name":"Land sterling","url":"https://landsterling.com","logo":{"@@type":"ImageObject","@@id":"https://landsterling.com/#logo","url":"https://landsterling.com/wp-content/uploads/2020/12/Group-13086.png","caption":"Land sterling","inLanguage":"en-US"}},{"@@type":"WebSite","@@id":"https://landsterling.com/#website","url":"https://landsterling.com","name":"Land sterling","publisher":{"@@id":"https://landsterling.com/#organization"},"inLanguage":"en-US","potentialAction":{"@@type":"SearchAction","target":"https://landsterling.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@@type":"ImageObject","@@id":"https://landsterling.com/wp-content/uploads/2021/01/Group-13802.png","url":"https://landsterling.com/wp-content/uploads/2021/01/Group-13802.png","width":"200","height":"200","inLanguage":"en-US"},{"@@type":"Person","@@id":"https://landsterling.com/author/mubarak/","name":"Mubarak","url":"https://landsterling.com/author/mubarak/","image":{"@@type":"ImageObject","@@id":"https://secure.gravatar.com/avatar/c49f6814bb380369876d5dc9af14390c?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/c49f6814bb380369876d5dc9af14390c?s=96&amp;d=mm&amp;r=g","caption":"Mubarak","inLanguage":"en-US"},"worksFor":{"@@id":"https://landsterling.com/#organization"}},{"@@type":"WebPage","@@id":"https://landsterling.com/#webpage","url":"https://landsterling.com/","name":"Home - Land sterling","datePublished":"2021-09-28T09:31:17+00:00","dateModified":"2022-06-08T12:57:22+00:00","author":{"@@id":"https://landsterling.com/author/mubarak/"},"isPartOf":{"@@id":"https://landsterling.com/#website"},"primaryImageOfPage":{"@@id":"https://landsterling.com/wp-content/uploads/2021/01/Group-13802.png"},"inLanguage":"en-US"},{"@@type":"Article","headline":"Home - Land sterling","datePublished":"2021-09-28T09:31:17+00:00","dateModified":"2022-06-08T12:57:22+00:00","author":{"@@id":"https://landsterling.com/author/mubarak/"},"publisher":{"@@id":"https://landsterling.com/#organization"},"description":"Your trusted partner in making informed property decisions. Comprehensive Real Estate SolutionsA mix of international standards with local expertise.","name":"Home - Land sterling","@@id":"https://landsterling.com/#richSnippet","isPartOf":{"@@id":"https://landsterling.com/#webpage"},"image":{"@@id":"https://landsterling.com/wp-content/uploads/2021/01/Group-13802.png"},"inLanguage":"en-US","mainEntityOfPage":{"@@id":"https://landsterling.com/#webpage"}}]}</script>
+
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel="alternate" type="application/rss+xml" title="Land Sterling » Feed" href="https://landsterling.com/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="Land Sterling » Comments Feed" href="https://landsterling.com/comments/feed/" />
+    <script>
+        window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/landsterling.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.3" } };
+        !function (e, a, t) { var n, r, o, i = a.createElement("canvas"), p = i.getContext && i.getContext("2d"); function s(e, t) { var a = String.fromCharCode; p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, e), 0, 0); e = i.toDataURL(); return p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, t), 0, 0), e === i.toDataURL() } function c(e) { var t = a.createElement("script"); t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t) } for (o = Array("flag", "emoji"), t.supports = { everything: !0, everythingExceptFlag: !0 }, r = 0; r < o.length; r++)t.supports[o[r]] = function (e) { if (!p || !p.fillText) return !1; switch (p.textBaseline = "top", p.font = "600 32px Arial", e) { case "flag": return s([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) ? !1 : !s([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !s([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]); case "emoji": return !s([10084, 65039, 8205, 55357, 56613], [10084, 65039, 8203, 55357, 56613]) }return !1 }(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]); t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function () { t.DOMReady = !0 }, t.supports.everything || (n = function () { t.readyCallback() }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () { "complete" === a.readyState && t.readyCallback() })), (n = t.source || {}).concatemoji ? c(n.concatemoji) : n.wpemoji && n.twemoji && (c(n.twemoji), c(n.wpemoji))) }(window, document, window._wpemojiSettings);</script>
+
+    <style>
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 0.07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+
+    <link rel='stylesheet' id='astra-theme-css-css' href='https://landsterling.com/wp-content/themes/astra/assets/css/minified/style.min.css?ver=3.7.5' media='all' />
+
+    <style id='astra-theme-css-inline-css'>
+        html {
+            font-size: 93.75%;
+        }
+
+        a, .page-title {
+            color: #c8102e;
+        }
+
+            a:hover, a:focus {
+                color: #a8031e;
+            }
+
+        body, button, input, select, textarea, .ast-button, .ast-custom-button {
+            font-family: 'Exo',sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            font-size: 1rem;
+        }
+
+        blockquote {
+            color: var(--ast-global-color-3);
+        }
+
+        h1, .entry-content h1, h2, .entry-content h2, h3, .entry-content h3, h4, .entry-content h4, h5, .entry-content h5, h6, .entry-content h6, .site-title, .site-title a {
+            font-family: 'Exo',sans-serif;
+            font-weight: 400;
+        }
+
+        .site-title {
+            font-size: 35px;
+            font-size: 2.3333333333333rem;
+            display: none;
+        }
+
+        .ast-archive-description .ast-archive-title {
+            font-size: 40px;
+            font-size: 2.6666666666667rem;
+        }
+
+        .site-header .site-description {
+            font-size: 15px;
+            font-size: 1rem;
+            display: none;
+        }
+
+        .entry-title {
+            font-size: 30px;
+            font-size: 2rem;
+        }
+
+        h1, .entry-content h1 {
+            font-size: 40px;
+            font-size: 2.6666666666667rem;
+            font-family: 'Exo',sans-serif;
+        }
+
+        h2, .entry-content h2 {
+            font-size: 30px;
+            font-size: 2rem;
+            font-family: 'Exo',sans-serif;
+        }
+
+        h3, .entry-content h3 {
+            font-size: 25px;
+            font-size: 1.6666666666667rem;
+            font-family: 'Exo',sans-serif;
+        }
+
+        h4, .entry-content h4 {
+            font-size: 20px;
+            font-size: 1.3333333333333rem;
+            font-family: 'Exo',sans-serif;
+        }
+
+        h5, .entry-content h5 {
+            font-size: 18px;
+            font-size: 1.2rem;
+            font-family: 'Exo',sans-serif;
+        }
+
+        h6, .entry-content h6 {
+            font-size: 15px;
+            font-size: 1rem;
+            font-family: 'Exo',sans-serif;
+        }
+
+        .ast-single-post .entry-title, .page-title {
+            font-size: 30px;
+            font-size: 2rem;
+        }
+
+        ::selection {
+            background-color: #c8102e;
+            color: #ffffff;
+        }
+
+        body, h1, .entry-title a, .entry-content h1, h2, .entry-content h2, h3, .entry-content h3, h4, .entry-content h4, h5, .entry-content h5, h6, .entry-content h6 {
+            color: var(--ast-global-color-3);
+        }
+
+        .tagcloud a:hover, .tagcloud a:focus, .tagcloud a.current-item {
+            color: #ffffff;
+            border-color: #c8102e;
+            background-color: #c8102e;
+        }
+
+        input:focus, input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="reset"]:focus, input[type="search"]:focus, textarea:focus {
+            border-color: #c8102e;
+        }
+
+        input[type="radio"]:checked, input[type=reset], input[type="checkbox"]:checked, input[type="checkbox"]:hover:checked, input[type="checkbox"]:focus:checked, input[type=range]::-webkit-slider-thumb {
+            border-color: #c8102e;
+            background-color: #c8102e;
+            box-shadow: none;
+        }
+
+        .site-footer a:hover + .post-count, .site-footer a:focus + .post-count {
+            background: #c8102e;
+            border-color: #c8102e;
+        }
+
+        .single .nav-links .nav-previous, .single .nav-links .nav-next {
+            color: #c8102e;
+        }
+
+        .entry-meta, .entry-meta * {
+            line-height: 1.45;
+            color: #c8102e;
+        }
+
+            .entry-meta a:hover, .entry-meta a:hover *, .entry-meta a:focus, .entry-meta a:focus *, .page-links > .page-link, .page-links .page-link:hover, .post-navigation a:hover {
+                color: #a8031e;
+            }
+
+        #cat option, .secondary .calendar_wrap thead a, .secondary .calendar_wrap thead a:visited {
+            color: #c8102e;
+        }
+
+        .secondary .calendar_wrap #today, .ast-progress-val span {
+            background: #c8102e;
+        }
+
+        .secondary a:hover + .post-count, .secondary a:focus + .post-count {
+            background: #c8102e;
+            border-color: #c8102e;
+        }
+
+        .calendar_wrap #today > a {
+            color: #ffffff;
+        }
+
+        .page-links .page-link, .single .post-navigation a {
+            color: #c8102e;
+        }
+
+        .widget-title {
+            font-size: 21px;
+            font-size: 1.4rem;
+            color: var(--ast-global-color-3);
+        }
+
+        .single .ast-author-details .author-title {
+            color: #a8031e;
+        }
+
+        .main-header-menu .menu-link, .ast-header-custom-item a {
+            color: var(--ast-global-color-3);
+        }
+
+        .main-header-menu .menu-item:hover > .menu-link, .main-header-menu .menu-item:hover > .ast-menu-toggle, .main-header-menu .ast-masthead-custom-menu-items a:hover, .main-header-menu .menu-item.focus > .menu-link, .main-header-menu .menu-item.focus > .ast-menu-toggle, .main-header-menu .current-menu-item > .menu-link, .main-header-menu .current-menu-ancestor > .menu-link, .main-header-menu .current-menu-item > .ast-menu-toggle, .main-header-menu .current-menu-ancestor > .ast-menu-toggle {
+            color: #c8102e;
+        }
+
+        .header-main-layout-3 .ast-main-header-bar-alignment {
+            margin-right: auto;
+        }
+
+        .header-main-layout-2 .site-header-section-left .ast-site-identity {
+            text-align: left;
+        }
+
+        .ast-logo-title-inline .site-logo-img {
+            padding-right: 1em;
+        }
+
+        .site-logo-img img {
+            transition: all 0.2s linear;
+        }
+
+        .ast-header-break-point .ast-mobile-menu-buttons-minimal.menu-toggle {
+            background: transparent;
+            color: #c8102e;
+        }
+
+        .ast-header-break-point .ast-mobile-menu-buttons-outline.menu-toggle {
+            background: transparent;
+            border: 1px solid #c8102e;
+            color: #c8102e;
+        }
+
+        .ast-header-break-point .ast-mobile-menu-buttons-fill.menu-toggle {
+            background: #c8102e;
+        }
+
+        .ast-page-builder-template .hentry {
+            margin: 0;
+        }
+
+        .ast-page-builder-template .site-content > .ast-container {
+            max-width: 100%;
+            padding: 0;
+        }
+
+        .ast-page-builder-template .site-content #primary {
+            padding: 0;
+            margin: 0;
+        }
+
+        .ast-page-builder-template .no-results {
+            text-align: center;
+            margin: 4em auto;
+        }
+
+        .ast-page-builder-template .ast-pagination {
+            padding: 2em;
+        }
+
+        .ast-page-builder-template .entry-header.ast-no-title.ast-no-thumbnail {
+            margin-top: 0;
+        }
+
+        .ast-page-builder-template .entry-header.ast-header-without-markup {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .ast-page-builder-template .entry-header.ast-no-title.ast-no-meta {
+            margin-bottom: 0;
+        }
+
+        .ast-page-builder-template.single .post-navigation {
+            padding-bottom: 2em;
+        }
+
+        .ast-page-builder-template.single-post .site-content > .ast-container {
+            max-width: 100%;
+        }
+
+        .ast-page-builder-template .entry-header {
+            margin-top: 4em;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .ast-page-builder-template .ast-archive-description {
+            margin-top: 4em;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .single.ast-page-builder-template .entry-header {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .ast-page-builder-template.ast-no-sidebar .entry-content .alignwide {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .footer-adv .footer-adv-overlay {
+            border-top-style: solid;
+            border-top-color: #7a7a7a;
+        }
+
+        .wp-block-buttons.aligncenter {
+            justify-content: center;
+        }
+
+        @@@@media (min-width:1200px) {
+            .wp-block-group .has-background {
+                padding: 20px;
+            }
+        }
+
+        @@media (min-width:1200px) {
+            .ast-no-sidebar.ast-separate-container .entry-content .wp-block-group.alignwide, .ast-no-sidebar.ast-separate-container .entry-content .wp-block-cover.alignwide {
+                margin-left: -20px;
+                margin-right: -20px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .ast-no-sidebar.ast-separate-container .entry-content .wp-block-cover.alignfull, .ast-no-sidebar.ast-separate-container .entry-content .wp-block-group.alignfull {
+                margin-left: -6.67em;
+                margin-right: -6.67em;
+                padding-left: 6.67em;
+                padding-right: 6.67em;
+            }
+        }
+
+        @@media (min-width:1200px) {
+            .wp-block-cover-image.alignwide .wp-block-cover__inner-container, .wp-block-cover.alignwide .wp-block-cover__inner-container, .wp-block-cover-image.alignfull .wp-block-cover__inner-container, .wp-block-cover.alignfull .wp-block-cover__inner-container {
+                width: 100%;
+            }
+        }
+
+        .ast-plain-container.ast-no-sidebar #primary {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        @@media (max-width:921px) {
+            .ast-theme-transparent-header #primary, .ast-theme-transparent-header #secondary {
+                padding: 0;
+            }
+        }
+
+        .wp-block-columns {
+            margin-bottom: unset;
+        }
+
+        .wp-block-image.size-full {
+            margin: 2rem 0;
+        }
+
+        .wp-block-separator.has-background {
+            padding: 0;
+        }
+
+        .wp-block-gallery {
+            margin-bottom: 1.6em;
+        }
+
+        .wp-block-group {
+            padding-top: 4em;
+            padding-bottom: 4em;
+        }
+
+        .wp-block-group__inner-container .wp-block-columns:last-child, .wp-block-group__inner-container :last-child, .wp-block-table table {
+            margin-bottom: 0;
+        }
+
+        .blocks-gallery-grid {
+            width: 100%;
+        }
+
+        .wp-block-navigation-link__content {
+            padding: 5px 0;
+        }
+
+        .wp-block-group .wp-block-group .has-text-align-center, .wp-block-group .wp-block-column .has-text-align-center {
+            max-width: 100%;
+        }
+
+        .has-text-align-center {
+            margin: 0 auto;
+        }
+
+        @@media (min-width:1200px) {
+            .wp-block-cover__inner-container, .alignwide .wp-block-group__inner-container, .alignfull .wp-block-group__inner-container {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .wp-block-group.alignnone, .wp-block-group.aligncenter, .wp-block-group.alignleft, .wp-block-group.alignright, .wp-block-group.alignwide, .wp-block-columns.alignwide {
+                margin: 2rem 0 1rem 0;
+            }
+        }
+
+        @@media (max-width:1200px) {
+            .wp-block-group {
+                padding: 3em;
+            }
+
+                .wp-block-group .wp-block-group {
+                    padding: 1.5em;
+                }
+
+            .wp-block-columns, .wp-block-column {
+                margin: 1rem 0;
+            }
+        }
+
+        @@media (min-width:921px) {
+            .wp-block-columns .wp-block-group {
+                padding: 2em;
+            }
+        }
+
+        @@media (max-width:544px) {
+            .wp-block-cover-image .wp-block-cover__inner-container, .wp-block-cover .wp-block-cover__inner-container {
+                width: unset;
+            }
+
+            .wp-block-cover, .wp-block-cover-image {
+                padding: 2em 0;
+            }
+
+            .wp-block-group, .wp-block-cover {
+                padding: 2em;
+            }
+
+            .wp-block-media-text__media img, .wp-block-media-text__media video {
+                width: unset;
+                max-width: 100%;
+            }
+
+            .wp-block-media-text.has-background .wp-block-media-text__content {
+                padding: 1em;
+            }
+        }
+
+        @@media (max-width:921px) {
+            .ast-plain-container.ast-no-sidebar #primary {
+                padding: 0;
+            }
+        }
+
+        @@media (min-width:544px) {
+            .entry-content .wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
+                padding: 0 8% 0 0;
+            }
+
+            .entry-content .wp-block-media-text .wp-block-media-text__content {
+                padding: 0 0 0 8%;
+            }
+
+            .ast-plain-container .site-content .entry-content .has-custom-content-position.is-position-bottom-left > *, .ast-plain-container .site-content .entry-content .has-custom-content-position.is-position-bottom-right > *, .ast-plain-container .site-content .entry-content .has-custom-content-position.is-position-top-left > *, .ast-plain-container .site-content .entry-content .has-custom-content-position.is-position-top-right > *, .ast-plain-container .site-content .entry-content .has-custom-content-position.is-position-center-right > *, .ast-plain-container .site-content .entry-content .has-custom-content-position.is-position-center-left > * {
+                margin: 0;
+            }
+        }
+
+        @@media (max-width:544px) {
+            .entry-content .wp-block-media-text .wp-block-media-text__content {
+                padding: 8% 0;
+            }
+
+            .wp-block-media-text .wp-block-media-text__media img {
+                width: auto;
+                max-width: 100%;
+            }
+        }
+
+        @@media (max-width:921px) {
+            .ast-separate-container .ast-article-post, .ast-separate-container .ast-article-single {
+                padding: 1.5em 2.14em;
+            }
+
+            .ast-separate-container #primary, .ast-separate-container #secondary {
+                padding: 1.5em 0;
+            }
+
+            #primary, #secondary {
+                padding: 1.5em 0;
+                margin: 0;
+            }
+
+            .ast-left-sidebar #content > .ast-container {
+                display: flex;
+                flex-direction: column-reverse;
+                width: 100%;
+            }
+
+            .ast-author-box img.avatar {
+                margin: 20px 0 0 0;
+            }
+        }
+
+        @@media (min-width:922px) {
+            .ast-separate-container.ast-right-sidebar #primary, .ast-separate-container.ast-left-sidebar #primary {
+                border: 0;
+            }
+
+            .search-no-results.ast-separate-container #primary {
+                margin-bottom: 4em;
+            }
+        }
+
+        .wp-block-button .wp-block-button__link {
+            color: #ffffff;
+        }
+
+            .wp-block-button .wp-block-button__link:hover, .wp-block-button .wp-block-button__link:focus {
+                color: #ffffff;
+                background-color: #a8031e;
+                border-color: #a8031e;
+            }
+
+        .wp-block-button .wp-block-button__link {
+            border-style: solid;
+            border-top-width: 0;
+            border-right-width: 0;
+            border-left-width: 0;
+            border-bottom-width: 0;
+            border-color: #c8102e;
+            background-color: #c8102e;
+            color: #ffffff;
+            font-family: inherit;
+            font-weight: inherit;
+            line-height: 1;
+            border-radius: 2px;
+        }
+
+        .wp-block-buttons .wp-block-button .wp-block-button__link {
+            padding-top: 10px;
+            padding-right: 40px;
+            padding-bottom: 10px;
+            padding-left: 40px;
+        }
+
+        .menu-toggle, button, .ast-button, .ast-custom-button, .button, input#submit, input[type="button"], input[type="submit"], input[type="reset"] {
+            border-style: solid;
+            border-top-width: 0;
+            border-right-width: 0;
+            border-left-width: 0;
+            border-bottom-width: 0;
+            color: #ffffff;
+            border-color: #c8102e;
+            background-color: #c8102e;
+            border-radius: 2px;
+            padding-top: 10px;
+            padding-right: 40px;
+            padding-bottom: 10px;
+            padding-left: 40px;
+            font-family: inherit;
+            font-weight: inherit;
+            line-height: 1;
+        }
+
+            button:focus, .menu-toggle:hover, button:hover, .ast-button:hover, .ast-custom-button:hover .button:hover, .ast-custom-button:hover, input[type=reset]:hover, input[type=reset]:focus, input#submit:hover, input#submit:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="submit"]:hover, input[type="submit"]:focus {
+                color: #ffffff;
+                background-color: #a8031e;
+                border-color: #a8031e;
+            }
+
+        @@media (min-width:544px) {
+            .ast-container {
+                max-width: 100%;
+            }
+        }
+
+        @@media (max-width:544px) {
+            .ast-separate-container .ast-article-post, .ast-separate-container .ast-article-single, .ast-separate-container .comments-title, .ast-separate-container .ast-archive-description {
+                padding: 1.5em 1em;
+            }
+
+            .ast-separate-container #content .ast-container {
+                padding-left: 0.54em;
+                padding-right: 0.54em;
+            }
+
+            .ast-separate-container .ast-comment-list li.depth-1 {
+                padding: 1.5em 1em;
+                margin-bottom: 1.5em;
+            }
+
+            .ast-separate-container .ast-comment-list .bypostauthor {
+                padding: .5em;
+            }
+
+            .ast-search-menu-icon.ast-dropdown-active .search-field {
+                width: 170px;
+            }
+
+            .site-branding img, .site-header .site-logo-img .custom-logo-link img {
+                max-width: 100%;
+            }
+        }
+
+        @@media (max-width:921px) {
+            .ast-mobile-header-stack .main-header-bar .ast-search-menu-icon {
+                display: inline-block;
+            }
+
+            .ast-header-break-point.ast-header-custom-item-outside .ast-mobile-header-stack .main-header-bar .ast-search-icon {
+                margin: 0;
+            }
+
+            .ast-comment-avatar-wrap img {
+                max-width: 2.5em;
+            }
+
+            .ast-separate-container .ast-comment-list li.depth-1 {
+                padding: 1.5em 2.14em;
+            }
+
+            .ast-separate-container .comment-respond {
+                padding: 2em 2.14em;
+            }
+
+            .ast-comment-meta {
+                padding: 0 1.8888em 1.3333em;
+            }
+        }
+
+        .main-header-bar .button-custom-menu-item .ast-custom-button-link .ast-custom-button, .ast-theme-transparent-header .main-header-bar .button-custom-menu-item .ast-custom-button-link .ast-custom-button {
+            font-family: inherit;
+            font-weight: inherit;
+            line-height: 1;
+        }
+
+        .main-header-bar .button-custom-menu-item .ast-custom-button-link .ast-custom-button {
+            border-style: solid;
+            border-top-width: 0px;
+            border-right-width: 0px;
+            border-left-width: 0px;
+            border-bottom-width: 0px;
+        }
+
+        .ast-theme-transparent-header .main-header-bar .button-custom-menu-item .ast-custom-button-link .ast-custom-button {
+            border-style: solid;
+        }
+
+        body, .ast-separate-container {
+            background-color: #f2f2f2;
+            ;
+            background-image: none;
+            ;
+        }
+
+        .ast-no-sidebar.ast-separate-container .entry-content .alignfull {
+            margin-left: -6.67em;
+            margin-right: -6.67em;
+            width: auto;
+        }
+
+        @@media (max-width: 1200px) {
+            .ast-no-sidebar.ast-separate-container .entry-content .alignfull {
+                margin-left: -2.4em;
+                margin-right: -2.4em;
+            }
+        }
+
+        @@media (max-width: 768px) {
+            .ast-no-sidebar.ast-separate-container .entry-content .alignfull {
+                margin-left: -2.14em;
+                margin-right: -2.14em;
+            }
+        }
+
+        @@media (max-width: 544px) {
+            .ast-no-sidebar.ast-separate-container .entry-content .alignfull {
+                margin-left: -1em;
+                margin-right: -1em;
+            }
+        }
+
+        .ast-no-sidebar.ast-separate-container .entry-content .alignwide {
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+
+        .ast-no-sidebar.ast-separate-container .entry-content .wp-block-column .alignfull, .ast-no-sidebar.ast-separate-container .entry-content .wp-block-column .alignwide {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        @@media (max-width:921px) {
+            .site-title {
+                display: none;
+            }
+
+            .ast-archive-description .ast-archive-title {
+                font-size: 40px;
+            }
+
+            .site-header .site-description {
+                display: none;
+            }
+
+            .entry-title {
+                font-size: 30px;
+            }
+
+            h1, .entry-content h1 {
+                font-size: 30px;
+            }
+
+            h2, .entry-content h2 {
+                font-size: 25px;
+            }
+
+            h3, .entry-content h3 {
+                font-size: 20px;
+            }
+
+            .ast-single-post .entry-title, .page-title {
+                font-size: 30px;
+            }
+        }
+
+        @@media (max-width:544px) {
+            .site-title {
+                display: none;
+            }
+
+            .ast-archive-description .ast-archive-title {
+                font-size: 40px;
+            }
+
+            .site-header .site-description {
+                display: none;
+            }
+
+            .entry-title {
+                font-size: 30px;
+            }
+
+            h1, .entry-content h1 {
+                font-size: 30px;
+            }
+
+            h2, .entry-content h2 {
+                font-size: 25px;
+            }
+
+            h3, .entry-content h3 {
+                font-size: 20px;
+            }
+
+            .ast-single-post .entry-title, .page-title {
+                font-size: 30px;
+            }
+        }
+
+        @@media (max-width:921px) {
+            html {
+                font-size: 85.5%;
+            }
+        }
+
+        @@media (max-width:544px) {
+            html {
+                font-size: 85.5%;
+            }
+        }
+
+        @@media (min-width:922px) {
+            .ast-container {
+                max-width: 1240px;
+            }
+        }
+
+        @@font-face {
+            font-family: "Astra";
+            src: url(https://landsterling.com/wp-content/themes/astra/assets/fonts/astra.woff) format("woff"),url(https://landsterling.com/wp-content/themes/astra/assets/fonts/astra.ttf) format("truetype"),url(https://landsterling.com/wp-content/themes/astra/assets/fonts/astra.svg#astra) format("svg");
+            font-weight: normal;
+            font-style: normal;
+            font-display: fallback;
+        }
+
+        @@media (max-width:921px) {
+            .main-header-bar .main-header-bar-navigation {
+                display: none;
+            }
+        }
+
+        .ast-desktop .main-header-menu.submenu-with-border .sub-menu, .ast-desktop .main-header-menu.submenu-with-border .astra-full-megamenu-wrapper {
+            border-color: #c8102e;
+        }
+
+        .ast-desktop .main-header-menu.submenu-with-border .sub-menu {
+            border-top-width: 2px;
+            border-right-width: 0px;
+            border-left-width: 0px;
+            border-bottom-width: 0px;
+            border-style: solid;
+        }
+
+            .ast-desktop .main-header-menu.submenu-with-border .sub-menu .sub-menu {
+                top: -2px;
+            }
+
+            .ast-desktop .main-header-menu.submenu-with-border .sub-menu .menu-link, .ast-desktop .main-header-menu.submenu-with-border .children .menu-link {
+                border-bottom-width: 0px;
+                border-style: solid;
+                border-color: #eaeaea;
+            }
+
+        @@media (min-width:922px) {
+            .main-header-menu .sub-menu .menu-item.ast-left-align-sub-menu:hover > .sub-menu, .main-header-menu .sub-menu .menu-item.ast-left-align-sub-menu.focus > .sub-menu {
+                margin-left: -0px;
+            }
+        }
+
+        .ast-small-footer {
+            border-top-style: solid;
+            border-top-width: 1px;
+            border-top-color: #7a7a7a;
+        }
+
+        .ast-header-widget-area {
+            line-height: 1.65;
+        }
+
+            .ast-header-widget-area .widget-title, .ast-header-widget-area .no-widget-text {
+                margin-bottom: 0;
+            }
+
+            .ast-header-widget-area .widget {
+                margin: .5em;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+                .ast-header-widget-area .widget p {
+                    margin-bottom: 0;
+                }
+
+                .ast-header-widget-area .widget ul {
+                    position: static;
+                    border: 0;
+                    width: auto;
+                }
+
+                    .ast-header-widget-area .widget ul a {
+                        border: 0;
+                    }
+
+                .ast-header-widget-area .widget.widget_search .search-field, .ast-header-widget-area .widget.widget_search .search-field:focus {
+                    padding: 10px 45px 10px 15px;
+                }
+
+                .ast-header-widget-area .widget:last-child {
+                    margin-bottom: 0.5em;
+                    margin-right: 0;
+                }
+
+        .submenu-with-border .ast-header-widget-area .widget ul {
+            position: static;
+            border: 0;
+            width: auto;
+        }
+
+            .submenu-with-border .ast-header-widget-area .widget ul a {
+                border: 0;
+            }
+
+        .ast-header-break-point .ast-header-widget-area .widget {
+            margin: .5em 0;
+            display: block;
+        }
+
+        .ast-header-break-point.ast-header-custom-item-inside .main-header-bar .main-header-bar-navigation .ast-search-icon {
+            display: none;
+        }
+
+        .ast-header-break-point.ast-header-custom-item-inside .main-header-bar .ast-search-menu-icon .search-form {
+            padding: 0;
+            display: block;
+            overflow: hidden;
+        }
+
+        .ast-header-break-point .ast-header-custom-item .widget:last-child {
+            margin-bottom: 1em;
+        }
+
+        .ast-header-custom-item .widget {
+            margin: 0.5em;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+            .ast-header-custom-item .widget p {
+                margin-bottom: 0;
+            }
+
+            .ast-header-custom-item .widget li {
+                width: auto;
+            }
+
+        .ast-header-custom-item-inside .button-custom-menu-item .menu-link {
+            display: none;
+        }
+
+        .ast-header-custom-item-inside.ast-header-break-point .button-custom-menu-item .ast-custom-button-link {
+            display: none;
+        }
+
+        .ast-header-custom-item-inside.ast-header-break-point .button-custom-menu-item .menu-link {
+            display: block;
+        }
+
+        .ast-header-break-point.ast-header-custom-item-outside .main-header-bar .ast-search-icon {
+            margin-right: 1em;
+        }
+
+        .ast-header-break-point.ast-header-custom-item-inside .main-header-bar .ast-search-menu-icon .search-field, .ast-header-break-point.ast-header-custom-item-inside .main-header-bar .ast-search-menu-icon.ast-inline-search .search-field {
+            width: 100%;
+            padding-right: 5.5em;
+        }
+
+        .ast-header-break-point.ast-header-custom-item-inside .main-header-bar .ast-search-menu-icon .search-submit {
+            display: block;
+            position: absolute;
+            height: 100%;
+            top: 0;
+            right: 0;
+            padding: 0 1em;
+            border-radius: 0;
+        }
+
+        .ast-header-break-point .ast-header-custom-item .ast-masthead-custom-menu-items {
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-bottom: 1em;
+            margin-top: 1em;
+        }
+
+        .ast-header-custom-item-inside.ast-header-break-point .button-custom-menu-item {
+            padding-left: 0;
+            padding-right: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .astra-icon-down_arrow::after {
+            content: "\e900";
+            font-family: Astra;
+        }
+
+        .astra-icon-close::after {
+            content: "\e5cd";
+            font-family: Astra;
+        }
+
+        .astra-icon-drag_handle::after {
+            content: "\e25d";
+            font-family: Astra;
+        }
+
+        .astra-icon-format_align_justify::after {
+            content: "\e235";
+            font-family: Astra;
+        }
+
+        .astra-icon-menu::after {
+            content: "\e5d2";
+            font-family: Astra;
+        }
+
+        .astra-icon-reorder::after {
+            content: "\e8fe";
+            font-family: Astra;
+        }
+
+        .astra-icon-search::after {
+            content: "\e8b6";
+            font-family: Astra;
+        }
+
+        .astra-icon-zoom_in::after {
+            content: "\e56b";
+            font-family: Astra;
+        }
+
+        .astra-icon-check-circle::after {
+            content: "\e901";
+            font-family: Astra;
+        }
+
+        .astra-icon-shopping-cart::after {
+            content: "\f07a";
+            font-family: Astra;
+        }
+
+        .astra-icon-shopping-bag::after {
+            content: "\f290";
+            font-family: Astra;
+        }
+
+        .astra-icon-shopping-basket::after {
+            content: "\f291";
+            font-family: Astra;
+        }
+
+        .astra-icon-circle-o::after {
+            content: "\e903";
+            font-family: Astra;
+        }
+
+        .astra-icon-certificate::after {
+            content: "\e902";
+            font-family: Astra;
+        }
+
+        blockquote {
+            padding: 1.2em;
+        }
+
+        :root .has-ast-global-color-0-color {
+            color: var(--ast-global-color-0);
+        }
+
+        :root .has-ast-global-color-0-background-color {
+            background-color: var(--ast-global-color-0);
+        }
+
+        :root .wp-block-button .has-ast-global-color-0-color {
+            color: var(--ast-global-color-0);
+        }
+
+        :root .wp-block-button .has-ast-global-color-0-background-color {
+            background-color: var(--ast-global-color-0);
+        }
+
+        :root .has-ast-global-color-1-color {
+            color: var(--ast-global-color-1);
+        }
+
+        :root .has-ast-global-color-1-background-color {
+            background-color: var(--ast-global-color-1);
+        }
+
+        :root .wp-block-button .has-ast-global-color-1-color {
+            color: var(--ast-global-color-1);
+        }
+
+        :root .wp-block-button .has-ast-global-color-1-background-color {
+            background-color: var(--ast-global-color-1);
+        }
+
+        :root .has-ast-global-color-2-color {
+            color: var(--ast-global-color-2);
+        }
+
+        :root .has-ast-global-color-2-background-color {
+            background-color: var(--ast-global-color-2);
+        }
+
+        :root .wp-block-button .has-ast-global-color-2-color {
+            color: var(--ast-global-color-2);
+        }
+
+        :root .wp-block-button .has-ast-global-color-2-background-color {
+            background-color: var(--ast-global-color-2);
+        }
+
+        :root .has-ast-global-color-3-color {
+            color: var(--ast-global-color-3);
+        }
+
+        :root .has-ast-global-color-3-background-color {
+            background-color: var(--ast-global-color-3);
+        }
+
+        :root .wp-block-button .has-ast-global-color-3-color {
+            color: var(--ast-global-color-3);
+        }
+
+        :root .wp-block-button .has-ast-global-color-3-background-color {
+            background-color: var(--ast-global-color-3);
+        }
+
+        :root .has-ast-global-color-4-color {
+            color: var(--ast-global-color-4);
+        }
+
+        :root .has-ast-global-color-4-background-color {
+            background-color: var(--ast-global-color-4);
+        }
+
+        :root .wp-block-button .has-ast-global-color-4-color {
+            color: var(--ast-global-color-4);
+        }
+
+        :root .wp-block-button .has-ast-global-color-4-background-color {
+            background-color: var(--ast-global-color-4);
+        }
+
+        :root .has-ast-global-color-5-color {
+            color: var(--ast-global-color-5);
+        }
+
+        :root .has-ast-global-color-5-background-color {
+            background-color: var(--ast-global-color-5);
+        }
+
+        :root .wp-block-button .has-ast-global-color-5-color {
+            color: var(--ast-global-color-5);
+        }
+
+        :root .wp-block-button .has-ast-global-color-5-background-color {
+            background-color: var(--ast-global-color-5);
+        }
+
+        :root .has-ast-global-color-6-color {
+            color: var(--ast-global-color-6);
+        }
+
+        :root .has-ast-global-color-6-background-color {
+            background-color: var(--ast-global-color-6);
+        }
+
+        :root .wp-block-button .has-ast-global-color-6-color {
+            color: var(--ast-global-color-6);
+        }
+
+        :root .wp-block-button .has-ast-global-color-6-background-color {
+            background-color: var(--ast-global-color-6);
+        }
+
+        :root .has-ast-global-color-7-color {
+            color: var(--ast-global-color-7);
+        }
+
+        :root .has-ast-global-color-7-background-color {
+            background-color: var(--ast-global-color-7);
+        }
+
+        :root .wp-block-button .has-ast-global-color-7-color {
+            color: var(--ast-global-color-7);
+        }
+
+        :root .wp-block-button .has-ast-global-color-7-background-color {
+            background-color: var(--ast-global-color-7);
+        }
+
+        :root .has-ast-global-color-8-color {
+            color: var(--ast-global-color-8);
+        }
+
+        :root .has-ast-global-color-8-background-color {
+            background-color: var(--ast-global-color-8);
+        }
+
+        :root .wp-block-button .has-ast-global-color-8-color {
+            color: var(--ast-global-color-8);
+        }
+
+        :root .wp-block-button .has-ast-global-color-8-background-color {
+            background-color: var(--ast-global-color-8);
+        }
+
+        :root {
+            --ast-global-color-0: #0170B9;
+            --ast-global-color-1: #3a3a3a;
+            --ast-global-color-2: #3a3a3a;
+            --ast-global-color-3: #4B4F58;
+            --ast-global-color-4: #F5F5F5;
+            --ast-global-color-5: #FFFFFF;
+            --ast-global-color-6: #F2F5F7;
+            --ast-global-color-7: #424242;
+            --ast-global-color-8: #000000;
+        }
+
+        .ast-breadcrumbs .trail-browse, .ast-breadcrumbs .trail-items, .ast-breadcrumbs .trail-items li {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            border: none;
+            background: inherit;
+            text-indent: 0;
+        }
+
+        .ast-breadcrumbs .trail-browse {
+            font-size: inherit;
+            font-style: inherit;
+            font-weight: inherit;
+            color: inherit;
+        }
+
+        .ast-breadcrumbs .trail-items {
+            list-style: none;
+        }
+
+        .trail-items li::after {
+            padding: 0 0.3em;
+            content: "\00bb";
+        }
+
+        .trail-items li:last-of-type::after {
+            display: none;
+        }
+
+        h1, .entry-content h1, h2, .entry-content h2, h3, .entry-content h3, h4, .entry-content h4, h5, .entry-content h5, h6, .entry-content h6 {
+            color: #0c2340;
+        }
+
+        .elementor-widget-heading .elementor-heading-title {
+            margin: 0;
+        }
+
+        .elementor-post.elementor-grid-item.hentry {
+            margin-bottom: 0;
+        }
+
+        .woocommerce div.product .elementor-element.elementor-products-grid .related.products ul.products li.product, .elementor-element .elementor-wc-products .woocommerce[class*='columns-'] ul.products li.product {
+            width: auto;
+            margin: 0;
+            float: none;
+        }
+
+        .ast-left-sidebar .elementor-section.elementor-section-stretched, .ast-right-sidebar .elementor-section.elementor-section-stretched {
+            max-width: 100%;
+            left: 0 !important;
+        }
+
+        .elementor-template-full-width .ast-container {
+            display: block;
+        }
+
+        @@media (max-width:544px) {
+            .elementor-element .elementor-wc-products .woocommerce[class*="columns-"] ul.products li.product {
+                width: auto;
+                margin: 0;
+            }
+
+            .elementor-element .woocommerce .woocommerce-result-count {
+                float: none;
+            }
+        }
+
+        .ast-header-break-point .main-header-bar {
+            border-bottom-width: 1px;
+        }
+
+        @@media (min-width:922px) {
+            .main-header-bar {
+                border-bottom-width: 1px;
+            }
+        }
+
+        .ast-safari-browser-less-than-11 .main-header-menu .menu-item, .ast-safari-browser-less-than-11 .main-header-bar .ast-masthead-custom-menu-items {
+            display: block;
+        }
+
+        .main-header-menu .menu-item, #astra-footer-menu .menu-item, .main-header-bar .ast-masthead-custom-menu-items {
+            -js-display: flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -moz-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -moz-box-orient: vertical;
+            -moz-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+
+        .main-header-menu > .menu-item > .menu-link, #astra-footer-menu > .menu-item > .menu-link {
+            height: 100%;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -moz-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -js-display: flex;
+            display: flex;
+        }
+
+        .ast-primary-menu-disabled .main-header-bar .ast-masthead-custom-menu-items {
+            flex: unset;
+        }
+
+        .main-header-menu .sub-menu .menu-item.menu-item-has-children > .menu-link:after {
+            position: absolute;
+            right: 1em;
+            top: 50%;
+            transform: translate(0,-50%) rotate(270deg);
+        }
+
+        .ast-header-break-point .main-header-bar .main-header-bar-navigation .page_item_has_children > .ast-menu-toggle::before, .ast-header-break-point .main-header-bar .main-header-bar-navigation .menu-item-has-children > .ast-menu-toggle::before, .ast-mobile-popup-drawer .main-header-bar-navigation .menu-item-has-children > .ast-menu-toggle::before, .ast-header-break-point .ast-mobile-header-wrap .main-header-bar-navigation .menu-item-has-children > .ast-menu-toggle::before {
+            font-weight: bold;
+            content: "\e900";
+            font-family: Astra;
+            text-decoration: inherit;
+            display: inline-block;
+        }
+
+        .ast-header-break-point .main-navigation ul.sub-menu .menu-item .menu-link:before {
+            content: "\e900";
+            font-family: Astra;
+            font-size: .65em;
+            text-decoration: inherit;
+            display: inline-block;
+            transform: translate(0,-2px) rotateZ(270deg);
+            margin-right: 5px;
+        }
+
+        .widget_search .search-form:after {
+            font-family: Astra;
+            font-size: 1.2em;
+            font-weight: normal;
+            content: "\e8b6";
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translate(0,-50%);
+        }
+
+        .astra-search-icon::before {
+            content: "\e8b6";
+            font-family: Astra;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: inherit;
+            text-align: center;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .main-header-bar .main-header-bar-navigation .page_item_has_children > a:after, .main-header-bar .main-header-bar-navigation .menu-item-has-children > a:after, .site-header-focus-item .main-header-bar-navigation .menu-item-has-children > .menu-link:after {
+            content: "\e900";
+            display: inline-block;
+            font-family: Astra;
+            font-size: .6rem;
+            font-weight: bold;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            margin-left: 10px;
+            line-height: normal;
+        }
+
+        .ast-mobile-popup-drawer .main-header-bar-navigation .ast-submenu-expanded > .ast-menu-toggle::before {
+            transform: rotateX(180deg);
+        }
+
+        .ast-header-break-point .main-header-bar-navigation .menu-item-has-children > .menu-link:after {
+            display: none;
+        }
+
+        .ast-separate-container .blog-layout-1, .ast-separate-container .blog-layout-2, .ast-separate-container .blog-layout-3 {
+            background-color: transparent;
+            background-image: none;
+        }
+
+        .ast-separate-container .ast-article-post {
+            background-color: var(--ast-global-color-5);
+            ;
+        }
+
+        @@media (max-width:921px) {
+            .ast-separate-container .ast-article-post {
+                background-color: var(--ast-global-color-5);
+                ;
+            }
+        }
+
+        @@media (max-width:544px) {
+            .ast-separate-container .ast-article-post {
+                background-color: var(--ast-global-color-5);
+                ;
+            }
+        }
+
+        .ast-separate-container .ast-article-single:not(.ast-related-post), .ast-separate-container .comments-area .comment-respond, .ast-separate-container .comments-area .ast-comment-list li, .ast-separate-container .ast-woocommerce-container, .ast-separate-container .error-404, .ast-separate-container .no-results, .single.ast-separate-container .ast-author-meta, .ast-separate-container .related-posts-title-wrapper, .ast-separate-container.ast-two-container #secondary .widget, .ast-separate-container .comments-count-wrapper, .ast-box-layout.ast-plain-container .site-content, .ast-padded-layout.ast-plain-container .site-content, .ast-separate-container .comments-area .comments-title {
+            background-color: var(--ast-global-color-5);
+            ;
+        }
+
+        @@media (max-width:921px) {
+            .ast-separate-container .ast-article-single:not(.ast-related-post), .ast-separate-container .comments-area .comment-respond, .ast-separate-container .comments-area .ast-comment-list li, .ast-separate-container .ast-woocommerce-container, .ast-separate-container .error-404, .ast-separate-container .no-results, .single.ast-separate-container .ast-author-meta, .ast-separate-container .related-posts-title-wrapper, .ast-separate-container.ast-two-container #secondary .widget, .ast-separate-container .comments-count-wrapper, .ast-box-layout.ast-plain-container .site-content, .ast-padded-layout.ast-plain-container .site-content, .ast-separate-container .comments-area .comments-title {
+                background-color: var(--ast-global-color-5);
+            }
+        }
+
+        @@media (max-width:544px) {
+            .ast-separate-container .ast-article-single:not(.ast-related-post), .ast-separate-container .comments-area .comment-respond, .ast-separate-container .comments-area .ast-comment-list li, .ast-separate-container .ast-woocommerce-container, .ast-separate-container .error-404, .ast-separate-container .no-results, .single.ast-separate-container .ast-author-meta, .ast-separate-container .related-posts-title-wrapper, .ast-separate-container.ast-two-container #secondary .widget, .ast-separate-container .comments-count-wrapper, .ast-box-layout.ast-plain-container .site-content, .ast-padded-layout.ast-plain-container .site-content, .ast-separate-container .comments-area .comments-title {
+                background-color: var(--ast-global-color-5);
+            }
+        }
+
+        :root {
+            --e-global-color-astglobalcolor0: #0170B9;
+            --e-global-color-astglobalcolor1: #3a3a3a;
+            --e-global-color-astglobalcolor2: #3a3a3a;
+            --e-global-color-astglobalcolor3: #4B4F58;
+            --e-global-color-astglobalcolor4: #F5F5F5;
+            --e-global-color-astglobalcolor5: #FFFFFF;
+            --e-global-color-astglobalcolor6: #F2F5F7;
+            --e-global-color-astglobalcolor7: #424242;
+            --e-global-color-astglobalcolor8: #000000;
+        }
+
+        .ast-desktop .astra-menu-animation-slide-up > .menu-item > .astra-full-megamenu-wrapper, .ast-desktop .astra-menu-animation-slide-up > .menu-item > .sub-menu, .ast-desktop .astra-menu-animation-slide-up > .menu-item > .sub-menu .sub-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(.5em);
+            transition: visibility .2s ease,transform .2s ease
+        }
+
+        .ast-desktop .astra-menu-animation-slide-up > .menu-item .menu-item.focus > .sub-menu, .ast-desktop .astra-menu-animation-slide-up > .menu-item .menu-item:hover > .sub-menu, .ast-desktop .astra-menu-animation-slide-up > .menu-item.focus > .astra-full-megamenu-wrapper, .ast-desktop .astra-menu-animation-slide-up > .menu-item.focus > .sub-menu, .ast-desktop .astra-menu-animation-slide-up > .menu-item:hover > .astra-full-megamenu-wrapper, .ast-desktop .astra-menu-animation-slide-up > .menu-item:hover > .sub-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            transition: opacity .2s ease,visibility .2s ease,transform .2s ease
+        }
+
+        .ast-desktop .astra-menu-animation-slide-up > .full-width-mega.menu-item.focus > .astra-full-megamenu-wrapper, .ast-desktop .astra-menu-animation-slide-up > .full-width-mega.menu-item:hover > .astra-full-megamenu-wrapper {
+            -js-display: flex;
+            display: flex
+        }
+
+        .ast-desktop .astra-menu-animation-slide-down > .menu-item > .astra-full-megamenu-wrapper, .ast-desktop .astra-menu-animation-slide-down > .menu-item > .sub-menu, .ast-desktop .astra-menu-animation-slide-down > .menu-item > .sub-menu .sub-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-.5em);
+            transition: visibility .2s ease,transform .2s ease
+        }
+
+        .ast-desktop .astra-menu-animation-slide-down > .menu-item .menu-item.focus > .sub-menu, .ast-desktop .astra-menu-animation-slide-down > .menu-item .menu-item:hover > .sub-menu, .ast-desktop .astra-menu-animation-slide-down > .menu-item.focus > .astra-full-megamenu-wrapper, .ast-desktop .astra-menu-animation-slide-down > .menu-item.focus > .sub-menu, .ast-desktop .astra-menu-animation-slide-down > .menu-item:hover > .astra-full-megamenu-wrapper, .ast-desktop .astra-menu-animation-slide-down > .menu-item:hover > .sub-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            transition: opacity .2s ease,visibility .2s ease,transform .2s ease
+        }
+
+        .ast-desktop .astra-menu-animation-slide-down > .full-width-mega.menu-item.focus > .astra-full-megamenu-wrapper, .ast-desktop .astra-menu-animation-slide-down > .full-width-mega.menu-item:hover > .astra-full-megamenu-wrapper {
+            -js-display: flex;
+            display: flex
+        }
+
+        .ast-desktop .astra-menu-animation-fade > .menu-item > .astra-full-megamenu-wrapper, .ast-desktop .astra-menu-animation-fade > .menu-item > .sub-menu, .ast-desktop .astra-menu-animation-fade > .menu-item > .sub-menu .sub-menu {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity ease-in-out .3s
+        }
+
+        .ast-desktop .astra-menu-animation-fade > .menu-item .menu-item.focus > .sub-menu, .ast-desktop .astra-menu-animation-fade > .menu-item .menu-item:hover > .sub-menu, .ast-desktop .astra-menu-animation-fade > .menu-item.focus > .astra-full-megamenu-wrapper, .ast-desktop .astra-menu-animation-fade > .menu-item.focus > .sub-menu, .ast-desktop .astra-menu-animation-fade > .menu-item:hover > .astra-full-megamenu-wrapper, .ast-desktop .astra-menu-animation-fade > .menu-item:hover > .sub-menu {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity ease-in-out .3s
+        }
+
+        .ast-desktop .astra-menu-animation-fade > .full-width-mega.menu-item.focus > .astra-full-megamenu-wrapper, .ast-desktop .astra-menu-animation-fade > .full-width-mega.menu-item:hover > .astra-full-megamenu-wrapper {
+            -js-display: flex;
+            display: flex
+        }
+    </style>
+    <link rel='stylesheet' id='astra-google-fonts-css' href='https://fonts.googleapis.com/css?family=Exo%3A400%2C&display=fallback&ver=3.7.5' media='all' />
+    <link rel='stylesheet' id='anwp-pg-styles-css' href='https://landsterling.com/wp-content/plugins/anwp-post-grid-for-elementor/public/css/styles.min.css?ver=0.8.6' media='all' />
+    <link rel='stylesheet' id='wp-components-css' href='https://landsterling.com/wp-includes/css/dist/components/style.min.css?ver=5.9.3' media='all' />
+    <link rel='stylesheet' id='wp-block-editor-css' href='https://landsterling.com/wp-includes/css/dist/block-editor/style.min.css?ver=5.9.3' media='all' />
+    <link rel='stylesheet' id='wp-nux-css' href='https://landsterling.com/wp-includes/css/dist/nux/style.min.css?ver=5.9.3' media='all' />
+    <link rel='stylesheet' id='wp-reusable-blocks-css' href='https://landsterling.com/wp-includes/css/dist/reusable-blocks/style.min.css?ver=5.9.3' media='all' />
+    <link rel='stylesheet' id='wp-editor-css' href='https://landsterling.com/wp-includes/css/dist/editor/style.min.css?ver=5.9.3' media='all' />
+    <link rel='stylesheet' id='sjb_shortcode_block-cgb-style-css-css' href='https://landsterling.com/wp-content/plugins/simple-job-board/sjb-block/dist/blocks.style.build.css' media='all' />
+    <style id='global-styles-inline-css'>
+        body {
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--pale-pink: #f78da7;
+            --wp--preset--color--vivid-red: #cf2e2e;
+            --wp--preset--color--luminous-vivid-orange: #ff6900;
+            --wp--preset--color--luminous-vivid-amber: #fcb900;
+            --wp--preset--color--light-green-cyan: #7bdcb5;
+            --wp--preset--color--vivid-green-cyan: #00d084;
+            --wp--preset--color--pale-cyan-blue: #8ed1fc;
+            --wp--preset--color--vivid-cyan-blue: #0693e3;
+            --wp--preset--color--vivid-purple: #9b51e0;
+            --wp--preset--color--ast-global-color-0: var(--ast-global-color-0);
+            --wp--preset--color--ast-global-color-1: var(--ast-global-color-1);
+            --wp--preset--color--ast-global-color-2: var(--ast-global-color-2);
+            --wp--preset--color--ast-global-color-3: var(--ast-global-color-3);
+            --wp--preset--color--ast-global-color-4: var(--ast-global-color-4);
+            --wp--preset--color--ast-global-color-5: var(--ast-global-color-5);
+            --wp--preset--color--ast-global-color-6: var(--ast-global-color-6);
+            --wp--preset--color--ast-global-color-7: var(--ast-global-color-7);
+            --wp--preset--color--ast-global-color-8: var(--ast-global-color-8);
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);
+            --wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');
+            --wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');
+            --wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');
+            --wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');
+            --wp--preset--duotone--midnight: url('#wp-duotone-midnight');
+            --wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');
+            --wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');
+            --wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');
+            --wp--preset--font-size--small: 13px;
+            --wp--preset--font-size--medium: 20px;
+            --wp--preset--font-size--large: 36px;
+            --wp--preset--font-size--x-large: 42px;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .wp-site-blocks > .alignleft {
+            float: left;
+            margin-right: 2em;
+        }
+
+        .wp-site-blocks > .alignright {
+            float: right;
+            margin-left: 2em;
+        }
+
+        .wp-site-blocks > .aligncenter {
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .has-black-color {
+            color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-color {
+            color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-color {
+            color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-color {
+            color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-color {
+            color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-color {
+            color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-color {
+            color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-color {
+            color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-color {
+            color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-color {
+            color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-color {
+            color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-color {
+            color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-ast-global-color-0-color {
+            color: var(--wp--preset--color--ast-global-color-0) !important;
+        }
+
+        .has-ast-global-color-1-color {
+            color: var(--wp--preset--color--ast-global-color-1) !important;
+        }
+
+        .has-ast-global-color-2-color {
+            color: var(--wp--preset--color--ast-global-color-2) !important;
+        }
+
+        .has-ast-global-color-3-color {
+            color: var(--wp--preset--color--ast-global-color-3) !important;
+        }
+
+        .has-ast-global-color-4-color {
+            color: var(--wp--preset--color--ast-global-color-4) !important;
+        }
+
+        .has-ast-global-color-5-color {
+            color: var(--wp--preset--color--ast-global-color-5) !important;
+        }
+
+        .has-ast-global-color-6-color {
+            color: var(--wp--preset--color--ast-global-color-6) !important;
+        }
+
+        .has-ast-global-color-7-color {
+            color: var(--wp--preset--color--ast-global-color-7) !important;
+        }
+
+        .has-ast-global-color-8-color {
+            color: var(--wp--preset--color--ast-global-color-8) !important;
+        }
+
+        .has-black-background-color {
+            background-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-background-color {
+            background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-background-color {
+            background-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-background-color {
+            background-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-background-color {
+            background-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-background-color {
+            background-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-background-color {
+            background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-background-color {
+            background-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-ast-global-color-0-background-color {
+            background-color: var(--wp--preset--color--ast-global-color-0) !important;
+        }
+
+        .has-ast-global-color-1-background-color {
+            background-color: var(--wp--preset--color--ast-global-color-1) !important;
+        }
+
+        .has-ast-global-color-2-background-color {
+            background-color: var(--wp--preset--color--ast-global-color-2) !important;
+        }
+
+        .has-ast-global-color-3-background-color {
+            background-color: var(--wp--preset--color--ast-global-color-3) !important;
+        }
+
+        .has-ast-global-color-4-background-color {
+            background-color: var(--wp--preset--color--ast-global-color-4) !important;
+        }
+
+        .has-ast-global-color-5-background-color {
+            background-color: var(--wp--preset--color--ast-global-color-5) !important;
+        }
+
+        .has-ast-global-color-6-background-color {
+            background-color: var(--wp--preset--color--ast-global-color-6) !important;
+        }
+
+        .has-ast-global-color-7-background-color {
+            background-color: var(--wp--preset--color--ast-global-color-7) !important;
+        }
+
+        .has-ast-global-color-8-background-color {
+            background-color: var(--wp--preset--color--ast-global-color-8) !important;
+        }
+
+        .has-black-border-color {
+            border-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-border-color {
+            border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-border-color {
+            border-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-border-color {
+            border-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-border-color {
+            border-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-border-color {
+            border-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-border-color {
+            border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-border-color {
+            border-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-ast-global-color-0-border-color {
+            border-color: var(--wp--preset--color--ast-global-color-0) !important;
+        }
+
+        .has-ast-global-color-1-border-color {
+            border-color: var(--wp--preset--color--ast-global-color-1) !important;
+        }
+
+        .has-ast-global-color-2-border-color {
+            border-color: var(--wp--preset--color--ast-global-color-2) !important;
+        }
+
+        .has-ast-global-color-3-border-color {
+            border-color: var(--wp--preset--color--ast-global-color-3) !important;
+        }
+
+        .has-ast-global-color-4-border-color {
+            border-color: var(--wp--preset--color--ast-global-color-4) !important;
+        }
+
+        .has-ast-global-color-5-border-color {
+            border-color: var(--wp--preset--color--ast-global-color-5) !important;
+        }
+
+        .has-ast-global-color-6-border-color {
+            border-color: var(--wp--preset--color--ast-global-color-6) !important;
+        }
+
+        .has-ast-global-color-7-border-color {
+            border-color: var(--wp--preset--color--ast-global-color-7) !important;
+        }
+
+        .has-ast-global-color-8-border-color {
+            border-color: var(--wp--preset--color--ast-global-color-8) !important;
+        }
+
+        .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+            background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+        }
+
+        .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+            background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+        }
+
+        .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+        }
+
+        .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+            background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+        }
+
+        .has-cool-to-warm-spectrum-gradient-background {
+            background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+        }
+
+        .has-blush-light-purple-gradient-background {
+            background: var(--wp--preset--gradient--blush-light-purple) !important;
+        }
+
+        .has-blush-bordeaux-gradient-background {
+            background: var(--wp--preset--gradient--blush-bordeaux) !important;
+        }
+
+        .has-luminous-dusk-gradient-background {
+            background: var(--wp--preset--gradient--luminous-dusk) !important;
+        }
+
+        .has-pale-ocean-gradient-background {
+            background: var(--wp--preset--gradient--pale-ocean) !important;
+        }
+
+        .has-electric-grass-gradient-background {
+            background: var(--wp--preset--gradient--electric-grass) !important;
+        }
+
+        .has-midnight-gradient-background {
+            background: var(--wp--preset--gradient--midnight) !important;
+        }
+
+        .has-small-font-size {
+            font-size: var(--wp--preset--font-size--small) !important;
+        }
+
+        .has-medium-font-size {
+            font-size: var(--wp--preset--font-size--medium) !important;
+        }
+
+        .has-large-font-size {
+            font-size: var(--wp--preset--font-size--large) !important;
+        }
+
+        .has-x-large-font-size {
+            font-size: var(--wp--preset--font-size--x-large) !important;
+        }
+    </style>
+
+    <link rel='stylesheet' id='select2-css' href='https://landsterling.com/wp-content/plugins/beautiful-taxonomy-filters/public/css/select2.min.css?ver=2.4.3' media='all' />
+    <link rel='stylesheet' id='beautiful-taxonomy-filters-basic-css' href='https://landsterling.com/wp-content/plugins/beautiful-taxonomy-filters/public/css/beautiful-taxonomy-filters-base.min.css?ver=2.4.3' media='all' />
+    <link rel='stylesheet' id='beautiful-taxonomy-filters-css' href='https://landsterling.com/wp-content/plugins/beautiful-taxonomy-filters/public/css/beautiful-taxonomy-filters-light-material.min.css?ver=2.4.3' media='all' />
+    <link rel='stylesheet' id='contact-form-7-css' href='https://landsterling.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.5.3' media='all' />
+    <link rel='stylesheet' id='astra-contact-form-7-css' href='https://landsterling.com/wp-content/themes/astra/assets/css/minified/compatibility/contact-form-7-main.min.css?ver=3.7.5' media='all' />
+    <link rel='stylesheet' id='pdfprnt_frontend-css' href='https://landsterling.com/wp-content/plugins/pdf-print/css/frontend.css?ver=2.2.9' media='all' />
+    <link rel='stylesheet' id='simple-job-board-google-fonts-css' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C700%2C700i%2C900%2C900i&#038;ver=2.9.5' media='all' />
+    <link rel='stylesheet' id='simple-job-board-font-awesome-css' href='https://landsterling.com/wp-content/plugins/simple-job-board/public/css/font-awesome.min.css?ver=4.7.0' media='all' />
+    <link rel='stylesheet' id='simple-job-board-jquery-ui-css' href='https://landsterling.com/wp-content/plugins/simple-job-board/public/css/jquery-ui.css?ver=1.12.1' media='all' />
+    <link rel='stylesheet' id='simple-job-board-frontend-css' href='https://landsterling.com/wp-content/plugins/simple-job-board/public/css/simple-job-board-public.css?ver=3.0.0' media='all' />
+    <link rel='stylesheet' id='trp-language-switcher-style-css' href='https://landsterling.com/wp-content/plugins/translatepress-multilingual/assets/css/trp-language-switcher.css?ver=2.1.8' media='all' />
+    <link rel='stylesheet' id='cb70d11b8-css' href='https://landsterling.com/wp-content/uploads/essential-addons-elementor/cb70d11b8.min.css?ver=1655890528' media='all' />
+    <link rel='stylesheet' id='astra-addon-css-css' href='https://landsterling.com/wp-content/uploads/astra-addon/astra-addon-62b2a73fb62391-01162937.css?ver=3.6.3' media='all' />
+    <style id='astra-addon-css-inline-css'>
+        .ast-fullscreen-menu-enable.ast-header-break-point .main-header-bar-navigation .close:after, .ast-fullscreen-above-menu-enable.ast-header-break-point .ast-above-header-navigation-wrap .close:after, .ast-fullscreen-below-menu-enable.ast-header-break-point .ast-below-header-navigation-wrap .close:after {
+            content: "\e5cd";
+            display: inline-block;
+            font-family: 'Astra';
+            font-size: 2rem;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 40px;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            margin: 0;
+        }
+
+        .ast-flyout-above-menu-enable.ast-header-break-point .ast-above-header-navigation-wrap .close:after {
+            content: "\e5cd";
+            display: inline-block;
+            font-family: 'Astra';
+            font-size: 28px;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: normal;
+        }
+
+        .ast-flyout-below-menu-enable.ast-header-break-point .ast-below-header-navigation-wrap .close:after {
+            content: "\e5cd";
+            display: inline-block;
+            font-family: 'Astra';
+            font-size: 28px;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: normal;
+        }
+
+        .ast-flyout-menu-enable.ast-header-break-point .main-header-bar .main-header-bar-navigation .site-navigation, .ast-flyout-menu-enable.ast-header-break-point .ast-primary-menu-disabled .ast-merge-header-navigation-wrap {
+            width: 325px;
+        }
+
+        .ast-search-box.header-cover #close::before, .ast-search-box.full-screen #close::before {
+            font-family: Astra;
+            content: "\e5cd";
+            display: inline-block;
+            transition: transform .3s ease-in-out;
+        }
+    </style>
+    <link rel='stylesheet' id='elementor-frontend-css' href='https://landsterling.com/wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.4.8' media='all' />
+    <style id='elementor-frontend-inline-css'>
+        @@font-face {
+            font-family: eicons;
+            src: url(https://landsterling.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0);
+            src: url(https://landsterling.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"),url(https://landsterling.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"),url(https://landsterling.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"),url(https://landsterling.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"),url(https://landsterling.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");
+            font-weight: 400;
+            font-style: normal
+        }
+    </style>
+    <link rel='stylesheet' id='elementor-post-686-css' href='https://landsterling.com/wp-content/uploads/elementor/css/post-686.css?ver=1642522440' media='all' />
+    <link rel='stylesheet' id='elementor-pro-css' href='https://landsterling.com/wp-content/plugins/elementor-pro/assets/css/frontend-lite.min.css?ver=3.5.2' media='all' />
+    <link rel='stylesheet' id='uael-frontend-css' href='https://landsterling.com/wp-content/plugins/ultimate-elementor/assets/min-css/uael-frontend.min.css?ver=1.35.1' media='all' />
+    <link rel='stylesheet' id='font-awesome-5-all-css' href='https://landsterling.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=4.9.7' media='all' />
+    @*<link rel='stylesheet' id='font-awesome-4-shim-css' href='https://landsterling.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=4.9.7' media='all' />*@
+    <link rel='stylesheet' id='elementor-global-css' href='https://landsterling.com/wp-content/uploads/elementor/css/global.css?ver=1646045807' media='all' />
+    <link rel='stylesheet' id='elementor-post-11497-css' href='https://landsterling.com/wp-content/uploads/elementor/css/post-11497.css?ver=1654693060' media='all' />
+    <link rel='stylesheet' id='elementor-post-15876-css' href='https://landsterling.com/wp-content/uploads/elementor/css/post-15876.css?ver=1642522441' media='all' />
+    <link rel='stylesheet' id='elementor-post-10372-css' href='https://landsterling.com/wp-content/uploads/elementor/css/post-10372.css?ver=1642522441' media='all' />
+    <link rel='stylesheet' id='elementor-post-10345-css' href='https://landsterling.com/wp-content/uploads/elementor/css/post-10345.css?ver=1642522441' media='all' />
+    <link rel='stylesheet' id='elementor-post-8240-css' href='https://landsterling.com/wp-content/uploads/elementor/css/post-8240.css?ver=1642522441' media='all' />
+    <link rel='stylesheet' id='elementor-icons-ekiticons-css' href='https://landsterling.com/wp-content/plugins/elementskit-lite/modules/elementskit-icon-pack/assets/css/ekiticons.css?ver=2.5.1' media='all' />
+    <link rel='stylesheet' id='simple-favorites-css' href='https://landsterling.com/wp-content/plugins/favorites/assets/css/favorites.css?ver=2.3.2' media='all' />
+    <link rel='stylesheet' id='astra-child-theme-css-css' href='https://landsterling.com/wp-content/themes/astra-child/style.css?ver=1' media='all' />
+    <link rel='stylesheet' id='ekit-widget-styles-css' href='https://landsterling.com/wp-content/plugins/elementskit-lite/widgets/init/assets/css/widget-styles.css?ver=2.5.1' media='all' />
+    <link rel='stylesheet' id='ekit-responsive-css' href='https://landsterling.com/wp-content/plugins/elementskit-lite/widgets/init/assets/css/responsive.css?ver=2.5.1' media='all' />
+    <link rel='stylesheet' id='sib-front-css-css' href='https://landsterling.com/wp-content/plugins/mailin/css/mailin-front.css?ver=6.0' media='all' />
+    <link rel='stylesheet' id='ecs-styles-css' href='https://landsterling.com/wp-content/plugins/ele-custom-skin/assets/css/ecs-style.css?ver=3.1.4' media='all' />
+    <link rel='stylesheet' id='elementor-post-8889-css' href='https://landsterling.com/wp-content/uploads/elementor/css/post-8889.css?ver=1623245238' media='all' />
+    <link rel='stylesheet' id='elementor-post-9709-css' href='https://landsterling.com/wp-content/uploads/elementor/css/post-9709.css?ver=1641533056' media='all' />
+    <link rel='stylesheet' id='elementor-post-10083-css' href='https://landsterling.com/wp-content/uploads/elementor/css/post-10083.css?ver=1641532817' media='all' />
+    <link rel='stylesheet' id='elementor-post-10100-css' href='https://landsterling.com/wp-content/uploads/elementor/css/post-10100.css?ver=1641532824' media='all' />
+    <link rel='stylesheet' id='elementor-post-10186-css' href='https://landsterling.com/wp-content/uploads/elementor/css/post-10186.css?ver=1638020746' media='all' />
+    <link rel='stylesheet' id='elementor-post-10306-css' href='https://landsterling.com/wp-content/uploads/elementor/css/post-10306.css?ver=1630389907' media='all' />
+    <link rel='stylesheet' id='elementor-post-11658-css' href='https://landsterling.com/wp-content/uploads/elementor/css/post-11658.css?ver=1641532686' media='all' />
+    <link rel='stylesheet' id='elementor-post-13474-css' href='https://landsterling.com/wp-content/uploads/elementor/css/post-13474.css?ver=1638018652' media='all' />
+    <link rel='stylesheet' id='elementor-post-13556-css' href='https://landsterling.com/wp-content/uploads/elementor/css/post-13556.css?ver=1638249263' media='all' />
+    <link rel='stylesheet' id='elementor-post-13561-css' href='https://landsterling.com/wp-content/uploads/elementor/css/post-13561.css?ver=1638249658' media='all' />
+    <link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CExo+2%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.0' media='all' />
+    <link rel='stylesheet' id='elementor-icons-shared-0-css' href='https://landsterling.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' media='all' />
+    <link rel='stylesheet' id='elementor-icons-fa-solid-css' href='https://landsterling.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3' media='all' />
+    <link href="~/Assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <!--[if IE]>
+    <script src='https://landsterling.com/wp-content/themes/astra/assets/js/minified/flexibility.min.js?ver=3.7.5' id='astra-flexibility-js'></script>
+    <script id='astra-flexibility-js-after'>
+    flexibility(document.documentElement);
+    </script>
+    <![endif]-->
+
+    <script src='https://landsterling.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+    <script src='https://landsterling.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+    <script src='https://landsterling.com/wp-content/themes/astra-child/js/custom-jquery.js?ver=6.0' id='custom-jquery-js'></script>
+    <script src='https://landsterling.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=4.9.7' id='font-awesome-4-shim-js'></script>
+
+    @*<script src='https://landsterling.com/wp-content/cache/autoptimize/js/autoptimize_single_7f094de0f3bf7b9cdc7c79bb6e6e0ff9.js?ver=5.9.3' id='custom-jquery-js'></script>
+        <script src='https://landsterling.com/wp-content/cache/autoptimize/js/autoptimize_single_48c36b4ac1b8ed4371fdb3c6f9100ce8.js?ver=5.9.3' id='custom-script-js'></script>*@
+
+    <script id='favorites-js-extra'>var favorites_data = { "ajaxurl": "https:\/\/landsterling.com\/wp-admin\/admin-ajax.php", "nonce": "bc234e6cd3", "favorite": "<i class=\"sf-icon-love\"><\/i> ", "favorited": "<i class=\"sf-icon-love\"><\/i> ", "includecount": "1", "indicate_loading": "1", "loading_text": "Loading", "loading_image": "", "loading_image_active": "", "loading_image_preload": "", "cache_enabled": "1", "button_options": { "button_type": "custom", "custom_colors": true, "box_shadow": false, "include_count": true, "default": { "background_default": false, "border_default": false, "text_default": false, "icon_default": "#dcdcdc", "count_default": "#202020" }, "active": { "background_active": false, "border_active": false, "text_active": false, "icon_active": "#c9352e", "count_active": "#202020" } }, "authentication_modal_content": "<p>Please login to add favorites.<\/p><p><a href=\"#\" data-favorites-modal-close>Dismiss this notice<\/a><\/p>", "authentication_redirect": "", "dev_mode": "", "logged_in": "", "user_id": "0", "authentication_redirect_url": "https:\/\/landsterling.com\/wp-login.php" };</script>
+    <script src='https://landsterling.com/wp-content/plugins/favorites/assets/js/favorites.min.js?ver=2.3.2' id='favorites-js'></script>
+    <script id='ecs_ajax_load-js-extra'>var ecs_ajax_params = { "ajaxurl": "https:\/\/landsterling.com\/wp-admin\/admin-ajax.php", "posts": "{\"error\":\"\",\"m\":\"\",\"p\":\"11497\",\"post_parent\":\"\",\"subpost\":\"\",\"subpost_id\":\"\",\"attachment\":\"\",\"attachment_id\":0,\"name\":\"\",\"pagename\":\"\",\"page_id\":\"11497\",\"second\":\"\",\"minute\":\"\",\"hour\":\"\",\"day\":0,\"monthnum\":0,\"year\":0,\"w\":0,\"category_name\":\"\",\"tag\":\"\",\"cat\":\"\",\"tag_id\":\"\",\"author\":\"\",\"author_name\":\"\",\"feed\":\"\",\"tb\":\"\",\"paged\":0,\"meta_key\":\"\",\"meta_value\":\"\",\"preview\":\"\",\"s\":\"\",\"sentence\":\"\",\"title\":\"\",\"fields\":\"\",\"menu_order\":\"\",\"embed\":\"\",\"category__in\":[],\"category__not_in\":[],\"category__and\":[],\"post__in\":[],\"post__not_in\":[],\"post_name__in\":[],\"tag__in\":[],\"tag__not_in\":[],\"tag__and\":[],\"tag_slug__in\":[],\"tag_slug__and\":[],\"post_parent__in\":[],\"post_parent__not_in\":[],\"author__in\":[],\"author__not_in\":[],\"ignore_sticky_posts\":false,\"suppress_filters\":false,\"cache_results\":true,\"update_post_term_cache\":true,\"lazy_load_term_meta\":true,\"update_post_meta_cache\":true,\"post_type\":\"\",\"posts_per_page\":10,\"nopaging\":false,\"comments_per_page\":\"20\",\"no_found_rows\":false,\"order\":\"DESC\"}" };</script>
+    @*<script src='https://landsterling.com/wp-content/cache/autoptimize/js/autoptimize_single_6a414b257267a883c6dd13b3c66b8596.js?ver=3.1.4' id='ecs_ajax_load-js'></script>
+        <script src='https://landsterling.com/wp-content/cache/autoptimize/js/autoptimize_single_447712f49ef92d24eda0381882e5f00b.js?ver=3.1.4' id='ecs-script-js'></script>*@
+
+    <script src='https://landsterling.com/wp-content/plugins/ele-custom-skin/assets/js/ecs_ajax_pagination.js?ver=3.1.4' id='ecs_ajax_load-js'></script>
+    <script id='sib-front-js-js-extra'>
+        var sibErrMsg = { "invalidMail": "Please fill out valid email address", "requiredField": "Please fill out required fields", "invalidDateFormat": "Please fill out valid date format", "invalidSMSFormat": "Please fill out valid phone number" };
+        var ajax_sib_front_object = { "ajax_url": "https:\/\/landsterling.com\/wp-admin\/admin-ajax.php", "ajax_nonce": "da78d9c511", "flag_url": "https:\/\/landsterling.com\/wp-content\/plugins\/mailin\/img\/flags\/" };
+    </script>
+    <script src='https://landsterling.com/wp-content/plugins/mailin/js/mailin-front.js?ver=1654492282' id='sib-front-js-js'></script>
+    <script src='https://landsterling.com/wp-content/plugins/ele-custom-skin/assets/js/ecs.js?ver=3.1.4' id='ecs-script-js'></script>
+    <link rel="https://api.w.org/" href="https://landsterling.com/wp-json/" />
+    <link rel="alternate" type="application/json" href="https://landsterling.com/wp-json/wp/v2/pages/11497" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://landsterling.com/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://landsterling.com/wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 6.0" />
+    <link rel='shortlink' href='https://landsterling.com/' />
+    <link rel="alternate" type="application/json+oembed" href="https://landsterling.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flandsterling.com%2F" />
+    <link rel="alternate" type="text/xml+oembed" href="https://landsterling.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flandsterling.com%2F&#038;format=xml" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <script>
+        jQuery(document).ready(function ($) {
+
+
+            jQuery("#pub_carousal .uael-post__content-wrap").prepend("<div class='txt-ls'>Land Sterling</div>");
+
+
+            jQuery("#sec-service #investment-advisory").mouseover(function (e) {
+                jQuery("#investment-advisory img").attr("src", "/wp-content/uploads/2021/01/Group-13793.png");
+            });
+            jQuery("#sec-service #investment-advisory").mouseleave(function (e) {
+                jQuery("#investment-advisory img").attr("src", "/wp-content/uploads/2020/12/Group-13793.png");
+            });
+
+            jQuery("#sec-service #property-valuations").mouseover(function (e) {
+                jQuery("#property-valuations img").attr("src", "/wp-content/uploads/2021/01/Group-13796.png");
+            });
+            jQuery("#sec-service #property-valuations").mouseleave(function (e) {
+                jQuery("#property-valuations img").attr("src", "/wp-content/uploads/2020/12/Group-13796.png");
+            });
+
+            jQuery("#sec-service #strategic-consultancy").mouseover(function (e) {
+                jQuery("#strategic-consultancy img").attr("src", "/wp-content/uploads/2021/01/Group-13797.png");
+            });
+            jQuery("#sec-service #strategic-consultancy").mouseleave(function (e) {
+                jQuery("#strategic-consultancy img").attr("src", "/wp-content/uploads/2020/12/Group-13797.png");
+            });
+
+            jQuery("#sec-service #industrial-consultancy").mouseover(function (e) {
+                jQuery("#industrial-consultancy img").attr("src", "/wp-content/uploads/2021/01/Group-13800.png");
+            });
+            jQuery("#sec-service #industrial-consultancy").mouseleave(function (e) {
+                jQuery("#industrial-consultancy img").attr("src", "/wp-content/uploads/2020/12/Group-13800.png");
+            });
+
+            jQuery("#sec-service #project-building").mouseover(function (e) {
+                jQuery("#project-building img").attr("src", "/wp-content/uploads/2021/01/Group-13801.png");
+            });
+            jQuery("#sec-service #project-building").mouseleave(function (e) {
+                jQuery("#project-building img").attr("src", "/wp-content/uploads/2020/12/Group-13801.png");
+            });
+
+            jQuery("#sec-service #property-management").mouseover(function (e) {
+                jQuery("#property-management img").attr("src", "/wp-content/uploads/2021/01/Group-13802.png");
+            });
+            jQuery("#sec-service #property-management").mouseleave(function (e) {
+                jQuery("#property-management img").attr("src", "/wp-content/uploads/2020/12/Group-13802.png");
+            });
+
+            jQuery("#sec-service #property-consulartancy").mouseover(function (e) {
+                jQuery("#property-consulartancy img").attr("src", "/wp-content/uploads/2021/10/Group-15803.png");
+            });
+            jQuery("#sec-service #property-consulartancy").mouseleave(function (e) {
+                jQuery("#property-consulartancy img").attr("src", "/wp-content/uploads/2021/09/project-managment.png");
+            });
+
+            jQuery("#sec-service #property-managment").mouseover(function (e) {
+                jQuery("#property-managment img").attr("src", "/wp-content/uploads/2021/10/2.Group-12919.png");
+            });
+            jQuery("#sec-service #property-managment").mouseleave(function (e) {
+                jQuery("#property-managment img").attr("src", "/wp-content/uploads/2021/10/1.Group-12919.png");
+            });
+
+            jQuery("#sec-service .project-marketing-icon").mouseover(function (e) {
+                jQuery(".project-marketing-icon img").attr("src", "/wp-content/uploads/2021/10/2.project-marketing.png");
+            });
+            jQuery("#sec-service .project-marketing-icon").mouseleave(function (e) {
+                jQuery(".project-marketing-icon img").attr("src", "/wp-content/uploads/2021/10/1.project-marketing.png");
+            });
+
+            jQuery("#sec-service #property-mng-consulartancy").mouseover(function (e) {
+                jQuery("#property-mng-consulartancy img").attr("src", "/wp-content/uploads/2021/10/Group-15803.png");
+            });
+            jQuery("#sec-service #property-mng-consulartancy").mouseleave(function (e) {
+                jQuery("#property-mng-consulartancy img").attr("src", "/wp-content/uploads/2021/09/project-managment.png");
+            });
+
+
+            jQuery("#sec-service #project-marketing-icon").mouseover(function (e) {
+                jQuery("#project-marketing-icon img").attr("src", "/wp-content/uploads/2021/10/2.Group-12919.png");
+            });
+            jQuery("#sec-service #project-marketing-icon").mouseleave(function (e) {
+                jQuery("#project-marketing-icon img").attr("src", "/wp-content/uploads/2021/10/1.Group-12919.png");
+            });
+
+
+            // add slop to all banner bottoms
+            $sloper = "<div class='sloper'></div>";
+            $("#inner-banner").append($sloper);
+
+
+            // add right arrow to cta valuesoft
+            $vs_right_arrow = "<i aria-hidden='true' class='icon icon-chevron-right'></i>";
+            $("#valusoft-cta-sec a.cta-button").append($vs_right_arrow);
+
+
+            // add right arrow to cta valuesoft on property valuations
+            $(".valusoft-login-fancy a.cta-button").append($vs_right_arrow);
+
+
+            // fix for mobile menu not working
+            if ($(window).width() < 960) {
+                $("body:not([class~='ast-header-break-point'])").addClass("ast-header-break-point");
+                $("#hm-sec-banner #myVideo").attr("height", "800");
+            }
+
+            $(".real-pulse-sec a.anwp-position-cover.anwp-link-without-effects").attr('href', '#');
+
+
+            setInterval(function () {
+                jQuery("img.in-icon").attr("src", "/wp-content/uploads/2021/02/linkedin-01-01-512.png");
+            }, 2000);
+
+            // favorite button change on click
+            jQuery("img._like_icon:not(liked)").on('click', function () {
+                jQuery(this).attr("src", "/wp-content/uploads/2021/02/Path-4739.png");
+                jQuery(this).addClass("liked");
+            });
+            jQuery("body").find("img._like_icon.liked").on('click', function () {
+                jQuery(this).attr("src", "/wp-content/uploads/2021/02/love_white.png");
+            });
+            // home page watch our video vertical slop
+            $pt = '<div class="sloper-vertical"></div>';
+            $("#sec-home-video").append($pt);
+
+            // Apply now file upload button
+            jQuery("input#attach_resume").click(function () {
+                jQuery(".attach-resume input").css('color', '#fff');
+                jQuery(".attach-resume input").addClass("clicked");
+            });
+
+            // enable click for home page our service sections
+            $("#sec-service .elementor-widget-elementskit-icon-box").click(function () {
+                var service_href = $(this).find("a.elementskit-btn").attr("href")
+                window.location.href = (service_href);
+            });
+
+        });</script>
+    <style type="text/css">
+        /* SJB Fonts */
+
+        /* Job Filters Background Color */
+        .sjb-page .sjb-filters {
+            background-color: #f2f2f2 !important;
+        }
+
+        /* Listing & Detail Page Title Color */
+        .sjb-page .list-data .v1 .job-info h4 a,
+        .sjb-page .list-data .v2 .job-info h4 a {
+            color: #0c2340;
+        }
+
+        /* Job Detail Page Headings */
+        .sjb-page .sjb-detail .list-data .v1 h3,
+        .sjb-page .sjb-detail .list-data .v2 h3,
+        .sjb-page .sjb-detail .list-data ul li::before,
+        .sjb-page .sjb-detail .list-data .v1 .job-detail h3,
+        .sjb-page .sjb-detail .list-data .v2 .job-detail h3,
+        .sjb-page .sjb-archive-page .job-title {
+            color: #0c2340;
+        }
+
+        /* Fontawesome Icon Color */
+        .sjb-page .list-data .v1 .job-type i,
+        .sjb-page .list-data .v1 .job-location i,
+        .sjb-page .list-data .v1 .job-date i,
+        .sjb-page .list-data .v2 .job-type i,
+        .sjb-page .list-data .v2 .job-location i,
+        .sjb-page .list-data .v2 .job-date i {
+            color: #c8102e;
+        }
+
+        /* Fontawesome Text Color */
+        .sjb-page .list-data .v1 .job-type,
+        .sjb-page .list-data .v1 .job-location,
+        .sjb-page .list-data .v1 .job-date,
+        .sjb-page .list-data .v2 .job-type,
+        .sjb-page .list-data .v2 .job-location,
+        .sjb-page .list-data .v2 .job-date {
+            color: #0c2340;
+        }
+
+        /* Job Filters-> All Buttons Background Color */
+        .sjb-page .btn-primary,
+        .sjb-page .btn-primary:hover,
+        .sjb-page .btn-primary:active:hover,
+        .sjb-page .btn-primary:active:focus,
+        .sjb-page .sjb-detail .jobpost-form .file div,
+        .sjb-page .sjb-detail .jobpost-form .file:hover div {
+            background-color: #c8102e !important;
+            color: #fff !important;
+        }
+
+        /* Pagination Text Color */
+        /* Pagination Background Color */
+        .sjb-page .pagination li.list-item span.current,
+        .sjb-page .pagination li.list-item a:hover,
+        .sjb-page .pagination li.list-item span.current:hover {
+            background: #c8102e;
+            border-color: #c8102e;
+            color: #fff;
+        }
+    </style>
+    <link rel="alternate" hreflang="en-US" href="https://landsterling.com/" />
+    <link rel="alternate" hreflang="en" href="https://landsterling.com/" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-15901586-1"></script>
+    <link href="~/Assets/css/mystyle.css" rel="stylesheet" />
+    <link href="~/Assets/css/LS.css" rel="stylesheet" />
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-15901586-1');</script>
+    <script type="text/javascript">
+        _linkedin_partner_id = "3763412";
+        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+        window._linkedin_data_partner_ids.push(_linkedin_partner_id);</script>
+    <script type="text/javascript">
+        (function (l) {
+            if (!l) {
+                window.lintrk = function (a, b) { window.lintrk.q.push([a, b]) };
+                window.lintrk.q = []
+            }
+            var s = document.getElementsByTagName("script")[0];
+            var b = document.createElement("script");
+            b.type = "text/javascript"; b.async = true;
+            b.src = "~/Assets/js/insight.min.js";
+            s.parentNode.insertBefore(b, s);
+        })(window.lintrk);</script>
+    <noscript>
+        <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=3763412&fmt=gif" />
+    </noscript>
+    <style>
+        .recentcomments a {
+            display: inline !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .ast-small-footer .ast-footer-overlay, .ast-small-footer .ast-footer-overlay a {
+            margin-bottom: -53px;
+        }
+
+        .widget {
+            border-bottom: none
+        }
+    </style>
+    <link rel="icon" href="https://landsterling.com/wp-content/uploads/2021/02/favicon.png" sizes="32x32" />
+    <link rel="icon" href="https://landsterling.com/wp-content/uploads/2021/02/favicon.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://landsterling.com/wp-content/uploads/2021/02/favicon.png" />
+    <meta name="msapplication-TileImage" content="https://landsterling.com/wp-content/uploads/2021/02/favicon.png" />
+
+    <link href="~/Assets/css/main.a54d8241.chunk.css" rel="stylesheet" />
+    <link href="~/Assets/css/16.5c6a4fbb.chunk.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../Assets/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="../Assets/css/bootstrap-submenu.css">
+
+    <link rel="stylesheet" type="text/css" href="../Assets/css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="../Assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../Assets/css/leaflet.css" type="text/css">
+    <link rel="stylesheet" href="../Assets/css/map.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../Assets/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="../Assets/fonts/linearicons/style.css">
+    <link rel="stylesheet" type="text/css" href="../Assets/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="../Assets/css/dropzone.css">
+    <link rel="stylesheet" type="text/css" href="../Assets/css/slick.css">
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" type="text/css" id="style_sheet" href="../Assets/css/skins/default.css">
+    <link rel="stylesheet" type="text/css" href="../Assets/css/style1.css">
+
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="../Assets/img/favicon.ico" type="image/x-icon">
+
+    <!-- Google fonts -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,300,700">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700">
+    <link rel="stylesheet" type="text/css" href="../Assets/css/ie10-viewport-bug-workaround.css">
+    <script src="../Assets/js/ie-emulation-modes-warning.js"></script>
+
+    /* /////////////////////////*/
+    </style>
+</head>
+<body>
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Land Sterling", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Buy", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Sell Your Property", "About", "Home")</li>
+                        <li>@Html.ActionLink("Hot Deals", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Properties", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("About Us", "Contact", "Home")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>*@
+    <header id="header" class="fixed-top d-flex align-items-center" style="background-color:white">
+        <div class="container d-flex justify-content-between">
+
+            <div class="logo">
+                <a class="navbar-brand" href="#">
+                    <h5 style="margin-top:60PX;" class="text-danger">LAND STRELING <img src="~/assets/img/logo2.png" width="30" height="20" style="margin-bottom:5px;" class="d-inline-block align-top" alt="IMAGE"></h5>
+
+                </a>
+            </div>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#hero" style="color:black;">Buy</a></li>
+                    <li><a class="nav-link scrollto " href="#about" style="color:black;">Sell Your Property</a></li>
+                    <li><a class="nav-link scrollto " href="#services" style="color:black;">Hot Deals</a></li>
+                    <li><a class="nav-link scrollto " href="#portfolio" style="color:black;">Proerties</a></li>
+                    <li><a class="nav-link scrollto " href="#team" style="color:black;">About us</a></li>
+                    <li><a href="#"<i class="bi-telephone" style="color:green"></i></a></li>
+                    <li><a href="#"<i class="bi-whatsapp" style="color:green"></i></a></li>
+                    <li><a href="#"<i class="bi-file-post" style="color:green"></i></a></li>
+
+
+                    <li class="dropdown">
+                        <a href="#" style="color:black;"><span>Log-in</span> <span class="bi bi-person-circle" style="color:green"></span> <i class="bi bi-chevron-down" style="color:green"></i></a>
+                        <ul>
+                            <li><a href="#" style="color:black;"><span>Log-in</span> <span class="bi bi-person-circle" style="color:green"></span> </a></li>
+                            <li><a href="#" style="color:black;"><span>Sign-in</span><span class="bi bi-person-circle" style="color:green"></span>  </a></li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+    @*<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Find your property</h5>
+
+                </div>
+                <div class="carousel-item active">
+                    <img src="~/images/Group 13461.png" style="width:1000px;height:700px;" class="d-block w-100  img-responsive" id="carousel-img" />
+
+
+                </div>
+                <div class="carousel-item">
+                    <img src="" style="width:1000px;height:700px;" class="d-block w-100" a />
+
+                    <div class="carousel-caption d-none d-md-block">
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="~/images/Group 13461.png" style="width:1000px;height:700px;" class="d-block w-100" a />
+
+                    <div class="carousel-caption d-none d-md-block">
+
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>*@
+    <section id="hero">
+        <div class="hero-container">
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+                <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
+
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active" style="background-image: url(~/images/Group13461.png)">
+                        <div class="carousel-container">
+                            @*<div class="container">
+                                <img src="~/images/Group 13461.png" />
+                                            @RenderBody()
+
+                                        </div>*@
+                            <div class="search-section ss-2" id="search-style-2">
+                                <div class="container p-3 my-3 bg-white text-dark " style="width:400px; height:200px; margin-left:1px; ">
+                                    <div class="search-section-area ssa2 active-pate">
+                                        <div class="search-area-inner">
+                                            <div class="search-contents">
+                                                <form method="GET">
+                                                    <h4>Im looking for</h4>
+                                                    <div class="row" style="margin-bottom:8px;">
+                                                        <div class="col-3">
+                                                            <div class="form-group" st>
+                                                                <select class="selectpicker search-fields" style="width:110px;padding:5px;margin:1px" name="Property type">
+                                                                    <option>Property Type</option>
+
+                                                                    @foreach (var item in ViewBag.eUnitCategory_Masters)
+                                                                    {
+                                                                        <option style="display:inline"><b>@item.Unit_Category</b></option>
+
+                                                                    }
+                                                                </select>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <div class="form-group">
+                                                                <select class="selectpicker search-fields" style="width:222px;padding:5px;margin:1px" name="Enter Location">
+                                                                    <option>Enter Location</option>
+                                                                    @foreach (var item in ViewBag.cities)
+                                                                    {
+                                                                        <option style="display:inline"><b>@item.Name</b></option>
+
+                                                                    }
+
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-4">
+                                                            <div class="form-group">
+                                                                <select style="width:110px;padding:5px;margin:0px 0px 0px 4px;" name="Bods">
+                                                                    <option>Beds</option>
+                                                                    @foreach (var item in ViewBag.eBedroom_Masters)
+                                                                    {
+                                                                        <option style="display:inline"><b>@item.Bedrooms</b></option>
+
+                                                                    }
+
+
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <div class="form-group" style="padding-left:10px">
+                                                                <input type="text" name="MinPrice" placeholder="Min Price" id="MinPrice" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <div class="form-group" style="padding-left:10px">
+                                                                <input type="text" name="MinPrice" placeholder="Max Price" id="MinPrice" />
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <button type="button" class="btn btn-success border-btn-sm btn-block" style="width:360px;margin-top:20px;">Search</button>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" style="background-image: url(~/images/Group13461@2x.png)">
+                        <div class="carousel-container">
+
+                            <div class="container">
+                                <h2 class="animate__animated animate__fadeInDown">At vero eos et accusamus</h2>
+                                <p class="animate__animated animate__fadeInUp">Helping Business Security & Peace of Mind for Your Family</p>
+                                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" style="background-image: url(~/assets/img/hero-carousel/3.jpg)">
+                        <div class="carousel-container">
+                            <div class="container">
+                                <h2 class="animate__animated animate__fadeInDown">Temporibus autem quibusdam</h2>
+                                <p class="animate__animated animate__fadeInUp">Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem</p>
+                                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+                </a>
+
+                <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+                </a>
+
+            </div>
+        </div>
+    </section><!-- End Hero Section -->
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")*@
+    @*@Scripts.Render("~/bundles/jquery1")
+        @Scripts.Render("~/bundles/popper1")
+        @Scripts.Render("~/bundles/bootstrap1")
+        <script src="@Url.Content("~/js/jquery.slim.min.js")"></script>
+        <script src="@Url.Content("~/js/popper.min.js")"></script>
+        <script src="@Url.Content("~/js/bootstrap1.bundle.min.js")"></script>
+        @RenderSection("scripts", required: false)*@
+    <script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="~/assets/js/main.js"></script>
+    @*////////////////////////////////////*@
+    <script src="../Assets/js/jquery-2.2.0.min.js"></script>
+    <script src="~/Assets/js/jquery.unobtrusive-ajax.js"></script>
+    <script src="../Assets/js/popper.min.js"></script>
+    <script src="../Assets/js/bootstrap.min.js"></script>
+    <script src="../Assets/js/bootstrap-submenu.js"></script>
+    <script src="../Assets/js/rangeslider.js"></script>
+    <script src="../Assets/js/jquery.mb.YTPlayer.js"></script>
+    <script src="../Assets/js/bootstrap-select.min.js"></script>
+    <script src="../Assets/js/jquery.easing.1.3.js"></script>
+    <script src="../Assets/js/jquery.scrollUp.js"></script>
+    <script src="../Assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../Assets/js/leaflet.js"></script>
+    <script src="../Assets/js/leaflet-providers.js"></script>
+    <script src="../Assets/js/leaflet.markercluster.js"></script>
+    <script src="../Assets/js/dropzone.js"></script>
+    <script src="../Assets/js/slick.min.js"></script>
+    <script src="../Assets/js/jquery.filterizr.js"></script>
+    <script src="../Assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="../Assets/js/jquery.countdown.js"></script>
+    <script src="../Assets/js/maps.js"></script>
+    <script src="../Assets/js/app.js"></script>
+    <script src="~/Assets/js/jquery.validate-vsdoc.js"></script>
+    <script src="~/Assets/js/jquery.validate.js"></script>
+    <script src="~/Assets/js/jquery.validate.min.js"></script>
+    <script src="~/Assets/js/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Assets/js/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Assets/js/modernizr-2.8.3.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../Assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!-- Custom javascript -->
+    <script src="../Assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"></script>
+    <script type="text/javascript">
+        var onloadCallback = function () {
+            grecaptcha.render('divcaptcha', {
+                'sitekey': '6LfzsNwbAAAAAPfHAqcwiI3_YUTSlB71Ghgep2lm',
+                'size': 'normal',
+                'callback': function (response) {
+                    $('#txtcaptcha').val('ePMSCap4321#');
+                }
+            });
+        }
+    </script>
+
+    <script src="~/Assets/js/particles.min.js"></script>
+    <script src="https://landsterling.com/wp-content/cache/autoptimize/js/autoptimize_single_d8482147973139945265b72b68efd30d.js"></script>
+    <link rel="stylesheet" href="https://landsterling.com/wp-content/cache/autoptimize/css/autoptimize_single_5bd8897f1992d12dec6f2f813fb65f87.css" type="text/css"><link rel="stylesheet" href="https://landsterling.com/wp-content/cache/autoptimize/css/autoptimize_single_1af844c265453122aaab4dee6fb4a021.css" type="text/css">
+    <div data-elementor-type="popup" data-elementor-id="15876" class="elementor elementor-15876 elementor-location-popup" data-elementor-settings="{" open_selector":"a[href=\"#popup-menu-anchor\"]","triggers":[],"timing":[]}">
+        <div class="elementor-section-wrap">
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-bc1696e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="bc1696e" data-element_type="section">
+                <div class="elementor-container elementor-column-gap-no">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-cb630b8" data-id="cb630b8" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-3a237ee elementor-widget elementor-widget-html" data-id="3a237ee" data-element_type="widget" data-widget_type="html.default"><div class="elementor-widget-container"> <iframe src="https://drive.google.com/file/d/1JHiJk_wsOs3FBKvEweqeVo6cPLQCA0iD/preview" width="640" height="480" allow="autoplay"></iframe></div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div data-elementor-type="popup" data-elementor-id="10372" class="elementor elementor-10372 elementor-location-popup" data-elementor-settings="{" prevent_scroll":"yes","triggers":[],"timing":[]}"><div class="elementor-section-wrap"><section class="elementor-section elementor-top-section elementor-element elementor-element-e468586 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e468586" data-element_type="section"><div class="elementor-container elementor-column-gap-default"><div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-98500be" data-id="98500be" data-element_type="column"><div class="elementor-widget-wrap elementor-element-populated"><div class="elementor-element elementor-element-e5eb273 elementor-search-form--skin-classic elementor-search-form--button-type-icon elementor-search-form--icon-search elementor-widget elementor-widget-search-form" data-id="e5eb273" data-element_type="widget" data-settings="{" skin":"classic"}" data-widget_type="search-form.default"><div class="elementor-widget-container"><form class="elementor-search-form" role="search" action="https://landsterling.com" method="get"><div class="elementor-search-form__container"> <input placeholder="Search..." class="elementor-search-form__input" type="search" name="s" title="Search" value=""> <button class="elementor-search-form__submit" type="submit" title="Search" aria-label="Search"> <i aria-hidden="true" class="fa fa-search"></i> <span class="elementor-screen-only">Search</span> </button></div></form></div></div></div></div></div></section></div></div><div data-elementor-type="popup" data-elementor-id="10345" class="elementor elementor-10345 elementor-location-popup" data-elementor-settings="{" triggers":[],"timing":[]}">
+        <div class="elementor-section-wrap">
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-23c3ee9 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="23c3ee9" data-element_type="section">
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ae237f8" data-id="ae237f8" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-7a1e7fe elementor-share-buttons--view-icon elementor-share-buttons--skin-flat elementor-share-buttons--shape-circle elementor-share-buttons--color-custom elementor-grid-0 elementor-widget elementor-widget-share-buttons" data-id="7a1e7fe" data-element_type="widget" data-widget_type="share-buttons.default">
+                                <div class="elementor-widget-container">
+                                    <link rel="stylesheet" href="https://landsterling.com/wp-content/plugins/elementor-pro/assets/css/widget-share-buttons.min.css"><div class="elementor-grid">
+                                        <div class="elementor-grid-item">
+                                            <div class="elementor-share-btn elementor-share-btn_email">
+                                                <span class="elementor-share-btn__icon">
+                                                    <i class="fas fa-envelope" aria-hidden="true"></i> <span class="elementor-screen-only">Share on email</span>
+                                                </span>
+                                            </div>
+                                        </div><div class="elementor-grid-item">
+                                            <div class="elementor-share-btn elementor-share-btn_whatsapp">
+                                                <span class="elementor-share-btn__icon">
+                                                    <i class="fa fa-whatsapp" aria-hidden="true"></i> <span class="elementor-screen-only">Share on whatsapp</span>
+                                                </span>
+                                            </div>
+                                        </div><div class="elementor-grid-item">
+                                            <div class="elementor-share-btn elementor-share-btn_twitter">
+                                                <span class="elementor-share-btn__icon">
+                                                    <i class="fa fa-twitter" aria-hidden="true"></i> <span class="elementor-screen-only">Share on twitter</span>
+                                                </span>
+                                            </div>
+                                        </div><div class="elementor-grid-item">
+                                            <div class="elementor-share-btn elementor-share-btn_linkedin">
+                                                <span class="elementor-share-btn__icon">
+                                                    <i class="fa fa-linkedin" aria-hidden="true"></i> <span class="elementor-screen-only">Share on linkedin</span>
+                                                </span>
+                                            </div>
+                                        </div><div class="elementor-grid-item">
+                                            <div class="elementor-share-btn elementor-share-btn_facebook">
+                                                <span class="elementor-share-btn__icon">
+                                                    <i class="fa fa-facebook" aria-hidden="true"></i> <span class="elementor-screen-only">Share on facebook</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div><div data-elementor-type="popup" data-elementor-id="8240" class="elementor elementor-8240 elementor-location-popup" data-elementor-settings="{" entrance_animation":"slideInUp","prevent_close_on_background_click":"yes","prevent_close_on_esc_key":"yes","entrance_animation_duration":{"unit":"px","size":1.1999999999999999555910790149937383830547332763671875,"sizes":[]},"triggers":{"page_load":"yes","page_load_delay":0},"timing":{"logged_in":"yes","logged_in_users":"all"}}"><div class="elementor-section-wrap"><section class="elementor-section elementor-top-section elementor-element elementor-element-37b2d8d1 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="37b2d8d1" data-element_type="section"><div class="elementor-container elementor-column-gap-default"><div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2c057c14" data-id="2c057c14" data-element_type="column"><div class="elementor-widget-wrap elementor-element-populated"><div class="elementor-element elementor-element-44aac26 elementor-widget elementor-widget-heading" data-id="44aac26" data-element_type="widget" data-widget_type="heading.default"><div class="elementor-widget-container"><h3 class="elementor-heading-title elementor-size-default">Your privacy is our priority.</h3></div></div><div class="elementor-element elementor-element-78d60ae elementor-widget elementor-widget-heading" data-id="78d60ae" data-element_type="widget" data-widget_type="heading.default"><div class="elementor-widget-container"><p class="elementor-heading-title elementor-size-default">Land Sterling | UAE uses cookies and similar technology to understand how you use our website and to enable us to continuously improve your experience. To learn more about our use of cookies and approach to data privacy, <a href="https://landsterling.com/privacy-policy/">click here</a>. <br /> By continuing to use our website, you accept our use of cookies.</p></div></div><div class="elementor-element elementor-element-1a5ac4b2 elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="1a5ac4b2" data-element_type="widget" data-widget_type="button.default"><div class="elementor-widget-container"><div class="elementor-button-wrapper"> <a href="#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6InllcyJ9" class="elementor-button-link elementor-button elementor-size-sm" role="button"> <span class="elementor-button-content-wrapper"> <span class="elementor-button-text">Continue </span> </span> </a></div></div></div></div></div></div></section></div></div><link rel='stylesheet' id='elementor-post-8663-css' href='https://landsterling.com/wp-content/uploads/elementor/css/post-8663.css?ver=1642522442' media='all' /><link rel='stylesheet' id='gglcptch-css' href='https://landsterling.com/wp-content/cache/autoptimize/css/autoptimize_single_b1659b32665d4c6683bba4783117d77e.css?ver=1.66' media='all' /><link rel='stylesheet' id='e-animations-css' href='https://landsterling.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.4.8' media='all' />
+    <script id='astra-theme-js-js-extra'>var astra = { "break_point": "921", "isRtl": "" };</script>
+    <script src='https://landsterling.com/wp-content/themes/astra/assets/js/minified/style.min.js?ver=3.7.5' id='astra-theme-js-js'></script>
+    <script src='https://landsterling.com/wp-content/plugins/beautiful-taxonomy-filters/public/js/select2/select2.full.min.js?ver=2.4.3' id='select2-js'></script>
+    <script id='beautiful-taxonomy-filters-js-extra'>var btf_localization = { "ajaxurl": "https:\/\/landsterling.com\/wp-admin\/admin-ajax.php", "min_search": "8", "allow_clear": "", "show_description": "", "disable_select2": "", "conditional_dropdowns": "", "language": "", "rtl": "", "disable_fuzzy": "", "show_count": "" };</script>
+    <script src='https://landsterling.com/wp-content/cache/autoptimize/js/autoptimize_single_678a1177fbf0d3997250644c34adfb41.js?ver=2.4.3' id='beautiful-taxonomy-filters-js'></script>
+    <script src='https://landsterling.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9' id='regenerator-runtime-js'></script>
+    <script src='https://landsterling.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+    <script id='contact-form-7-js-extra'>var wpcf7 = { "api": { "root": "https:\/\/landsterling.com\/wp-json\/", "namespace": "contact-form-7\/v1" } };</script>
+    <script src='https://landsterling.com/wp-content/cache/autoptimize/js/autoptimize_single_862c82d8373e4d69aa5af6c994389bda.js?ver=5.5.3' id='contact-form-7-js'></script>
+    <script id='cb70d11b8-js-extra'>var localize = { "ajaxurl": "https:\/\/landsterling.com\/wp-admin\/admin-ajax.php", "nonce": "98098f7dcf", "i18n": { "added": "Added ", "compare": "Compare", "loading": "Loading..." } };</script>
+    <script src='https://landsterling.com/wp-content/uploads/essential-addons-elementor/cb70d11b8.min.js?ver=1650624711' id='cb70d11b8-js'></script>
+    <script id='astra-addon-js-js-extra'>var astraAddon = { "sticky_active": "", "svgIconClose": "<span class=\"ast-icon icon-close\"><\/span>", "is_header_builder_active": "" };</script>
+    <script src='https://landsterling.com/wp-content/cache/autoptimize/js/autoptimize_single_45029d0cf0a483c21d283a358033c1f1.js?ver=3.6.3' id='astra-addon-js-js'></script>
+    <script src='https://landsterling.com/wp-content/cache/autoptimize/js/autoptimize_single_94d041d462db321cdb888066586f2068.js?ver=2.5.1' id='elementskit-framework-js-frontend-js'></script>
+    <script id='elementskit-framework-js-frontend-js-after'>
+        var elementskit = {
+            resturl: 'https://landsterling.com/wp-json/elementskit/v1/',
+        }</script>
+    <script src='https://landsterling.com/wp-content/cache/autoptimize/js/autoptimize_single_3a70ba59770d262ab51ee39795aa9a75.js?ver=2.5.1' id='ekit-widget-scripts-js'></script>
+    <script src='https://landsterling.com/wp-includes/js/imagesloaded.min.js?ver=4.1.4' id='imagesloaded-js'></script>
+    <script src='https://landsterling.com/wp-content/plugins/ultimate-elementor/assets/lib/js-cookie/js_cookie.min.js?ver=1.35.1' id='uael-cookie-lib-js'></script>
+    <script src='https://landsterling.com/wp-content/plugins/ultimate-elementor/assets/min-js/uael-modal-popup.min.js?ver=1.35.1' id='uael-modal-popup-js'></script>
+    <script src='https://landsterling.com/wp-content/plugins/ultimate-elementor/assets/lib/jquery-element-resize/jquery_resize.min.js?ver=1.35.1' id='uael-element-resize-js'></script>
+    <script src='https://landsterling.com/wp-content/plugins/ultimate-elementor/assets/lib/slick/slick.min.js?ver=1.35.1' id='uael-slick-js'></script>
+    <script src='https://landsterling.com/wp-content/plugins/ultimate-elementor/assets/lib/isotope/isotope.min.js?ver=1.35.1' id='uael-isotope-js'></script>
+    <script id='uael-posts-js-extra'>var uael_posts_script = { "ajax_url": "https:\/\/landsterling.com\/wp-admin\/admin-ajax.php", "posts_nonce": "c0a8131cd7" };</script>
+    <script src='https://landsterling.com/wp-content/plugins/ultimate-elementor/assets/min-js/uael-posts.min.js?ver=1.35.1' id='uael-posts-js'></script>
+    <script src='https://landsterling.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.5.2' id='elementor-pro-webpack-runtime-js'></script>
+    <script src='https://landsterling.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.4.8' id='elementor-webpack-runtime-js'></script>
+    <script src='https://landsterling.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.4.8' id='elementor-frontend-modules-js'></script>
+    <script id='elementor-pro-frontend-js-before'>var ElementorProFrontendConfig = { "ajaxurl": "https:\/\/landsterling.com\/wp-admin\/admin-ajax.php", "nonce": "efc62bf2ae", "urls": { "assets": "https:\/\/landsterling.com\/wp-content\/plugins\/elementor-pro\/assets\/", "rest": "https:\/\/landsterling.com\/wp-json\/" }, "i18n": { "toc_no_headings_found": "No headings were found on this page." }, "shareButtonsNetworks": { "facebook": { "title": "Facebook", "has_counter": true }, "twitter": { "title": "Twitter" }, "linkedin": { "title": "LinkedIn", "has_counter": true }, "pinterest": { "title": "Pinterest", "has_counter": true }, "reddit": { "title": "Reddit", "has_counter": true }, "vk": { "title": "VK", "has_counter": true }, "odnoklassniki": { "title": "OK", "has_counter": true }, "tumblr": { "title": "Tumblr" }, "digg": { "title": "Digg" }, "skype": { "title": "Skype" }, "stumbleupon": { "title": "StumbleUpon", "has_counter": true }, "mix": { "title": "Mix" }, "telegram": { "title": "Telegram" }, "pocket": { "title": "Pocket", "has_counter": true }, "xing": { "title": "XING", "has_counter": true }, "whatsapp": { "title": "WhatsApp" }, "email": { "title": "Email" }, "print": { "title": "Print" } }, "facebook_sdk": { "lang": "en_US", "app_id": "" }, "lottie": { "defaultAnimationUrl": "https:\/\/landsterling.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json" } };</script>
+    <script src='https://landsterling.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.5.2' id='elementor-pro-frontend-js'></script>
+    <script src='https://landsterling.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2' id='elementor-waypoints-js'></script>
+    <script src='https://landsterling.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.1' id='jquery-ui-core-js'></script>
+    <script id='elementor-frontend-js-extra'>var uael_particles_script = { "uael_particles_url": "https:\/\/landsterling.com\/wp-content\/plugins\/ultimate-elementor\/assets\/min-js\/uael-particles.min.js", "particles_url": "https:\/\/landsterling.com\/wp-content\/plugins\/ultimate-elementor\/assets\/lib\/particles\/particles.min.js", "snowflakes_image": "https:\/\/landsterling.com\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/snowflake.svg", "gift": "https:\/\/landsterling.com\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/gift.png", "tree": "https:\/\/landsterling.com\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/tree.png", "skull": "https:\/\/landsterling.com\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/skull.png", "ghost": "https:\/\/landsterling.com\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/ghost.png", "moon": "https:\/\/landsterling.com\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/moon.png", "bat": "https:\/\/landsterling.com\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/bat.png", "pumpkin": "https:\/\/landsterling.com\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/pumpkin.png" };</script>
+    <script id='elementor-frontend-js-before'>var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Extra", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Extra", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.4.8", "is_static": false, "experimentalFeatures": { "e_dom_optimization": true, "e_optimized_assets_loading": true, "e_optimized_css_loading": true, "a11y_improvements": true, "e_import_export": true, "theme_builder_v2": true, "landing-pages": true, "elements-color-picker": true, "admin-top-bar": true, "form-submissions": true }, "urls": { "assets": "https:\/\/landsterling.com\/wp-content\/plugins\/elementor\/assets\/" }, "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 11497, "title": "Home%20-%20Land%20sterling", "excerpt": "", "featuredImage": false } };</script>
+    <script src='https://landsterling.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.4.8' id='elementor-frontend-js'></script>
+    <script id='elementor-frontend-js-after'>
+        window.scope_array = [];
+        window.backend = 0;
+        jQuery.cachedScript = function (url, options) {
+            // Allow user to set any option except for dataType, cache, and url.
+            options = jQuery.extend(options || {}, {
+                dataType: "script",
+                cache: true,
+                url: url
+            });
+            // Return the jqXHR object so we can chain callbacks.
+            return jQuery.ajax(options);
+        };
+        jQuery(window).on("elementor/frontend/init", function () {
+            elementorFrontend.hooks.addAction("frontend/element_ready/global", function ($scope, $) {
+                if ("undefined" == typeof $scope) {
+                    return;
+                }
+                if ($scope.hasClass("uael-particle-yes")) {
+                    window.scope_array.push($scope);
+                    $scope.find(".uael-particle-wrapper").addClass("js-is-enabled");
+                } else {
+                    return;
+                }
+                if (elementorFrontend.isEditMode() && $scope.find(".uael-particle-wrapper").hasClass("js-is-enabled") && window.backend == 0) {
+                    var uael_url = uael_particles_script.uael_particles_url;
+
+                    jQuery.cachedScript(uael_url);
+                    window.backend = 1;
+                } else if (elementorFrontend.isEditMode()) {
+                    var uael_url = uael_particles_script.uael_particles_url;
+                    jQuery.cachedScript(uael_url).done(function () {
+                        var flag = true;
+                    });
+                }
+            });
+        });
+        jQuery(document).on("ready elementor/popup/show", () => {
+            if (jQuery.find(".uael-particle-yes").length < 1) {
+                return;
+            }
+            var uael_url = uael_particles_script.uael_particles_url;
+            jQuery.cachedScript = function (url, options) {
+                // Allow user to set any option except for dataType, cache, and url.
+                options = jQuery.extend(options || {}, {
+                    dataType: "script",
+                    cache: true,
+                    url: url
+                });
+                // Return the jqXHR object so we can chain callbacks.
+                return jQuery.ajax(options);
+            };
+            jQuery.cachedScript(uael_url);
+        });</script>
+    <script src="~/Assets/js/LS.js"></script>
+    <script src='https://landsterling.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.5.2' id='pro-elements-handlers-js'></script>
+    <script src='https://landsterling.com/wp-content/cache/autoptimize/js/autoptimize_single_5ab577656d48e7fb2da4071c3477d4f4.js?ver=2.5.1' id='animate-circle-js'></script>
+    <script src='https://landsterling.com/wp-content/cache/autoptimize/js/autoptimize_single_a84658cd2a9cf40bb091dc777d36c2c6.js?ver=2.5.1' id='elementskit-elementor-js'></script>
+    <script src='https://landsterling.com/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=2.5.1' id='swiper-js'></script>
+    <script id='anwp-pg-scripts-js-extra'>var anwpPostGridElementorData = { "ajax_url": "https:\/\/landsterling.com\/wp-admin\/admin-ajax.php", "public_nonce": "18466d0bae", "premium_active": "", "loader": "https:\/\/landsterling.com\/wp-includes\/js\/tinymce\/skins\/lightgray\/img\/loader.gif" };</script>
+    <script src='https://landsterling.com/wp-content/plugins/anwp-post-grid-for-elementor/public/js/plugin.min.js?ver=0.8.6' id='anwp-pg-scripts-js'></script>
+    <script data-cfasync="false" async="async" defer="defer" src='https://www.google.com/recaptcha/api.js?render=explicit&ver=1.66' id='gglcptch_api-js'></script>
+    <script id='gglcptch_script-js-extra'>var gglcptch = { "options": { "version": "v2", "sitekey": "6LfEB9cdAAAAAIWR4JkH3CtWad-OSeF8QhlZwEbI", "error": "<strong>Warning<\/strong>: More than one reCAPTCHA has been found in the current form. Please remove all unnecessary reCAPTCHA fields to make it work properly.", "disable": 0, "theme": "light" }, "vars": { "visibility": false } };</script>
+    <script src='https://landsterling.com/wp-content/cache/autoptimize/js/autoptimize_single_cbc4485fa252c2ebfdc41193386ae242.js?ver=1.66' id='gglcptch_script-js'></script>
+    <script>/(trident|msie)/i.test(navigator.userAgent) && document.getElementById && window.addEventListener && window.addEventListener("hashchange", function () { var t, e = location.hash.substring(1); /^[A-z0-9_-]+$/.test(e) && (t = document.getElementById(e)) && (/^(?:a|select|input|button|textarea)$/i.test(t.tagName) || (t.tabIndex = -1), t.focus()) }, !1);</script> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;left: -100%;" height="0" width="0"><symbol id="icon-anwp-pg-calendar" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M13 2h-1v1.5c0 .28-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5V2H6v1.5c0 .28-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5V2H2c-.55 0-1 .45-1 1v11c0 .55.45 1 1 1h11c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 12H2V5h11v9zM5 3H4V1h1v2zm6 0h-1V1h1v2zM6 7H5V6h1v1zm2 0H7V6h1v1zm2 0H9V6h1v1zm2 0h-1V6h1v1zM4 9H3V8h1v1zm2 0H5V8h1v1zm2 0H7V8h1v1zm2 0H9V8h1v1zm2 0h-1V8h1v1zm-8 2H3v-1h1v1zm2 0H5v-1h1v1zm2 0H7v-1h1v1zm2 0H9v-1h1v1zm2 0h-1v-1h1v1zm-8 2H3v-1h1v1zm2 0H5v-1h1v1zm2 0H7v-1h1v1zm2 0H9v-1h1v1z" /></symbol><symbol id="icon-anwp-pg-clock" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M8 8h3v2H7c-.55 0-1-.45-1-1V4h2v4zM7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 011.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7z" /></symbol><symbol id="icon-anwp-pg-comment-discussion" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 1H6c-.55 0-1 .45-1 1v2H1c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h1v3l3-3h4c.55 0 1-.45 1-1V9h1l3 3V9h1c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zM9 11H4.5L3 12.5V11H1V5h4v3c0 .55.45 1 1 1h3v2zm6-3h-2v1.5L11.5 8H6V2h9v6z" /></symbol><symbol id="icon-anwp-pg-device-camera" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 3H7c0-.55-.45-1-1-1H2c-.55 0-1 .45-1 1-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h14c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zM6 5H2V4h4v1zm4.5 7C8.56 12 7 10.44 7 8.5S8.56 5 10.5 5 14 6.56 14 8.5 12.44 12 10.5 12zM13 8.5c0 1.38-1.13 2.5-2.5 2.5S8 9.87 8 8.5 9.13 6 10.5 6 13 7.13 13 8.5z" /></symbol><symbol id="icon-anwp-pg-eye" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z" /></symbol><symbol id="icon-anwp-pg-pencil" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M17.263 2.177a1.75 1.75 0 012.474 0l2.586 2.586a1.75 1.75 0 010 2.474L19.53 10.03l-.012.013L8.69 20.378a1.75 1.75 0 01-.699.409l-5.523 1.68a.75.75 0 01-.935-.935l1.673-5.5a1.75 1.75 0 01.466-.756L14.476 4.963l2.787-2.786zm-2.275 4.371l-10.28 9.813a.25.25 0 00-.067.108l-1.264 4.154 4.177-1.271a.25.25 0 00.1-.059l10.273-9.806-2.94-2.939zM19 8.44l2.263-2.262a.25.25 0 000-.354l-2.586-2.586a.25.25 0 00-.354 0L16.061 5.5 19 8.44z" /></symbol><symbol id="icon-anwp-pg-person" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2.5a5.5 5.5 0 00-3.096 10.047 9.005 9.005 0 00-5.9 8.18.75.75 0 001.5.045 7.5 7.5 0 0114.993 0 .75.75 0 101.499-.044 9.005 9.005 0 00-5.9-8.181A5.5 5.5 0 0012 2.5zM8 8a4 4 0 118 0 4 4 0 01-8 0z" /></symbol><symbol id="icon-anwp-pg-play" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M14 8A7 7 0 110 8a7 7 0 0114 0zm-8.223 3.482l4.599-3.066a.5.5 0 000-.832L5.777 4.518A.5.5 0 005 4.934v6.132a.5.5 0 00.777.416z" /></symbol><symbol id="icon-anwp-pg-tag" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7.685 1.72a2.49 2.49 0 00-1.76-.726H3.48A2.5 2.5 0 00.994 3.48v2.456c0 .656.269 1.292.726 1.76l6.024 6.024a.99.99 0 001.402 0l4.563-4.563a.99.99 0 000-1.402L7.685 1.72zM2.366 7.048a1.54 1.54 0 01-.467-1.123V3.48c0-.874.716-1.58 1.58-1.58h2.456c.418 0 .825.159 1.123.467l6.104 6.094-4.702 4.702-6.094-6.114zm.626-4.066h1.989v1.989H2.982V2.982h.01z" /></symbol><symbol id="icon-anwp-pg-trash" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z" /><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z" /><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z" /></symbol></svg>
+    <div id="9a4975ff-overlay" data-trigger-on="custom_id" data-close-on-esc="no" data-close-on-overlay="yes" data-exit-intent="no" data-after-sec="no" data-after-sec-val="1" data-cookies="no" data-cookies-days="1" data-custom="" data-custom-id="menu-item-5764" data-content="saved_rows" data-autoplay="no" data-device="false" data-async="" class="uael-modal-parent-wrapper uael-module-content uamodal-9a4975ff uael-aspect-ratio-16_9 modal-pop-popup get-in-touch-popup"><div id="modal-9a4975ff" class="uael-modal uael-modal-custom uael-modal-saved_rows uael-effect-1 uael-aspect-ratio-16_9" style="top: 20px; margin-bottom: 20px;"><div class="uael-content"> <span class="uael-modal-close uael-close-icon elementor-clickable uael-close-custom-popup-edge-top-right"> <i aria-hidden="true" class="fas fa-times"></i> </span><div class="uael-modal-text uael-modal-content-data clearfix"><div data-elementor-type="section" data-elementor-id="5438" class="elementor elementor-5438" data-elementor-settings="[]"><div class="elementor-inner"><div class="elementor-section-wrap"><section class="elementor-section elementor-top-section elementor-element elementor-element-d85919e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d85919e" data-element_type="section" id="contact-frm-sec" data-settings="{" ekit_has_onepagescroll_dot":"yes"}"><div class="elementor-container elementor-column-gap-default"><div class="elementor-row"><div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-46dbeb2d" data-id="46dbeb2d" data-element_type="column"><div class="elementor-column-wrap elementor-element-populated"><div class="elementor-widget-wrap"><div class="elementor-element elementor-element-8126282 elementor-widget elementor-widget-html" data-id="8126282" data-element_type="widget" data-widget_type="html.default"><div class="elementor-widget-container"><div class="crm-form"><h3>Get in Touch</h3> <span class="frm-desc">Please fill in the form below and we will contact you shortly.</span><form action="" method="post" autocomplete="off" class="infi-form-has-footer"><div class="frm-row"><div class="col-2"> <input type="text" required="true" placeholder="First Name" name="contact[FirstName]"></div><div class="col-2"> <input type="text" name="contact[LastName]" required="true" placeholder="Last Name"></div></div><div class="frm-row"><div class="col-2"> <input type="tel" pattern="^[0-9]{6,14}$" name="contact[MobilePhone]" required="true" placeholder="Mobile"></div><div class="col-2"> <input type="email" name="contact[Email]" required="true" placeholder="Email"></div></div><div class="frm-row"><div class="col-2"> <input type="text" name="contact[Title]" required="true" placeholder="Job title" /></div><div class="col-2"> <input type="text" name="contact[pba__CompanyName__c]" required="true" placeholder="Company" /></div></div><div class="frm-row"><div class="col-2"> <select id="sel_lead" name="contact[LeadSource]"><option value="">How did you hear about us?</option><option value="Website">Website</option><option value="Facebook">Facebook</option><option value="LinkedIn">LinkedIn</option><option value="Instagram">Instagram</option><option value="Twitter">Twitter</option><option value="Youtube">Youtube</option><option value="Referrals">Referrals</option><option value="E-Mail Campaign">E-Mail Campaign</option><option value="Booth">Booth</option><option value="Exhibition">Exhibition</option><option value="Sales Office">Sales Office</option><option value="Other">Other</option> </select></div><div class="col-2"> <select id="sel_describe" name="contact[pba__ContactType_pb__c]"><option value="">What best describe you?</option><option value="General">General</option><option value="Buyer">Buyer</option><option value="Seller">Seller</option><option value="Landlord">Landlord</option><option value="Tenant">Tenant</option><option value="Investor">Investor</option><option value="Mortgage Broker">Mortgage Broker</option><option value="Real Estate Agent">Real Estate Agent</option><option value="Developer">Developer</option><option value="Other">Other</option> </select></div></div><div class="frm-row"><div class="col-1"><textarea name="request[pba__Comments__c]" placeholder="Message"></textarea></div></div><div class="frm-row frm-row-accept"><div class="col-1"> <input type="checkbox" name="accept-terms" value="1" id="accept_terms" required=""> 
+        <label for="accept_terms">
+        I agree to the Land Sterling 
+        <a href="https://landsterling.com/privacy-policy/" id="ls_privacy_policy">privacy policy</a> and <a href="https://landsterling.com/terms-and-conditions/" id="ls_terms_of_use">terms of use</a>.</label></div></div><div class="gglcptch gglcptch_v2"><div id="gglcptch_recaptcha_2145073666" class="gglcptch_recaptcha"></div>
+        <noscript><div style="width: 302px;"><div style="width: 302px; height: 422px; position: relative;">
+        <div style="width: 302px; height: 422px; position: absolute;"> 
+        <iframe src="https://www.google.com/recaptcha/api/fallback?k=6LfEB9cdAAAAAIWR4JkH3CtWad-OSeF8QhlZwEbI" frameborder="0" scrolling="no" style="width: 302px; height:422px; border-style: none;"></iframe></div></div>
+        <div style="border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px; height: 60px; width: 300px;"><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px !important; height: 40px !important; border: 1px solid #c1c1c1 !important; margin: 10px 25px !important; padding: 0px !important; resize: none !important;"></textarea></div></div> </noscript></div> <input type="hidden" name="request[RecordTypeId]" value="0124K000000ssSgQAI"> <input type="hidden" name="contact[pba__LeadSourceDetail_pb__c]" value="Website - Contact Us"> <input type="text" name="h_178adfb31c83da5b6ac9992bed411489" value="" style="display: none"> <input type="hidden" name="contact[OwnerId]" value="0054K000001Ipwu" /> <input type="hidden" name="request[OwnerId]" value="0054K000001Ipwu" /> <input type="hidden" name="success_url" value="https://landsterling.com/form-success/"><div class="frm-row"><div class="col-1"> <button type="submit" class="submit_button_1">Submit</button></div></div><div class="message_wrapper_1"></div></form></div></div></div></div></div></div><div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-32b83822" data-id="32b83822" data-element_type="column" data-settings="{" background_background":"classic"}"><div class="elementor-column-wrap elementor-element-populated"><div class="elementor-widget-wrap"><div class="elementor-element elementor-element-50dcc9ba elementor-widget elementor-widget-heading" data-id="50dcc9ba" data-element_type="widget" data-widget_type="heading.default"><div class="elementor-widget-container">
+        <h3 class="elementor-heading-title elementor-size-default">Contact Us</h3></div></div><div class="elementor-element elementor-element-1a96ee7c elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="1a96ee7c" data-element_type="widget" data-widget_type="icon-list.default"><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"> <span class="elementor-icon-list-icon"> <i aria-hidden="true" class="icon icon-envelope2"></i> </span> <span class="elementor-icon-list-text email-tel"> <a href="mailto:info@landsterling.com" target="_blank">info@landsterling.com</a> </span></li></ul></div></div><div class="elementor-element elementor-element-1a96ee7c elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="1a96ee7c" data-element_type="widget" data-widget_type="icon-list.default"><div class="elementor-widget-container"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"> <span class="elementor-icon-list-icon"> <i aria-hidden="true" class="icon icon-phone1"></i> </span> <span class="elementor-icon-list-text email-tel"> <a href="tel:+97143808707" target="_blank" rel="noopener">+971 4 380 8707</a> </span></li></ul></div></div><div class="elementor-element elementor-element-1a96ee7c elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="1a96ee7c" data-element_type="widget" data-widget_type="icon-list.default"><div class="elementor-widget-container address-list1"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"> <span class="elementor-icon-list-icon"> <i aria-hidden="true" class="icon icon-map-marker1"></i> </span> <span class="elementor-icon-list-text">227, Block B, Al Shafar Investment Building, Sheikh Zayed Road, Dubai, UAE</span></li></ul></div></div><div class="elementor-element elementor-element-26a8927b pop-logo-bottom elementor-widget elementor-widget-image" data-id="26a8927b" data-element_type="widget" data-widget_type="image.default"><div class="elementor-widget-container"><div class="elementor-image"> <img width="245" height="23" src="https://landsterling.com/wp-content/uploads/2021/01/Group-11861-1.png" class="attachment-large size-large" alt="" loading="lazy"></div></div></div></div></div></div></div></div></section><section class="elementor-section elementor-top-section elementor-element elementor-element-516c4538 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="516c4538" data-element_type="section" id="thankyou-sec" data-settings="{" ekit_has_onepagescroll_dot":"yes"}"><div class="elementor-container elementor-column-gap-default"><div class="elementor-row"><div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4084c234" data-id="4084c234" data-element_type="column"><div class="elementor-column-wrap elementor-element-populated"><div class="elementor-widget-wrap"><div class="elementor-element elementor-element-427d745b elementor-widget elementor-widget-html" data-id="427d745b" data-element_type="widget" data-widget_type="html.default"><div class="elementor-widget-container"><div class="thankyou-div"><div class="thank1-div"><h2>Thank you!</h2><p>We will respond to your request shortly.</p></div><div class="thank2-div"><img src="/wp-content/uploads/2020/12/Group-13086.png"></div></div></div></div></div></div></div></div></div></section></div></div></div><div class="resize-triggers"><div class="expand-trigger"><div style="width: 801px; height: 447px;"></div></div><div class="contract-trigger"></div></div></div></div></div><div class="uael-overlay"></div></div><div id="9a4973gg-overlay" data-trigger-on="custom" data-close-on-esc="no" data-close-on-overlay="yes" data-exit-intent="no" data-after-sec="no" data-after-sec-val="1" data-cookies="no" data-cookies-days="1" data-custom="pub-pop" data-custom-id data-content="saved_rows" data-autoplay="no" data-device="false" data-async="" class="uael-modal-parent-wrapper uael-module-content uamodal-9a4973gg uael-aspect-ratio-16_9 pub-view-pop modal-pop-popup">
+        <div id="modal-9a4973gg" class="uael-modal uael-modal-custom uael-modal-saved_rows uael-effect-1 uael-aspect-ratio-16_9" style="top: 20px; margin-bottom: 20px;">
+            <div class="uael-content">
+                <span class="uael-modal-close uael-close-icon elementor-clickable uael-close-custom-popup-edge-top-right"> <i aria-hidden="true" class="fas fa-times"></i> </span><div class="uael-modal-text uael-modal-content-data clearfix">
+                    <div data-elementor-type="section" data-elementor-id="5438" class="elementor elementor-5438" data-elementor-settings="[]">
+                        <div class="elementor-inner">
+                            <div class="elementor-section-wrap">
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-d85919e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d85919e" data-element_type="section" id="contact-frm-sec" data-settings="{" ekit_has_onepagescroll_dot":"yes"}">
+                                    <div class="elementor-container elementor-column-gap-default">
+                                        <div class="elementor-row">
+                                            <div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-46dbeb2d" data-id="46dbeb2d" data-element_type="column">
+                                                <div class="elementor-column-wrap elementor-element-populated">
+                                                    <div class="elementor-widget-wrap">
+                                                        <div class="elementor-element elementor-element-8126282 elementor-widget elementor-widget-html" data-id="8126282" data-element_type="widget" data-widget_type="html.default">
+                                                            <div class="elementor-widget-container">
+                                                                <div class="crm-form">
+                                                                    <h3>Publication</h3> <span class="frm-desc">Please fill in the form below to get Magazine.</span><form action="https://front-desk.propertybase.com/forms/706908a2021738f9f2df493571a1eec9d5b3189d" autocomplete="off" method="post">
+                                                                        <div class="frm-row"><div class="col-2"> <input type="text" required="true" placeholder="First Name" name="contact[FirstName]"></div><div class="col-2"> <input type="text" name="contact[LastName]" required="true" placeholder="Last Name"></div></div><div class="frm-row"><div class="col-2"> <input type="tel" pattern="^[0-9]{6,14}$" name="contact[MobilePhone]" required="true" placeholder="Mobile"></div><div class="col-2"> <input type="email" name="contact[Email]" required="true" placeholder="Email"></div></div> <input type="hidden" name="request[RecordTypeId]" value="0124K000000ssSgQAI" /> <input type="hidden" name="contact[OwnerId]" value="0054K000001Ipwu" /> <input type="hidden" name="request[OwnerId]" value="0054K000001Ipwu" /> <input type="hidden" name="contact[Newsletter_Subscription__c]" value="true" /> <input type="hidden" name="success_url" value="https://landsterling.com/form-success/"><div class="frm-row"><div class="col-1">
+    <button type="submit">Submit</button></div></div> 
+    <input type="text" name="h_178adfb31c83da5b6ac9992bed411489" value="" style="display: none" />
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-32b83822" data-id="32b83822" data-element_type="column" data-settings="{" background_background":"classic"}"><div class="elementor-column-wrap elementor-element-populated"><div class="elementor-widget-wrap"><div class="elementor-element elementor-element-50dcc9ba elementor-widget elementor-widget-heading" data-id="50dcc9ba" data-element_type="widget" data-widget_type="heading.default"><div class="elementor-widget-container"><h3 class="elementor-heading-title elementor-size-default">Contact Us</h3></div></div><div class="elementor-element elementor-element-1a96ee7c elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="1a96ee7c" data-element_type="widget" data-widget_type="icon-list.default"><div class="elementor-widget-container address-list1"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item"> <span class="elementor-icon-list-icon"> <i aria-hidden="true" class="icon icon-map-marker1"></i> </span> <span class="elementor-icon-list-text">227, Block B, Al Shafar Investment Building, Sheikh Zayed Road, Dubai, UAE</span></li></ul></div></div><div class="elementor-element elementor-element-26a8927b pop-logo-bottom elementor-widget elementor-widget-image" data-id="26a8927b" data-element_type="widget" data-widget_type="image.default"><div class="elementor-widget-container"><div class="elementor-image"> <img width="245" height="23" src="https://landsterling.com/wp-content/uploads/2021/01/Group-11861-1.png" class="attachment-large size-large" alt="" loading="lazy"></div></div></div></div></div></div>
+                                        </div>
+                                    </div>
+                                </section><section class="elementor-section elementor-top-section elementor-element elementor-element-516c4538 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="516c4538" data-element_type="section" id="thankyou-sec" data-settings="{" ekit_has_onepagescroll_dot":"yes"}"><div class="elementor-container elementor-column-gap-default"><div class="elementor-row"><div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4084c234" data-id="4084c234" data-element_type="column"><div class="elementor-column-wrap elementor-element-populated"><div class="elementor-widget-wrap"><div class="elementor-element elementor-element-427d745b elementor-widget elementor-widget-html" data-id="427d745b" data-element_type="widget" data-widget_type="html.default"><div class="elementor-widget-container"><div class="thankyou-div"><div class="thank1-div"><h2>Thank you!</h2><p>We will respond to your request shortly.</p></div><div class="thank2-div"><img src="/wp-content/uploads/2020/12/Group-13086.png"></div></div></div></div></div></div></div></div></div></section>
+                            </div>
+                        </div>
+                    </div><div class="resize-triggers"><div class="expand-trigger"><div style="width: 801px; height: 447px;"></div></div><div class="contract-trigger"></div></div>
+                </div>
+            </div>
+        </div><div class="uael-overlay"></div>
+    </div>
+    @*///////////////////////////////////*@
+</body>
+</html>

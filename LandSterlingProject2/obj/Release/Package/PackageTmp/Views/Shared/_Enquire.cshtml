@@ -1,0 +1,48 @@
+﻿@model LandSterlingProject2.Models.models_ado.ContactUs
+@{
+    string @display = (ViewBag.IsSentEnquiry != null) ? "block" : "none";
+    <div id="abc" style="display:@display">
+        <!-- Popup Div Starts Here -->
+        <div id="popupContact" style="opacity:1">
+            <!-- Contact Us Form -->
+            @using (Ajax.BeginForm("ContactUs", "Home", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "abc" }))
+            {
+                @Html.AntiForgeryToken()
+                <div id="PopupForm" class="PopupForm" style="height:530px">
+                    <img id="close" src="~/Assets/img/Close.jpg" onclick="div_hide()">
+                    <h2 class="popuph2">Enquire Now</h2>
+                    <hr class="popuphr">
+                    <input id="Name" name="Name" autocomplete="off" class="popuinput popupname" placeholder="Name" type="text">
+                    <input id="EmailId" name="Email" autocomplete="off" class="popuinput popupemail" placeholder="Email" type="text">
+                    <input id="MobileNumber" autocomplete="off" name="MobileNumber" class="popuinput popupmobile" placeholder="Mobile Number" type="text">
+                    <input id="IsEnquiry" name="IsEnquiry" value="1" type="text" hidden="hidden">
+                    <textarea id="Message" name="Message" class="popuptext" placeholder="Message"></textarea>
+                    <div class="form-group" style="margin-top:-7px;border-radius:3px;width:245px;">
+                        <div id="divcaptcha"></div>
+                    </div>
+                    <input id="txtcaptcha" name="Cap" type="text" style="display:none" />
+                    <button type="submit" onclick="return validateFields(); return false;" class="btn btn-theme popupsubmit" style="margin-bottom:0px;margin-top:0px;">Send Enquiry</button>
+                    @if (ViewBag.IsSentEnquiry != null)
+                    {
+                        if (ViewBag.IsSentEnquiry)
+                        {
+                            <div class="send-btn text-center">
+                                <label class="alert-success" style="margin:10px; border-radius:5px; padding:5px;">Thank you for submitting your enquiry. one of our agents will contact you soon !</label>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="col-md-12">
+                                <div class="text-center">
+                                    <label class="alert-danger  text-center" style="margin:10px; border-radius:5px; padding:5px;">Please fill in all the required fields.. !</label>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            }
+        </div>
+        <!-- Popup Div Ends Here -->
+    </div>
+};
+

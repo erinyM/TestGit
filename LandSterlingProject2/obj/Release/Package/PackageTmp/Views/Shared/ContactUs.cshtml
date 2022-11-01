@@ -1,0 +1,114 @@
+﻿@model LandSterlingProject2.Models.models_ado.ContactUs
+@{
+    ViewBag.Title = "Contact";
+}
+@if (ViewBag.IsSent != null)
+{
+    if (ViewBag.IsSent)
+    {
+        <div class="send-btn text-center">
+            <label class="alert-success" style="margin:10px; border-radius:5px; padding:5px;">Thank you for submitting your enquiry. one of our agents will contact you soon !</label>
+        </div>
+    }
+    else
+    {
+        <div class="col-md-12">
+            <div class="text-center">
+                <label class="alert-danger  text-center" style="margin:10px; border-radius:5px; padding:5px;">Please fill in all the required fields.. !</label>
+            </div>
+        </div>
+    }
+}
+<div class="connect-us" id="connect-us">
+    <div class="connect-section">
+        <div class="connect">
+            <div class="container">
+                <h2>Connect with us</h2>
+              
+                @using (Ajax.BeginForm("ContactUs", "Home", null,
+                new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "divTSettings", OnSuccess = "ShowsuccessContactUS", OnFailure = "ShowfailSellYProperty" },
+                new { id = "ContactUs" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="row">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="col-md-6 contact-form">
+
+
+
+                            @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Name" ,@id="name"} })
+
+                            @Html.ValidationMessageFor(model => model.FullName, null, new { @class = "text-danger" })
+
+
+
+                        </div>
+                        <div class="col-md-6 contact-form">
+
+
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @placeholder = "Email", @id = "EmailId" } })
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="col-md-6 contact-form">
+
+
+                            @Html.EditorFor(model => model.Exp1, new { htmlAttributes = new { @class = "form-control", @placeholder = "Subject",name="Exp1",@id="subject" } })
+                            @Html.ValidationMessageFor(model => model.Exp1, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="col-md-6 contact-form">
+
+
+                            @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control", @placeholder = "Mobile Number" ,id="PhoneNumber"} })
+                            @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="col-md-6 contact-form">
+
+                            @Html.TextAreaFor(model => model.Exp2, new { htmlAttributes = new { @class = "form-control", @name = "Exp2", @placeholder = "Write Message", @id = "Message" } })
+                            @Html.ValidationMessageFor(model => model.Exp2, "", new { @style = "color:red" })
+
+                         
+                        </div>
+                        <div class="form-group" style="margin-top:-22px;">
+                            <div id="divcaptcha" class="col-md-6"></div>
+                        </div>
+                        @*<input id="txtcaptcha" name="Cap" type="text" style="display:none" required />*@
+                        <div class="col-md-12" style="margin-top:0px">
+                            <div class="text-center">
+                                <input type="submit" class="submit" value="Submit" />
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="contact">
+            <div class="container">
+                <h2>Contact us directly</h2>
+                <p>Discuss or drop us a message at</p>
+                <h2>+971 4 582 6135</h2>
+                <p>Send a WhatsApp message</p>
+                <div class="whatsapp">
+                    <a href="https://wa.me/+97145826135"> <img src="images/whatsapp.svg" alt="" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*<script>
+        function validateContactUs() {
+        $.ajax({
+            dataType: "Html",
+            type: "POST",
+            url: '@Url.Action("ContactUs","Home")',
+            data: { id: num },
+            success: function (a) {
+                // Replace the div's content with the page method's return.
+                alert("success");
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert(errorThrown)}
+        });
+    }*@

@@ -1,0 +1,263 @@
+﻿@model LandSterlingProject2.Models.models_ado.SellYourProperty
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="services" class="" style="background-image: url('/images/Group13463.png');">
+
+    <div class="row">
+        <div class="col">
+            <h2 class="text-bg-light " style="text-align:center; margin-top:150px;color:white;font-weight:900">Sell Your Property</h2>
+        </div>
+        <div class="col p-5">
+
+            <div class="container landing-card " style=" margin-top: 150px; background-color: white; width: 430px; border-radius: 10px; box-shadow: 3px 2px 20px black;">
+                <article class="card-body mx-auto" style="max-width: 430px; ">
+                    <h4 class="card-title mt-3 my-4 ">List your property with us</h4>
+
+
+                    @if (ViewBag.IsSent != null)
+                    {
+                        if (ViewBag.IsSent)
+                        {
+                            <div class="send-btn text-center">
+                                <label class="alert-success" style="margin:10px; border-radius:5px; padding:5px;">Thank you for submitting your enquiry. one of our agents will contact you soon !</label>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="col-md-12">
+                                <div class="text-center">
+                                    <label class="alert-danger  text-center" style="margin:10px; border-radius:5px; padding:5px;">Please fill in all the required fields.. !</label>
+                                </div>
+                            </div>
+                        }
+                    }
+
+                    @using (Ajax.BeginForm("SellYourProperty", "Home", null,
+                     new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "divTSettings", OnSuccess = "ShowsuccessSellYProperty", OnFailure = "ShowfailSellYProperty" },
+                                    new { id = "SellYourProperty" }))
+
+                    {
+                        @Html.AntiForgeryToken()
+                        if (ViewBag.Msg != null)
+                        {
+                            <div>@ViewBag.Msg</div>
+                        }
+                       
+                        <div class="row">
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group input-group my-2 p-1">
+                                @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control graybackground", @placeholder = "Full Name", @style = "width:390px",@id= "FullName" } })
+                                <br /> @Html.ValidationMessageFor(model => model.FullName, null, new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="form-group input-group my-2 p-1">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control graybackground", @placeholder = "Email", @id = "EmailId", @style = "width:390px" } })
+                                <br />   @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+
+
+                            <div class="form-group input-group my-2 p-1">
+                                @Html.EditorFor(model => model.MobileNumber, "", new { htmlAttributes = new { @class = "form-control graybackground", @id = "MobileNumber", @type = "tel", @style = "width:380px" } })
+                                @Html.EditorFor(model => model.CountryCode, "", new { htmlAttributes = new { @class = "form-control graybackground", @id = "MobileNumber1", @type = "hidden", @style = "width:380px" } })
+                                <br />
+                                @Html.ValidationMessageFor(model => model.MobileNumber, "", new { @class = "text-danger" })
+                            </div>
+
+
+                            <div class="form-group input-group  my-2 p-1">
+                                @Html.DropDownListFor(model => model.Property_Type,
+                                 new SelectList(ViewBag.tbProperty_Masters, "Property_Type", "Property_Type"), new { @class = "form-control graybackground" })
+                                <br />
+                                @Html.ValidationMessageFor(model => model.Property_Type, "", new { @class = "text-danger" })
+
+                            </div>
+
+
+                            <div class="form-group input-group  my-2 p-1">
+                                @Html.DropDownListFor(model => model.Location,
+                                new SelectList(ViewBag.cities, "Name", "Name"), new { @class = "form-control graybackground" })
+
+                                <br /> @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
+
+                            </div>
+
+
+                            <div class="form-group" style="margin-top:-22px;">
+
+                            </div>
+                            @*<input id="txtcaptcha" name="Cap" type="text" style="display:none" required />*@
+                            <div class="col-md-12" style="margin-top:0px">
+                                <div class="text-center">
+                                    <input type="submit" class="btn btn-success" value="Submit" id="submit_sellyourproperty" onclick="insert_Success(); style="width:330px;" />
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </article>
+            </div> <!-- card.// -->
+
+        </div>
+
+
+
+    </div>
+
+</div>
+@if (ViewBag.tbTestimonialsList != null && ViewBag.tbTestimonialsList.Length > 0)
+{
+    <div class="home p-5">
+        <div class="container">
+            <h1 class="text-center p-5 fw-bold">Client Testimonials</h1>
+            <div class="home-row">
+                <div class="d-flex home-cards">
+                    @foreach (var item in ViewBag.tbTestimonialsList)
+                    {
+                        <div class="card col-12 col-md-6 col-lg-4 p-3">
+                            <h3 class="fw-bold">@item.Name</h3><br />
+                            <div class="stars d-flex pb-4">
+                                @for (int j = 0; j < int.Parse(@item.Starcount); j++)
+                                {
+                                    <span class="fa fa-star checked"></span>
+                                }
+                                @for (int k = int.Parse(@item.Starcount); k < 5; k++)
+                                {
+                                    <span class="fa fa-star unchecked"></span>
+                                }
+                            </div><br />
+                            <p><b>@item.Comment</b></p><br />
+
+                        </div>
+                    }
+
+                </div>
+            </div>
+            <div class="left-arrow arrow">
+                <i class="fa-solid fa-chevron-left"></i>
+            </div>
+            <div class="right-arrow arrow">
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </div>
+    </div>
+}
+<div id="services" class="services-area area-padding" style="background-color:aliceblue;">
+    <h3 style="text-align:center; font-style:italic;">Frequently asked questions</h3>
+
+    <!--1-->
+    @if (ViewBag.tb_QuestionsList != null)
+    {
+        foreach (var item in ViewBag.tb_QuestionsList)
+        {
+            <div style="text-align:center">
+                <button class="btn btn-light w-75 shadow-sm p-3 mb-5 bg-body rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collaps1" aria-expanded="false" aria-controls="collaps1">
+                    <div class="float:left;text-align:left">
+                        @item.question
+                    </div>
+                    <i class="fa fa-plus-circle" style="font-size:25px;float:right;"></i>
+                    <div class="collapse collapse-horizontal w-75 my-3" id="collaps1">
+
+                        @item.answer
+
+                    </div>
+                </button>
+            </div>
+        }
+        <!--1-->
+    }
+</div>
+<div class="search-section pt-5 pb-5">
+    <div class="container">
+        <h2 class="text-center fw-bold">Popular searches in the UAE</h2>
+        <div class="search-by p-4 mt-4">
+            <h5 class="active">By Location</h5>
+            <h5>By Property Type</h5>
+        </div>
+        <div class="row">
+
+            <div class="col-lg-4 col-md-6 col-sm-12 sm-m-3">
+                <h5 class="fw-bold">Dubai Apartments</h5>
+                <p>
+                    @if (ViewBag.DubaiApartments != null && ViewBag.DubaiApartments.Length > 0)
+                    {
+                        for (int i = 0; i < ViewBag.DubaiApartments.Length; i++)
+                        {
+
+                            @Html.Raw(ViewBag.DubaiApartments[i].Community_No) <br />
+                        }
+                    }
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <h5 class="fw-bold">Abu Dhabi Apartments</h5>
+                <p>
+                    @if (ViewBag.AbuDahbiApartments != null && ViewBag.AbuDahbiApartments.Length > 0)
+                    {
+                        for (int i = 0; i < ViewBag.AbuDahbiApartments.Length; i++)
+                        {
+
+                            @Html.Raw(ViewBag.AbuDahbiApartments[i].Community_No) <br />
+                        }
+                    }
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <h5 class="fw-bold">Apartments in other locations</h5>
+                <p>
+                    @if (ViewBag.otherCountries != null && ViewBag.otherCountries.Length > 0)
+                    {
+                        for (int i = 0; i < ViewBag.otherCountries.Length; i++)
+                        {
+
+                            @Html.Raw(ViewBag.otherCountries[i].City) <br />
+
+                        }
+                    }
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <h5 class="fw-bold">Dubai Villas</h5>
+                <p>
+                    @if (ViewBag.DubaiApartments != null && ViewBag.DubaiApartments.Length > 0)
+                    {
+                        for (int i = 0; i < ViewBag.DubaiApartments.Length; i++)
+                        {
+
+                            @Html.Raw(ViewBag.DubaiApartments[i].Community_No) <br />
+                        }
+                    }
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <h5 class="fw-bold">Abu Dhabi Villas</h5>
+                <p>
+                    @if (ViewBag.AbuDahbiApartments != null && ViewBag.AbuDahbiApartments.Length > 0)
+                    {
+                        for (int i = 0; i < ViewBag.AbuDahbiApartments.Length; i++)
+                        {
+
+                            @Html.Raw(ViewBag.AbuDahbiApartments[i].Community_No) <br />
+                        }
+                    }
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <h5 class="fw-bold">Villlas in other locations</h5>
+                <p>
+                    @if (ViewBag.otherCountries != null && ViewBag.otherCountries.Length > 0)
+                    {
+                        for (int i = 0; i < ViewBag.otherCountries.Length; i++)
+                        {
+
+                            @Html.Raw(ViewBag.otherCountries[i].City) <br />
+                        }
+                    }
+
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+@Html.Partial("ContactUs")
+

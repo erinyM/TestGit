@@ -1,0 +1,32 @@
+﻿
+@using (Ajax.BeginForm("Subscribe", "Home", null,
+new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "divTSettings", OnSuccess = "ShowsuccessSubscribe", OnFailure = "ShowfailSellYProperty" },
+new { id = "Subscribe" }))
+{
+    @model LandSterlingProject2.Models.models_ado.Subscribe
+    @Html.AntiForgeryToken()
+    <div class="row">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="col-md-12 contact-form">
+            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @placeholder = "Name",@name="name" ,@id="name"} })
+            @Html.ValidationMessageFor(model => model.Name, null, new { @class = "text-danger" })
+
+        </div>
+        <div class="col-md-12 contact-form">
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @placeholder = "Email",@name="Email", @id = "Email" } })
+            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
+        </div>
+        <div class="col-md-12" style="margin-top:0px">
+            <p>
+                By clicking subscribe, you agree to our Terms of Use and Privacy
+                Policy
+            </p>
+        </div>
+        <div class="col-md-12" style="margin-top:0px">
+
+            <input type="submit" class="buttonSubscibe" value="Subscribe" />
+
+        </div>
+    </div>
+}

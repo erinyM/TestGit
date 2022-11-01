@@ -1,0 +1,65 @@
+﻿@model LandSterlingProject2.Models.RegisterModel
+
+<div class="register">
+
+    @using (Ajax.BeginForm("Register", "User", null,
+     new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "divTSettings", OnSuccess = "ShowsuccessRegister", OnFailure = "ShowfailSellYProperty" },
+                    new { id = "registeration" }))
+
+    {
+        <form name="registration" id="registration">
+
+       
+           
+            @Html.LabelFor(m => m.Name)
+            @Html.TextBoxFor(m => m.Name, new { @name = "name",@id="name" })
+            @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })<br />
+
+            @Html.LabelFor(m => m.Password)
+            @Html.PasswordFor(m => m.Password, new { @name = "password",@id="password" })
+            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })<br />
+
+            @Html.LabelFor(m => m.ConfirmPassword, new { @name = "con_password", @id = "con_password" })
+            @Html.PasswordFor(m => m.ConfirmPassword)
+            @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })<br />
+
+
+            @Html.LabelFor(m => m.PhoneNumber)
+
+            @Html.TextBoxFor(m => m.PhoneNumber, new { @type = "tel", @id = "PhoneNumber" })
+            @Html.TextBoxFor(m => m.PhoneNumber1, new { @type = "hidden", @id = "PhoneNumber1" })
+            @Html.ValidationMessageFor(m => m.PhoneNumber, "", new { @class = "text-danger" })<br />
+
+            @Html.LabelFor(m => m.Email)
+            @Html.TextBoxFor(m => m.Email, new { @name = "email" ,@id= "email", @onchange= "CheckAvailability();" })
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger",@id="message" })
+
+
+            <div class="chick pt-4">
+                @Html.CheckBoxFor(m => m.IamNotArobot)
+                @Html.LabelFor(m => m.IamNotArobot)
+            </div>
+            <input type="submit" value="Create an account" id="submit_registeration"/>
+          
+        </form>
+    }
+    </div>
+<script>
+    var phone_number1 = window.intlTelInput(document.querySelector("#PhoneNumber"), {
+        separateDialCode: true,
+        preferredCountries: ["ae"],
+        hiddenInput: "full",
+        utilsScript: "/js/utils.js"
+
+        /*"//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"*/
+    });
+    $('#PhoneNumber').change(function () {
+
+        alert("test country code");
+        var full_number = phone_number1.getNumber(intlTelInputUtils.numberFormat.E164);
+        $("#PhoneNumber1").val(full_number);
+        // alert(full_number);
+
+    });
+    </script>
+@*@using (Html.BeginForm("Register", "User", FormMethod.Post))*@

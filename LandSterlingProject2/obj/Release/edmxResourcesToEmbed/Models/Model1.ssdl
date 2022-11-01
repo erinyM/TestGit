@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ePMS2040Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Country_Master">
+    <Key>
+      <PropertyRef Name="Country_Id" />
+    </Key>
+    <Property Name="Country_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Country_Desc" Type="varchar" MaxLength="50" />
+    <Property Name="Modify_By" Type="varchar" MaxLength="50" />
+    <Property Name="Modify_On" Type="datetime" />
+  </EntityType>
+  <EntityType Name="eBedroom_Master">
+    <Key>
+      <PropertyRef Name="Record_Id" />
+    </Key>
+    <Property Name="Record_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Bedrooms" Type="varchar" MaxLength="100" />
+    <Property Name="Bedrooms_BI" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="eCountryCity_Master">
+    <Key>
+      <PropertyRef Name="Record_Id" />
+      <PropertyRef Name="Country_Desc" />
+    </Key>
+    <Property Name="Record_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Country_Desc" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="City_Desc" Type="varchar" MaxLength="100" />
+    <Property Name="Country_Desc_Ar" Type="nvarchar" MaxLength="100" />
+    <Property Name="City_Desc_Ar" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="eUnitCategory_Master">
+    <Key>
+      <PropertyRef Name="Record_Id" />
+    </Key>
+    <Property Name="Record_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Unit_Type" Type="varchar" MaxLength="100" />
+    <Property Name="Unit_Category" Type="varchar" MaxLength="100" />
+    <Property Name="Unit_Category_Ar" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tbTestimonials">
+    <Key>
+      <PropertyRef Name="testId" />
+    </Key>
+    <Property Name="testId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Comment" Type="nvarchar(max)" />
+    <Property Name="Starcount" Type="int" />
+  </EntityType>
+  <EntityType Name="tbUnit_Master">
+    <Key>
+      <PropertyRef Name="Ref_No" />
+    </Key>
+    <Property Name="Record_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Property_No" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Property_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Unit_No" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Ref_No" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Unit_Sr_No" Type="bigint" />
+    <Property Name="RERA_STR_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Street_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Street_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Unit_Option" Type="nvarchar" MaxLength="100" />
+    <Property Name="Category_Mix" Type="nvarchar" MaxLength="100" />
+    <Property Name="Permitted_Use" Type="nvarchar" MaxLength="100" />
+    <Property Name="Unit_Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Unit_Category" Type="nvarchar" MaxLength="100" />
+    <Property Name="Unit_Style" Type="nvarchar" MaxLength="100" />
+    <Property Name="Unit_Model" Type="nvarchar" MaxLength="100" />
+    <Property Name="Unit_Zone" Type="nvarchar" MaxLength="100" />
+    <Property Name="BuildingName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Plot_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Plot_Size" Type="nvarchar" MaxLength="50" />
+    <Property Name="Block" Type="nvarchar" MaxLength="50" />
+    <Property Name="Floor" Type="nvarchar" MaxLength="50" />
+    <Property Name="Unit_View" Type="nvarchar" MaxLength="255" />
+    <Property Name="CurrentMarketRate" Type="money" />
+    <Property Name="Completion_Date" Type="nvarchar" MaxLength="50" />
+    <Property Name="Unit_Class" Type="nvarchar" MaxLength="50" />
+    <Property Name="LivingRooms" Type="nvarchar" MaxLength="50" />
+    <Property Name="Bedrooms" Type="nvarchar" MaxLength="50" />
+    <Property Name="StoreRooms" Type="nvarchar" MaxLength="50" />
+    <Property Name="Parking" Type="nvarchar" MaxLength="50" />
+    <Property Name="Facilities" Type="nvarchar(max)" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="Payment_Plan" Type="nvarchar" MaxLength="100" />
+    <Property Name="Broker_Id" Type="nvarchar" MaxLength="50" />
+    <Property Name="Broker_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Seller_Id" Type="nvarchar" MaxLength="50" />
+    <Property Name="Seller_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="RequirementId" Type="bigint" />
+    <Property Name="Adv_Listing" Type="bit" />
+    <Property Name="Adv_NewsPaper" Type="bit" />
+    <Property Name="Adv_Web" Type="bit" />
+    <Property Name="Adv_OpenHouse" Type="bit" />
+    <Property Name="Adv1" Type="bit" />
+    <Property Name="Adv2" Type="bit" />
+    <Property Name="Adv3" Type="bit" />
+    <Property Name="Adv_Remarks1" Type="nvarchar(max)" />
+    <Property Name="Adv_Remarks2" Type="nvarchar(max)" />
+    <Property Name="Adv_Remarks3" Type="nvarchar(max)" />
+    <Property Name="Remarks" Type="nvarchar(max)" />
+    <Property Name="InternalRemarks" Type="nvarchar(max)" />
+    <Property Name="OtherSpace1" Type="nvarchar" MaxLength="50" />
+    <Property Name="OtherSpace2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Bathrooms" Type="nvarchar" MaxLength="50" />
+    <Property Name="Kitchen" Type="nvarchar" MaxLength="50" />
+    <Property Name="Balcony" Type="nvarchar" MaxLength="50" />
+    <Property Name="Terrace" Type="nvarchar" MaxLength="50" />
+    <Property Name="Total_Area" Type="money" />
+    <Property Name="Measured_Area" Type="money" />
+    <Property Name="Sqft_Rate" Type="money" />
+    <Property Name="Purchase_Value" Type="money" />
+    <Property Name="Total_Value" Type="money" />
+    <Property Name="Measured_Value" Type="money" />
+    <Property Name="RoundOff_Value" Type="money" />
+    <Property Name="Parking_Price" Type="money" />
+    <Property Name="All_In_Price" Type="money" />
+    <Property Name="Premium" Type="money" />
+    <Property Name="Premium_Percent" Type="smallmoney" />
+    <Property Name="Seller_Commission" Type="money" />
+    <Property Name="Seller_Commission_Percent" Type="smallmoney" />
+    <Property Name="Buyer_Commission" Type="money" />
+    <Property Name="Buyer_Commission_Percent" Type="smallmoney" />
+    <Property Name="Seller_TransferFee" Type="money" />
+    <Property Name="Seller_TransferFee_Percent" Type="smallmoney" />
+    <Property Name="Buyer_TransferFee" Type="money" />
+    <Property Name="Buyer_TransferFee_Percent" Type="smallmoney" />
+    <Property Name="Admin_Fees" Type="money" />
+    <Property Name="Admin_Fees_Percent" Type="smallmoney" />
+    <Property Name="Other_Fees" Type="money" />
+    <Property Name="Other_Fees_Percent" Type="smallmoney" />
+    <Property Name="Other_Fees_Remarks" Type="nvarchar" MaxLength="255" />
+    <Property Name="Seller_Paid" Type="money" />
+    <Property Name="Seller_Paid_Percent" Type="smallmoney" />
+    <Property Name="Developer_Due" Type="money" />
+    <Property Name="Developer_Due_Percent" Type="smallmoney" />
+    <Property Name="Rent_Per_Annum" Type="money" />
+    <Property Name="Short_Term_Rent" Type="money" />
+    <Property Name="Short_Term_Period" Type="nvarchar" MaxLength="100" />
+    <Property Name="Rent_Per_Day" Type="money" />
+    <Property Name="Security_Deposit" Type="money" />
+    <Property Name="Advance_Deposit" Type="money" />
+    <Property Name="Tenant_Commission" Type="money" />
+    <Property Name="Landlord_Commission" Type="money" />
+    <Property Name="Maintenance_Fee" Type="money" />
+    <Property Name="ReferralCommission" Type="money" />
+    <Property Name="All_In_Rent" Type="money" />
+    <Property Name="VAT" Type="money" />
+    <Property Name="VAT_Percent" Type="smallmoney" />
+    <Property Name="Tax" Type="money" />
+    <Property Name="Tax_Percent" Type="smallmoney" />
+    <Property Name="Tax_Code" Type="int" />
+    <Property Name="Discount" Type="money" />
+    <Property Name="Discount_Percent" Type="smallmoney" />
+    <Property Name="Negotiable" Type="bit" />
+    <Property Name="Currency" Type="nvarchar" MaxLength="50" />
+    <Property Name="CMA_Range1" Type="money" />
+    <Property Name="CMA_Range2" Type="money" />
+    <Property Name="Installments" Type="int" />
+    <Property Name="RentPayableTo" Type="nvarchar" MaxLength="255" />
+    <Property Name="RentBankName" Type="nvarchar" MaxLength="255" />
+    <Property Name="RentBankAcNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="SecDepPayableTo" Type="nvarchar" MaxLength="255" />
+    <Property Name="SecDepBankName" Type="nvarchar" MaxLength="255" />
+    <Property Name="SecDepBankAcNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="ComPayableTo" Type="nvarchar" MaxLength="255" />
+    <Property Name="ComBankName" Type="nvarchar" MaxLength="255" />
+    <Property Name="ComBankAcNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Key_Status" Type="nvarchar" MaxLength="100" />
+    <Property Name="NoofKeys" Type="int" />
+    <Property Name="PublishDate" Type="datetime" />
+    <Property Name="PublishStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="ServiceCharge" Type="nvarchar" MaxLength="50" />
+    <Property Name="OwnerOccupied" Type="bit" />
+    <Property Name="Leased" Type="bit" />
+    <Property Name="LeaseAmount" Type="money" />
+    <Property Name="LeaseExpiry" Type="datetime" />
+    <Property Name="Mandate" Type="nvarchar" MaxLength="50" />
+    <Property Name="FinanceOffered" Type="bit" />
+    <Property Name="FinanceCompany" Type="nvarchar" MaxLength="100" />
+    <Property Name="Mortgaged" Type="bit" />
+    <Property Name="MortgageCompany" Type="nvarchar" MaxLength="100" />
+    <Property Name="PropertyRegistered" Type="bit" />
+    <Property Name="RegisteredDate" Type="datetime" />
+    <Property Name="ForSale" Type="bit" />
+    <Property Name="Adv_Listing_Date" Type="datetime" />
+    <Property Name="Adv_NewsPaper_Date" Type="datetime" />
+    <Property Name="Adv_Web_Date" Type="datetime" />
+    <Property Name="Adv_OpenHouse_Date" Type="datetime" />
+    <Property Name="Adv1_Date" Type="datetime" />
+    <Property Name="Adv2_Date" Type="datetime" />
+    <Property Name="Adv3_Date" Type="datetime" />
+    <Property Name="Portfolio" Type="nvarchar" MaxLength="100" />
+    <Property Name="PortfolioManager" Type="nvarchar" MaxLength="100" />
+    <Property Name="PropertyAdministrator" Type="nvarchar" MaxLength="100" />
+    <Property Name="CanView" Type="bit" />
+    <Property Name="Upcoming" Type="bit" />
+    <Property Name="PropertyType" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReferredTo" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReferredOn" Type="datetime" />
+    <Property Name="UnpublishedDate" Type="datetime" />
+    <Property Name="Factor" Type="nvarchar" MaxLength="50" />
+    <Property Name="Common" Type="nvarchar" MaxLength="50" />
+    <Property Name="CP" Type="nvarchar" MaxLength="50" />
+    <Property Name="GSA" Type="nvarchar" MaxLength="50" />
+    <Property Name="NSA" Type="nvarchar" MaxLength="50" />
+    <Property Name="Effeciency" Type="nvarchar" MaxLength="50" />
+    <Property Name="TotalValueUSD" Type="money" />
+    <Property Name="ListingPriceUSD" Type="money" />
+    <Property Name="AllInPriceUSD" Type="money" />
+    <Property Name="RentPerAnnumUSD" Type="money" />
+    <Property Name="AllInRentUSD" Type="money" />
+    <Property Name="Interest" Type="smallmoney" />
+    <Property Name="Repayment" Type="smallmoney" />
+    <Property Name="MonthlyIncome" Type="smallmoney" />
+    <Property Name="AnnualIncome" Type="smallmoney" />
+    <Property Name="EURights" Type="nvarchar" MaxLength="50" />
+    <Property Name="EURightsAmount" Type="money" />
+    <Property Name="USP" Type="nvarchar" MaxLength="500" />
+    <Property Name="Exp1" Type="nvarchar(max)" />
+    <Property Name="Exp2" Type="nvarchar(max)" />
+    <Property Name="Exp3" Type="nvarchar" MaxLength="500" />
+    <Property Name="Exp4" Type="nvarchar" MaxLength="500" />
+    <Property Name="Exp5" Type="nvarchar" MaxLength="255" />
+    <Property Name="Exp6" Type="nvarchar" MaxLength="255" />
+    <Property Name="Exp7" Type="nvarchar" MaxLength="255" />
+    <Property Name="Exp8" Type="nvarchar" MaxLength="100" />
+    <Property Name="Exp9" Type="nvarchar" MaxLength="100" />
+    <Property Name="Exp10" Type="nvarchar" MaxLength="100" />
+    <Property Name="TempId" Type="nvarchar" MaxLength="100" />
+    <Property Name="Refered_By" Type="nvarchar" MaxLength="100" />
+    <Property Name="Refered_On" Type="datetime" />
+    <Property Name="Modified_By" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modified_On" Type="datetime" />
+    <Property Name="Created_By" Type="nvarchar" MaxLength="100" />
+    <Property Name="Created_On" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="ePMS2040ModelStoreContainer">
+    <EntitySet Name="Country_Master" EntityType="Self.Country_Master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eBedroom_Master" EntityType="Self.eBedroom_Master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eCountryCity_Master" EntityType="Self.eCountryCity_Master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eUnitCategory_Master" EntityType="Self.eUnitCategory_Master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbTestimonials" EntityType="Self.tbTestimonials" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbUnit_Master" EntityType="Self.tbUnit_Master" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

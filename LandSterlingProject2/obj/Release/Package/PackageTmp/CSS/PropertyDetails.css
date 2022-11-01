@@ -1,0 +1,360 @@
+
+/* the main css */
+.second-page .all-links {
+    font-size: 11px;
+}
+
+    .second-page .all-links a {
+        text-decoration: none;
+        color: var(--main-color);
+    }
+
+    .second-page .all-links .link-one svg {
+        color: var(--main-color);
+    }
+
+    .second-page .all-links .the-rest svg:last-of-type {
+        color: var(--main-color);
+    }
+* {
+    font-family: Montserrat, Regular;
+}
+:root{
+   --main-color:#00A38F; 
+}
+.border-bottom{
+    border-bottom: 5px solid #CECECE;
+}
+.title h4{
+    font-size: 25px/30px;
+    font-weight:  600;
+}
+.main-button{
+    background: #00A38F 0% 0% no-repeat padding-box;
+border-radius: 7px;
+border: none;
+font-size: 20px/24px;
+font-weight: 600;
+color: #FFFFFF;
+
+}
+.link-style{
+    text-decoration:none;
+}
+/* slider style  */
+/* main-container */
+iframe{
+    width:100%;
+}
+.back-to-search {
+    color: #00A38F;
+}
+.back-to-search a {
+    color: #00A38F;
+}
+.location-link {
+    text-decoration: none;
+    color: #00A38F;
+}
+    .location-link:hover {
+        text-decoration: none;
+        color: #00A38F;
+    }
+.price {
+    font: normal normal bold 32px/39px ;
+    color: #00A38F;
+}
+.property-name {
+    font: normal normal bold 50px/61px ;
+}
+.details-title {
+    font: normal normal bold 32px/39px ;
+    color:#000000;
+   
+}
+.property-details a {
+    color: #00A38F;
+    font-size:15px;
+}
+
+.property-details a :hover {
+    color: #00A38F;
+}
+.property-img img {
+    background-size: cover;
+    height:150px;
+    width:100%
+}
+
+.property-information-details {
+    font: normal normal bold 15px/20px Montserrat, Regular;
+}
+.property-information-title {
+    font: normal normal normal 15px/20px Montserrat, Regular;
+    color: #00A38F;
+}
+.slider-dev button {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 7px;
+    font: normal normal 500px 16px/19px Montserrat, Regular;
+    color: #00A38F;
+    border: none;
+}
+.details {
+    position: absolute;
+    color: aqua;
+    z-index: 2222;
+    top: 90%;
+    left: 50%;
+}
+.carousel-control-prev-icon .carousel-control-next-icon{
+    background-color:#FFFFFF ;
+
+}
+input{
+    padding-left: 0;
+}
+/* end of slyder style */
+
+
+/* responsev */
+.details-container {
+    padding-right:15%  ;
+}
+
+
+
+  /* rang style */
+  .rang
+  {
+    padding-right: 25% ;
+  }
+   .range-value  {
+    font-size:30px/37px  ;
+    font-weight: 600;
+    letter-spacing: 0px;
+    color: #000000;
+  }
+  .range-title {
+    font-size:20px/24px  ;
+    letter-spacing: 0px;
+    color: #000000;
+  }
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    background: #00A38F 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+}
+input[type=range]::-webkit-slider-thumb {
+    height: 14px;
+    width: 15px;
+    border-radius: 10px;
+    
+    cursor: pointer;
+    margin-top: -3px;
+    -webkit-appearance: none;
+    background: #00A38F 0% 0% no-repeat padding-box;
+    
+}
+.calculation-result-payment {
+    color: #ffffff;
+    background-color: #00A38F;
+    padding:48px;
+}
+.calculation-border {
+    border-right: 2px solid #ffffff;
+}
+.send-email-btn {
+    border-radius: 0px 5px 5px 0px;
+    padding:4px 20px 4px 20px;
+}
+.send-email-btn-div{
+    padding-left:0 !important;
+}
+.send-email-input-div{
+    padding-right:0 !important;
+}
+.send-email-input {
+    padding: 2px  0 4px 5px;
+    border-radius: 5px 0px 0px 5px;
+    width: 100%;
+    opacity: 0.38;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border: 0.5px solid #707070;
+}
+/* form input */
+.form input, select {
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border: 0.5px solid #707070;
+    border-radius: 7px;
+    font-size: 12px/15px;
+    opacity: 0.38;
+
+}
+.MessageTextArea {
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border: 0.5px solid #707070;
+    border-radius: 7px;
+    font-size: 16px/19px;
+    opacity: 0.63;
+}
+.form chechbox {
+    font-size: 16px/19px;
+}
+/*.form-floating textarea{
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border: 0.5px solid #707070;
+    border-radius: 7px;
+    font-size: 16px/19px;
+    opacity: 0.63;
+}*/
+.call-link {
+    text-decoration:none;
+    color:#ffffff;
+}
+.call-link :hover{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/*contact us */
+.contact-details span {
+    color: #000000;
+    font: 25px/55px;
+}
+.contact-details i {
+    color: #00A38F;
+}
+.aminity-div {
+    box-shadow: -3px -3px 9px #c1b5b5;
+    color: #00A38F;
+    margin: 10px;
+}
+.aminities-icon {
+    font-size: 40px;
+    transition: font-size .5s;
+    display: flex;
+    justify-content: center;
+    margin:10px;
+}
+    .aminities-icon:hover {
+        font-size: 45px;
+    }
+    .aminities-name {
+        display: flex;
+        justify-content: center;
+    }
+  /*form style */
+/* Recommended-properties */
+.recomended-property {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 25px #00000026;
+    border-radius: 0px 8px 8px 0px;
+}
+    .recomended-property .property-details img{
+        padding:0;
+    }
+    .recomended-property .property-details{
+        padding:10px;
+    }
+        .recomended-property .property-details h5, h4 {
+            font: normal normal 12px/15px;
+            letter-spacing: 0px;
+            color: #000000;
+        }
+        .recomended-property .property-details .light-color-span {
+            font: normal 600 12px/15px Montserrat, Regular;
+            letter-spacing: 0px;
+            color: #999999;
+        }
+        .recomended-property .property-details .location {
+            font: normal normal 12px/15px Montserrat, Regular;
+            
+            letter-spacing: 0px;
+            color: #000000;
+        }
+
+.side-bar-link :hover {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.contact-font {
+    color: #00A38F
+}
+
+
+
+/* end of Recommended-properties */
+/* Popular-searches-in-the-UAE */
+.Popular-searches-in-the-UAE {
+    background-color: #F1F1F1;
+    border-radius: 10px;
+}
+.Popular-searches-in-the-UAE ul {
+    list-style: none;
+}
+/* end of Popular-searches-in-the-UAE */
+iframe {
+    height: 585px;
+    padding:0 !important;
+}
+@media only screen and (max-width: 990px) {
+
+
+    .details-container {
+        padding: 0;
+    }
+
+    .rang {
+       
+        padding: 5px 0 15px 0 ;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .details {
+        top: 90%;
+        left: 20%;
+    }
+}
+@media only screen and (max-width: 500px) {
+
+    .calculation-result-payment{
+        padding:10px 0 10px 0 ;
+    }
+    .send-email-btn {
+        border-radius:  5px;
+        padding: 5px 20px 5px 20px;
+    }
+    .details {
+        top: 80%;
+        left: 9%;
+        font-size:10px;
+        
+    }
+    
+
+}
+@media only screen and (max-width: 770px) {
+    .send-email-btn {
+        border-radius: 5px;
+    }
+    .send-email-btn-div {
+        padding-left:15px;
+        justify-content: center;
+        display: flex;
+        padding-top: 15px;
+        
+    }
+    .send-email-input{
+        border-radius:5px;
+
+    }
+    .send-email-input-div {
+        padding-right: 15px;
+    }
+}

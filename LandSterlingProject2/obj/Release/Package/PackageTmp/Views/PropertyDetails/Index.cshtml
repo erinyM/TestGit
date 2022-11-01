@@ -1,0 +1,665 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@model LandSterlingProject2.Models.Emailmodel
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="~/css/PropertyDetails.css">
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+<!-- font awesome -->
+<script src="https://kit.fontawesome.com/a3583e071f.js" crossorigin="anonymous"></script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="~/js/Propertydetailsscript.js"></script>
+<script>
+  
+@*form validation *@
+    var form = document.getElementById("ContactUS")
+    function SendMortgage() {
+        var mortgageEmail = {};
+        mortgageEmail.Email = document.getElementById("Email-to-send-to").value;
+        mortgageEmail.MonthlyPayment = document.getElementById("monthly-payment-tosend").value;
+        mortgageEmail.InvestmentValue = document.getElementById("total-invest-value-tosend").value;
+        console.log(JSON.stringify(mortgageEmail))
+        $.ajax({
+            url: "/PropertyDetails/SendEmail",
+            type: 'POST',
+            data: JSON.stringify(mortgageEmail),
+            contentType: "application/json; charset=utf-8",
+            datatype: 'json',
+            success: function (data) {
+                if (data == true) {
+                    
+                    swal("Thank you! ", "Submitted successfully", "success");
+                }
+                else {
+                   
+                }
+            }
+        });
+    };
+</script>
+
+<style>
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+
+    .swiper {
+        width: 100%;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .swiper-slide {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .mySwiper2 {
+        height: 80%;
+        width: 100%;
+    }
+
+    .mySwiper {
+        height: 20%;
+        box-sizing: border-box;
+        padding: 10px 0;
+    }
+
+        .mySwiper .swiper-slide {
+            width: 25%;
+            height: 100%;
+            opacity: 0.4;
+        }
+
+        .mySwiper .swiper-slide-thumb-active {
+            opacity: 1;
+        }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+<div>
+    <div class="container ">
+
+        <div class="row">
+            <div class="col-lg-9 col-md-12 col-sm-12 ">
+
+                <div class="slider-dev">
+                    <div class="all-links d-flex align-items-center py-4">
+                        <div class="link-one d-flex align-items-center back-to-search">
+                            <i class="fa-solid fa-angle-left pe-3"></i>
+                            <a href="@Url.Action("Index", "Users")">back to search</a>
+                        </div>
+                        <div class="the-rest d-flex align-items-center ms-auto">
+                            <a class="nav-link" href="@Url.Action("Index", "Users")">home</a>
+                            <i class="fa-solid fa-angle-right pe-3"></i>
+                            <p class="m-0">@{@Html.Raw(ViewBag.Property.CountryLocation)}</p>
+
+                            @*<p class="m-0">Apartments</p>
+                <i class="fa-solid fa-angle-right ps-3 pe-3"></i>
+                <p class="m-0">Aldar Properties</p>
+                <i class="fa-solid fa-angle-right ps-3"></i>
+                <a class="nav-link" href="#">>@{@Html.Raw((ViewBag.Property.Name.Contains(", Ref#")) ? ViewBag.Property.Name.Substring(0, ViewBag.Property.Name.IndexOf(", Ref#")) : ViewBag.Property.Name)}</a>*@
+
+                            @*<i class="fa-solid fa-angle-right ps-3"></i>*@
+                        </div>
+                    </div>
+                    <div class="head-line d-flex justify-content-between">
+                        <div>
+                            <h2 class="property-name">@{@Html.Raw((ViewBag.Property.Name.Contains(", Ref#")) ? ViewBag.Property.Name.Substring(0, ViewBag.Property.Name.IndexOf(", Ref#")) : ViewBag.Property.Name)}</h2>
+                            <h5>@{@Html.Raw(ViewBag.Property.Location)}</h5>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="head-line">
+                                <h2 class="price "> ADE @{@Html.Raw(ViewBag.Property.Price)}</h2>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;height:450px" ;
+                         class="swiper mySwiper2">
+                        <div class="details">
+                            <button class="px-3 py-2">
+                                <a href="#location" class="location-link">
+                                    <img class="pr-2" src="~/images/Icon awesome-map-marker-alt.png" /> Check
+                                    location
+                                </a>
+                            </button>
+                            <button class="px-3 py-2"> <img class="pr-3" src="~/images/Group 13147.png" />Save</button>
+                            <button class="px-3 py-2"> <img class="pr-3" src="~/images/Group 13150.png" />Share</button>
+                        </div>
+                        <div class="swiper-wrapper">
+                            @if (ViewBag.Property.ImagePath1 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath1)}">
+                                </div>
+                            }
+                            @if (ViewBag.Property.ImagePath2 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath2)}">
+                                </div>
+                            }
+                            @if (ViewBag.Property.ImagePath3 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath3)}">
+                                </div>
+                            }
+                            @if (ViewBag.Property.ImagePath4 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath4)}">
+                                </div>
+                            }
+                            @if (ViewBag.Property.ImagePath5 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath5)}">
+                                </div>
+                            }
+
+                            @if (ViewBag.Property.ImagePath6 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath6)}">
+                                </div>
+                            }
+                            @if (ViewBag.Property.ImagePath7 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath7)}">
+                                </div>
+                            }
+                            @if (ViewBag.Property.ImagePath8 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath8)}">
+                                </div>
+                            }
+                            @if (ViewBag.Property.ImagePath9 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath9)}">
+                                </div>
+                            }
+                            @if (ViewBag.Property.ImagePath10 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath10)}">
+                                </div>
+                            }
+                            @if (ViewBag.Property.ImagePath11 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath11)}">
+                                </div>
+                            }
+                            @if (ViewBag.Property.ImagePath12 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath12)}">
+                                </div>
+                            }
+
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <div thumbsSlider="" class="swiper mySwiper" style="height:120px;">
+                        <div class="swiper-wrapper">
+                            @if (ViewBag.Property.ImagePath1 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath1)}">
+                                </div>
+                            }
+                            @if (ViewBag.Property.ImagePath2 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath2)}">
+                                </div>
+                            }
+                            @if (ViewBag.Property.ImagePath3 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath3)}">
+                                </div>
+                            }
+                            @if (ViewBag.Property.ImagePath4 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath4)}">
+                                </div>
+                            }
+                            @if (ViewBag.Property.ImagePath5 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath5)}">
+                                </div>
+                            }
+
+                            @if (ViewBag.Property.ImagePath6 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath6)}">
+                                </div>
+                            }
+                            @if (ViewBag.Property.ImagePath7 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath7)}">
+                                </div>
+                            }
+                            @if (ViewBag.Property.ImagePath8 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath8)}">
+                                </div>
+                            }
+                            @if (ViewBag.Property.ImagePath9 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath9)}">
+                                </div>
+                            }
+                            @if (ViewBag.Property.ImagePath10 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath10)}">
+                                </div>
+                            }
+                            @if (ViewBag.Property.ImagePath11 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath11)}">
+                                </div>
+                            }
+                            @if (ViewBag.Property.ImagePath12 != "")
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@{@Html.Raw(ViewBag.Property.ImagePath12)}">
+                                </div>
+                            }
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class=" details-container ">
+                    <div class="property-details border-bottom pb-4 pt-2">
+
+                        <div class="contact-details ">
+                            <div class="pb-3 d-flex py-4">
+                                <div class=" px-3">
+                                    <img src="~/images/Untitled-2-02.png" class="pr-2">
+                                    <span class="light-color-span pr-3">  @{@Html.Raw(ViewBag.Property.Rooms)} BR</span>
+                                </div>
+
+                                <div>
+                                    <img src="~/images/Untitled-2-04.png" class="pr-2">
+                                    <span class="light-color-span"> @{@Html.Raw(ViewBag.Property.Floor)} Sq.Ft</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="property-description border-bottom pb-4 pt-2">
+                        <h2 class="details-title"> Welcome to @{@Html.Raw((ViewBag.Property.Name.Contains(", Ref#")) ? ViewBag.Property.Name.Substring(0, ViewBag.Property.Name.IndexOf(", Ref#")) : ViewBag.Property.Name)}</h2>
+                        <p>@{@Html.Raw(ViewBag.Property.MarketingText)}</p>
+                    </div>
+                    <div class="property-information pb-3 pt-2">
+                        <h2 class="details-title pb-3">Property Information </h2>
+                        <div>
+                            <div class="row border-bottom pb-3">
+                                <div class=" row pb-3">
+                                    <div class=" col-4">
+                                        <span class="property-information-title"> <i class="fa-sharp fa-solid fa-city "></i>  Type</span>
+                                    </div>
+                                    <div class="property-information-details col-8">
+                                        @{@Html.Raw(ViewBag.Property.PropertyType)}
+                                    </div>
+                                </div>
+                                <div class=" row pb-3">
+                                    <div class=" col-4">
+                                        <span class=" property-information-title"> <i class="fa-sharp fa-solid fa-house"></i>  Purpos</span>
+                                    </div>
+                                    <div class="property-information-details col-8">
+                                        @{@Html.Raw(ViewBag.Property.Purpos)}
+                                    </div>
+                                </div>
+                                <div class=" row pb-4">
+                                    <div class=" col-4">
+                                        <span class=" property-information-title"> <i class="fa-solid fa-credit-card "></i>  Payment Plan</span>
+                                    </div>
+                                    <div class="col-8 property-information-details">
+                                        The frist installment is  @{@Html.Raw(ViewBag.Property.FristInstallment)} ,
+                                        the handover is  @{@Html.Raw(ViewBag.Property.Handover)},
+                                        the underconstruction is  @{@Html.Raw(ViewBag.Property.UnderConstruction)},
+                                        and the post handover is  @{@Html.Raw(ViewBag.Property.PostHandover)}
+                                    </div>
+                                </div>
+
+
+                                <div class=" row pb-4 ">
+                                    <div class=" col-4">
+                                        <span class=" property-information-title"> <i class="fa-solid fa-location-dot "></i>  location Pros</span>
+                                    </div>
+                                    <div class="col-8 property-information-details">
+                                        @{@Html.Raw(ViewBag.Property.Address)}
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="aminities border-bottom pb-3 ">
+                        <h2 class="details-title">Aminities</h2>
+                        <div class="row px-5">
+                            @foreach (var item in ViewBag.features)
+                            {
+                                <div class="col-lg-3 col-md-5 col-sm-5  col-xs-3 py-3 aminity-div">
+                                    @*<div><i class=@{@item.Img=="0"? "fa-sharp fa-solid fa-house": @item.Img}></i></div>*@
+                                    @if (item.Img == "0")
+                                    {
+                                        <div class="aminities-icon pb-3"><i class=" fa-sharp fa-solid fa-house"></i></div>
+                                    }
+                                    else
+                                    {
+                                        <div class="aminities-icon  pb-3"><i class=" @item.Img"></i></div>
+                                    }
+                                    <div class="aminities-name">@item.Name</div>
+                                </div>
+                            }
+                        </div>
+
+                    </div>
+                    <div class="rang ">
+                        <div class="pb-5">
+                            <h2 class="details-title">Mortgage Calculator</h2>
+                            <div class="Property-price">
+                                <div class="d-flex  justify-content-between pb-2">
+                                    <div>
+                                        <span class="range-title">Property price</span>
+                                    </div>
+                                    <div>
+                                        <span class="range-value" id="property-price-span">1000 ADE</span>
+                                    </div>
+                                </div>
+                                <div class="rang-input w-100 pb-4">
+                                    <input id="property" class="w-100 py-3" type="range" min="1000" max="10000" value="1000" onchange="PropertyPrice(this.value)">
+                                </div>
+                            </div>
+                            <div class="Down-Payment">
+                                <div class="d-flex  justify-content-between pb-2">
+                                    <div>
+                                        <span class="range-title"> "Down-Payment</span>
+                                    </div>
+                                    <div>
+                                        <span class="range-value" id="Down-Payment-span">500 ADE</span>
+                                    </div>
+                                </div>
+                                <div class="rang-input w-100 pb-4">
+                                    <input id="Down-Payment-input" class="w-100 py-3" type="range" min="0" max="1000" value="500" onchange="DownPayment(this.value)">
+                                </div>
+                            </div>
+                            <div class="Interest">
+                                <div class="d-flex  justify-content-between pb-2">
+                                    <div>
+                                        <span class="range-title">Interest</span>
+                                    </div>
+                                    <div>
+                                        <span class="range-value" id="Interest-span">3 %</span>
+                                    </div>
+                                </div>
+                                <div class="rang-input w-100 pb-4">
+                                    <input id="Interest-input" class="w-100 py-3" type="range" min="0" max="4" value="1" onchange="Interest(this.value)">
+                                </div>
+                            </div>
+                            <div class="Loan-Duration">
+                                <div class="d-flex  justify-content-between pb-2">
+                                    <div>
+                                        <span class="range-title">Loan Duration</span>
+                                    </div>
+                                    <div>
+                                        <span class="range-value" id="Loan-Duration-span">4 Years</span>
+                                    </div>
+                                </div>
+                                <div class="rang-input w-100 pb-4">
+                                    <input id="Loan-Duration-input" class="w-100 py-3" type="range" min="4" max="10" value="4" onchange="LoanDuration(this.value)">
+                                </div>
+                            </div>
+                            <div class="row calculation-result-payment ">
+                                <div class=" calculation-border col-6 d-flex">
+                                    <div class="m-auto">
+                                        <span>ADE</span><br>
+                                        <h1 id="total-invest-value">356.5</h1>
+                                        <p>Total Interest Value</p>
+                                    </div>
+
+                                </div>
+                                <div class="col-6 d-flex">
+                                    <div class="m-auto">
+                                        <span>ADE</span><br>
+                                        <h1 id="monthly-payment">33.4</h1>
+                                        <p>Monthly payment</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-5">
+                            <div class="pb-5"> <span class="rang-span">Want a Copy of the Results?</span></div>
+                            @using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data", onsubmit = "SendMortgage()" }))
+                            {
+                                <form>
+                                    <input hidden id="total-invest-value-tosend" type="text" class="form-control form-input " name="InvestmentValue" value="the inital value according to the calculation">
+                                    <input hidden id="monthly-payment-tosend" type="text" class="form-control form-input " name="MonthlyPayment" value="the enetial value according to the calculation ">
+
+                                    <div class="row px-5 ">
+                                        <div class="col-md-8 col-sm-12  send-email-input-div ">
+
+                                            @Html.TextBoxFor(m => m.Email, "", new { @class = "send-email-input", @id = "Email-to-send-to", placeholder = "enter your email" })
+                                            @Html.ValidationMessageFor(m => m.Email)
+                                        </div>
+                                        <div class="col-md-4 col-sm-12  send-email-btn-div ">
+                                            <input type="submit" class=" send-email-btn main-button " value="Send Email" />
+                                        </div>
+
+                                    </div>
+                                </form>
+                            }
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-12 col-sm-12 pt-3">
+                <div class="row p-3">
+                    <div class="col-3">
+                        @if (ViewBag.listinguser.ImagePath == "0")
+                        {
+
+                            <img src="~/images/21104.png" width="50" />
+                        }
+                        else
+                        {
+                            <img src="@{@Html.Raw(ViewBag.listinguser.ImagePath)}" />
+                        }
+                    </div>
+                    <div class="col-9 d-flex align-items-center">
+                        @if (ViewBag.listinguser.Name != null)
+                        {
+
+                            <span> <i class="fa-sharp fa-solid fa-user"></i>  @{@Html.Raw(ViewBag.listinguser.Name)} </span>
+                        }
+
+                    </div>
+                </div>
+                @Html.Partial("Sidebar",
+                                new ViewDataDictionary(ViewData)
+                                {
+                                    { "propertyname", ViewBag.Property.Name.Contains(", Ref#") ? ViewBag.Property.Name.Substring(0, ViewBag.Property.Name.IndexOf(", Ref#")) : ViewBag.Property.Name}
+                })
+                <div class="Recommended-properties">
+                    <div class="title pb-3">
+                        <h4>Recommended properties</h4>
+                    </div>
+                    @foreach (var item in ViewBag.RecommendedProperty)
+                    {
+                        <div class=" recomended-property row mb-3 ">
+                            <div class=" property-img p-0 col-6 ">
+                                <img src=" @item.ImagePath1 " class="w-100 h-100 ">
+                            </div>
+                            <div class="property-details pr-1 py-3 col-6">
+                                <h5> <a href="~/PropertyDetails/Index/@item.RecordId">@item.Name</a> </h5>
+                                <div class="pb-1">
+                                    <span class="location"><img src="~/images/Icon awesome-map-marker-alt.png" class="pr-2 "> @item.Location</span>
+                                </div>
+                                <div class="pb-1">
+                                    <img src="~/images/Untitled-2-02.png" class="pr-2">
+                                    <span class="light-color-span pr-3"> @item.Rooms BR</span>
+                                </div>
+
+                                <div class="pb-1">
+                                    <img src="~/images/Untitled-2-04.png" class="pr-2">
+                                    <span class="light-color-span">  @item.Floor Sq.Ft</span>
+                                </div>
+                                <div>
+                                    <h4 class="pb-1">@item.Price</h4>
+                                </div>
+                                <div>
+                                    <button class="main-button  w-100">Book now </button>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="Popular-searches-in-the-UAE row  p-3">
+                    <h3>
+                        Popular searches in the UAE
+                    </h3>
+                    <div>
+                        <h6>Dubai Apartments</h6>
+                        <ul>
+                            @if (ViewBag.DubaiApartments.Length > 0)
+                            {
+                                for (int i = 0; i < ViewBag.DubaiApartments.Length; i++)
+                                {
+
+                                    <li>@Html.Raw(ViewBag.DubaiApartments[i].Community_No)</li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                    <div>
+                        <h6>AbuDahbi Apartments</h6>
+                        <ul>
+                            @if (ViewBag.AbuDahbiApartments != null && ViewBag.AbuDahbiApartments.Length > 0)
+                            {
+                                for (int i = 0; i < ViewBag.AbuDahbiApartments.Length; i++)
+                                {
+
+                                    <li>@Html.Raw(ViewBag.AbuDahbiApartments[i].Community_No)</li>
+
+                                }
+                            }
+                        </ul>
+                    </div>
+                    <div>
+                        <h6>other Countries</h6>
+                        <ul>
+                            @if (ViewBag.otherCountries != null && ViewBag.otherCountries.Length > 0)
+                            {
+                                for (int i = 0; i < ViewBag.otherCountries.Length; i++)
+                                {
+
+                                    <li> @Html.Raw(ViewBag.otherCountries[i].City)</li>
+                                }
+                            }
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+</div>
+<div class="container-fluid" id="location">
+    <iframe src="@{@Html.Raw(ViewBag.Property.VideoUrl)}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+</script>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

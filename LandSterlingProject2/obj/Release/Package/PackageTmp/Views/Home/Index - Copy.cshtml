@@ -1,0 +1,171 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@if (ViewBag.tbTestimonialsList != null && ViewBag.tbTestimonialsList.Length > 0)
+{
+    <!-- Partners strat -->
+    <div class="partners">
+        <div class="container">
+            <div class="main-title">
+                <h2>Client Testimonials</h2>
+            </div>
+            <div class="slick-slider-area">
+                <div class="row slick-carousel" data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 3}}, {"breakpoint": 768,"settings":{"slidesToShow": 2}}]}'>
+                    @foreach (var item in ViewBag.tbTestimonialsList)
+                    {
+
+                        <div class="slick-slide-item">
+                            <h3 style="display:inline"><b>@item.Name</b></h3><br />
+                            @for (int j = 0; j < int.Parse(@item.Starcount); j++)
+                            {
+                                <span class="fa fa-star checked"></span>
+                            }
+                            @for (int k = int.Parse(@item.Starcount); k < 5; k++)
+                            {
+                                <span class="fa fa-star "></span>
+                            }<br />
+                            <p style="display:inline"><b>@item.Comment</b></p><br />
+                            <p style="display:inline"><b>@item.Starcount</b></p><br />
+                        </div>
+                    }
+
+
+
+                </div>
+                <div class="slick-btn" style="margin-top:15px;">
+                    <div class="slick-prev slick-arrow-buton-2 sab-4">
+                        <i class="fa fa-angle-left"></i>
+                    </div>
+                    <div class="slick-next slick-arrow-buton-2 sab-3">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="main-title">
+                <br><a href="~/Home/tbTestimonals" class="btn button-theme" style=" font-weight: bold; margin-top: 36px;">Show All Developers</a>
+            </div>
+        </div>
+        <div class="main-title">
+        </div>
+    </div>
+}
+@if (ViewBag.Properties != null && ViewBag.Properties.Length > 0)
+{
+    <!-- Featured Properties start -->
+    <div class="featured-properties content-area-12">
+        <div class="container">
+            <!-- Main title -->
+            <div class="main-title">
+                <h2>Featured Properties</h2>
+            </div>
+            <!-- Slick slider area start -->
+            <div class="slick-slider-area">
+                <div class="row slick-carousel" data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
+                    @for (int i = 0; i < ViewBag.Properties.Length; i++)
+                    {
+
+                        <div class="slick-slide-item">
+                            <div class="property-box" onclick="OnUnitClick(@{@Html.Raw(ViewBag.Properties[i].RecordId)})">
+                                <div class="property-thumbnail">
+                                    <a href="~/Home/PropertyDetails?PropertyType=Unit&Id=@{@Html.Raw(ViewBag.Properties[i].RecordId)}" class="property-img">
+                                        <div class="listing-badges">
+                                            <span class="tag">@{@Html.Raw(ViewBag.Properties[i].Type)}</span>
+                                        </div>
+                                        <img class="d-block w-100" src="@{@Html.Raw(ViewBag.Properties[i].ImagePath1)}" alt="freemyip.com/@{@Html.Raw(ViewBag.Properties[i].Name)}">
+                                    </a>
+                                </div>
+                                <div class="detail">
+                                    <h1 class="title">
+                                        <a href="~/Home/PropertyDetails?PropertyType=Unit&Id=@{@Html.Raw(ViewBag.Properties[i].RecordId)}">@{@Html.Raw(ViewBag.Properties[i].Name)}</a>
+                                    </h1>
+
+                                    <div class="location">
+                                        <a href="~/Home/PropertyDetails?PropertyType=Unit&Id=@{@Html.Raw(ViewBag.Properties[i].RecordId)}">
+                                            <i class="flaticon-pin"></i>@{@Html.Raw(ViewBag.Properties[i].Location)}
+                                        </a>
+                                    </div>
+                                </div>
+                                <ul class="facilities-list clearfix">
+                                    @if (ViewBag.Properties[i].Developer != "")
+                                    {
+                                        <li>
+                                            <span>Developer</span><span class="NumFont">@{@Html.Raw(ViewBag.Properties[i].Developer)}</span>
+                                        </li>
+                                    }
+                                    <li>
+                                        <span>Area</span><span class="NumFont">@{@Html.Raw(ViewBag.Properties[i].Size)} SQ.FT</span>
+                                    </li>
+                                    @if (ViewBag.Properties[i].Rooms != "0")
+                                    {
+                                        <li>
+                                            <span>Rooms</span><span class="NumFont"> @{@Html.Raw(ViewBag.Properties[i].Rooms)}</span>
+                                        </li>
+                                    }
+                                    @if (ViewBag.Properties[i].Floor != "0")
+                                    {
+                                        <li>
+                                            <span>Floor</span><span class="NumFont"> @{@Html.Raw(ViewBag.Properties[i].Floor)}</span>
+                                        </li>
+                                    }
+                                    <li>
+                                        <button class="btn btn-success">Book Now</button>
+                                        <div class="price-box"><span>AED @{@Html.Raw(ViewBag.Properties[i].Price)}</span></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="slick-btn">
+                    <div class="slick-prev slick-arrow-buton-2 sab-4">
+                        <i class="fa fa-angle-left"></i>
+                    </div>
+                    <div class="slick-next slick-arrow-buton-2 sab-3">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+                <br>
+                <div class="main-title" style="margin-bottom:-20px">
+                    <br><a href="~/Home/Properties" class="btn button-theme" style=" font-weight: bold; margin-top: 36px;">Show All Units</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Featured Properties end -->
+}
+<div class="parent1">
+    <div class="text top-left" style="color:maroon"><h6>Land Sterling</h6></div>
+
+    <div class="text Center1" style="color:black;"><h4>Proberty Snagging and Inspections</h4></div>
+    <div class="text bottom-left2"><button style="background: maroon; color: white;" class="btn btn-danger">Get a free quotation</button></div>
+    <div class="text bottom-left1" style="color:black;">Be Confident in purchasing a property</div>
+
+</div>
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>

@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ePMS2040Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Country_Master">
+    <Key>
+      <PropertyRef Name="Country_Id" />
+    </Key>
+    <Property Name="Country_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Country_Desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modify_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modify_On" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="eBedroom_Master">
+    <Key>
+      <PropertyRef Name="Record_Id" />
+    </Key>
+    <Property Name="Record_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Bedrooms" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Bedrooms_BI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="eCountryCity_Master">
+    <Key>
+      <PropertyRef Name="Record_Id" />
+      <PropertyRef Name="Country_Desc" />
+    </Key>
+    <Property Name="Record_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Country_Desc" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="City_Desc" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Country_Desc_Ar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="City_Desc_Ar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="eUnitCategory_Master">
+    <Key>
+      <PropertyRef Name="Record_Id" />
+    </Key>
+    <Property Name="Record_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Unit_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Unit_Category" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Unit_Category_Ar" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbUnit_Master">
+    <Key>
+      <PropertyRef Name="Ref_No" />
+    </Key>
+    <Property Name="Record_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Property_No" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Property_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Unit_No" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ref_No" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Unit_Sr_No" Type="Int64" />
+    <Property Name="RERA_STR_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Street_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Street_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Unit_Option" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Category_Mix" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Permitted_Use" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Unit_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Unit_Category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Unit_Style" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Unit_Model" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Unit_Zone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BuildingName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Plot_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Plot_Size" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Block" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Floor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Unit_View" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentMarketRate" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Completion_Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Unit_Class" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LivingRooms" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Bedrooms" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StoreRooms" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Parking" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Facilities" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Payment_Plan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Broker_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Broker_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Seller_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Seller_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="RequirementId" Type="Int64" />
+    <Property Name="Adv_Listing" Type="Boolean" />
+    <Property Name="Adv_NewsPaper" Type="Boolean" />
+    <Property Name="Adv_Web" Type="Boolean" />
+    <Property Name="Adv_OpenHouse" Type="Boolean" />
+    <Property Name="Adv1" Type="Boolean" />
+    <Property Name="Adv2" Type="Boolean" />
+    <Property Name="Adv3" Type="Boolean" />
+    <Property Name="Adv_Remarks1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Adv_Remarks2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Adv_Remarks3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InternalRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OtherSpace1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OtherSpace2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Bathrooms" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Kitchen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Balcony" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Terrace" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Total_Area" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Measured_Area" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Sqft_Rate" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Purchase_Value" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Total_Value" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Measured_Value" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="RoundOff_Value" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Parking_Price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="All_In_Price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Premium" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Premium_Percent" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="Seller_Commission" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Seller_Commission_Percent" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="Buyer_Commission" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Buyer_Commission_Percent" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="Seller_TransferFee" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Seller_TransferFee_Percent" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="Buyer_TransferFee" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Buyer_TransferFee_Percent" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="Admin_Fees" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Admin_Fees_Percent" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="Other_Fees" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Other_Fees_Percent" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="Other_Fees_Remarks" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Seller_Paid" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Seller_Paid_Percent" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="Developer_Due" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Developer_Due_Percent" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="Rent_Per_Annum" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Short_Term_Rent" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Short_Term_Period" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Rent_Per_Day" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Security_Deposit" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Advance_Deposit" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Tenant_Commission" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Landlord_Commission" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Maintenance_Fee" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ReferralCommission" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="All_In_Rent" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="VAT" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="VAT_Percent" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="Tax" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Tax_Percent" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="Tax_Code" Type="Int32" />
+    <Property Name="Discount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Discount_Percent" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="Negotiable" Type="Boolean" />
+    <Property Name="Currency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CMA_Range1" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CMA_Range2" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Installments" Type="Int32" />
+    <Property Name="RentPayableTo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="RentBankName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="RentBankAcNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SecDepPayableTo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SecDepBankName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SecDepBankAcNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ComPayableTo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ComBankName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ComBankAcNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Key_Status" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NoofKeys" Type="Int32" />
+    <Property Name="PublishDate" Type="DateTime" Precision="3" />
+    <Property Name="PublishStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ServiceCharge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OwnerOccupied" Type="Boolean" />
+    <Property Name="Leased" Type="Boolean" />
+    <Property Name="LeaseAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="LeaseExpiry" Type="DateTime" Precision="3" />
+    <Property Name="Mandate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FinanceOffered" Type="Boolean" />
+    <Property Name="FinanceCompany" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Mortgaged" Type="Boolean" />
+    <Property Name="MortgageCompany" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PropertyRegistered" Type="Boolean" />
+    <Property Name="RegisteredDate" Type="DateTime" Precision="3" />
+    <Property Name="ForSale" Type="Boolean" />
+    <Property Name="Adv_Listing_Date" Type="DateTime" Precision="3" />
+    <Property Name="Adv_NewsPaper_Date" Type="DateTime" Precision="3" />
+    <Property Name="Adv_Web_Date" Type="DateTime" Precision="3" />
+    <Property Name="Adv_OpenHouse_Date" Type="DateTime" Precision="3" />
+    <Property Name="Adv1_Date" Type="DateTime" Precision="3" />
+    <Property Name="Adv2_Date" Type="DateTime" Precision="3" />
+    <Property Name="Adv3_Date" Type="DateTime" Precision="3" />
+    <Property Name="Portfolio" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PortfolioManager" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PropertyAdministrator" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CanView" Type="Boolean" />
+    <Property Name="Upcoming" Type="Boolean" />
+    <Property Name="PropertyType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ReferredTo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ReferredOn" Type="DateTime" Precision="3" />
+    <Property Name="UnpublishedDate" Type="DateTime" Precision="3" />
+    <Property Name="Factor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Common" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GSA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NSA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Effeciency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TotalValueUSD" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ListingPriceUSD" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="AllInPriceUSD" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="RentPerAnnumUSD" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="AllInRentUSD" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Interest" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="Repayment" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="MonthlyIncome" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="AnnualIncome" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="EURights" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EURightsAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="USP" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Exp1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Exp2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Exp3" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Exp4" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Exp5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Exp6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Exp7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Exp8" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Exp9" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Exp10" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TempId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Refered_By" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Refered_On" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Modified_On" Type="DateTime" Precision="3" />
+    <Property Name="Created_By" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Created_On" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="ePMS2040Entities3" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Country_Master" EntityType="Self.Country_Master" />
+    <EntitySet Name="eBedroom_Master" EntityType="Self.eBedroom_Master" />
+    <EntitySet Name="eCountryCity_Master" EntityType="Self.eCountryCity_Master" />
+    <EntitySet Name="eUnitCategory_Master" EntityType="Self.eUnitCategory_Master" />
+    <EntitySet Name="tbUnit_Master" EntityType="Self.tbUnit_Master" />
+    <EntitySet Name="tbTestimonials" EntityType="ePMS2040Model.tbTestimonials" />
+  </EntityContainer>
+  <EntityType Name="tbTestimonials">
+    <Key>
+      <PropertyRef Name="testId" />
+    </Key>
+    <Property Name="testId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Starcount" Type="Int32" />
+  </EntityType>
+</Schema>

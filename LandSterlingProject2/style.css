@@ -1,7 +1,4 @@
-ul,
-li {
-  list-style: none;
-}
+
 a {
   text-decoration: none;
 }
@@ -1120,5 +1117,8 @@ html {
 }
  .testclass
  {
+     color:red;
+ }
+ h2{
      color:red;
  }
